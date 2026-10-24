@@ -179,6 +179,22 @@ def align_traces(
     digest = model_digest(net)
     request = AlignmentRequest(digest, spec)
     parents = (traces.computation_id,) if traces.computation_id is not None else ()
+    if getattr(traces.spec, "tie_policy", None) == "concurrent":
+        return _result(
+            ALIGNMENT_OPERATOR_ID,
+            None,
+            request,
+            ComputeStatus.INVALID_INPUT,
+            None,
+            (
+                ComputeIssue(
+                    "concurrent_traces_unsupported",
+                    "This operator requires an explicitly ordered sequence",
+                ),
+            ),
+            source_digest=traces.source_digest,
+            parent_computation_ids=parents,
+        )
     if traces.status is not ComputeStatus.COMPUTED or not isinstance(
         traces.value, TraceSet
     ):

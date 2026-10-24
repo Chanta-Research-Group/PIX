@@ -14,7 +14,7 @@ from pix.contracts.analysis import (
     OCDFGTypeGraph,
     TraceSpec,
 )
-from pix.contracts.result import ComputationResult, ComputeStatus
+from pix.contracts.result import ComputationResult, ComputeIssue, ComputeStatus
 from pix.ocel import OCEL
 
 from ._common import _prepare, _result
@@ -42,6 +42,20 @@ def discover_ocdfg(
 
     if not isinstance(spec, OCDFGSpec):
         raise TypeError("spec must be OCDFGSpec")
+    if spec.tie_policy == "concurrent":
+        return _result(
+            OCDFG_OPERATOR_ID,
+            None,
+            spec,
+            ComputeStatus.INVALID_INPUT,
+            None,
+            (
+                ComputeIssue(
+                    "concurrent_dfg_unsupported",
+                    "Directly-follows is not defined for unordered groups",
+                ),
+            ),
+        )
     context, issues = _prepare(log)
     if context is None:
         return _result(

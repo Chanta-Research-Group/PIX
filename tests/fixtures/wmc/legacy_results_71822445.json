@@ -1,0 +1,238 @@
+[
+  {
+    "computation": {
+      "computation_id": "pix.computation.v1:sha256:94b7b1a978da168558f52713c9f106b3ca48af509050a9e920fc561484cce320",
+      "issues": [],
+      "operator_id": "pix.reconstruct_traces",
+      "operator_version": "1.0.0",
+      "parent_computation_ids": [],
+      "source_digest": "pix.ocel.canonical.v1:sha256:eae727fb90ab03f6f81e1c28c4ad0e2111367a24594a4b28b36093f8467ccc2d",
+      "spec": {
+        "object_type": "message",
+        "qualifiers": null,
+        "tie_policy": "reject"
+      },
+      "status": "computed",
+      "value": {
+        "object_type": "message",
+        "traces": [
+          {
+            "events": [
+              {
+                "activity": "sent",
+                "event_id": "a",
+                "relations": [
+                  {
+                    "event": "a",
+                    "object": "m",
+                    "qualifier": "sent"
+                  }
+                ],
+                "time": "2026-01-05T09:01:00.000000Z"
+              },
+              {
+                "activity": "received",
+                "event_id": "b",
+                "relations": [
+                  {
+                    "event": "b",
+                    "object": "m",
+                    "qualifier": "received"
+                  }
+                ],
+                "time": "2026-01-05T09:01:30.000000Z"
+              }
+            ],
+            "object_id": "m",
+            "object_type": "message"
+          }
+        ]
+      }
+    },
+    "document_digest": "pix.analysis-result.v1:sha256:5d9bab142b955893c342ea2d8e0be54ec23998647ba00f20e716fad57bbf617e",
+    "format": "pix.analysis-result",
+    "payload_kind": "object-traces",
+    "version": "1.2.0"
+  },
+  {
+    "computation": {
+      "computation_id": "pix.computation.v1:sha256:d2da3bb371c2defc7e0d906a2eb6bf16420301c7c3dd2531719be77a1beae3de",
+      "issues": [],
+      "operator_id": "pix.evaluate_constraints",
+      "operator_version": "1.0.0",
+      "parent_computation_ids": [
+        "pix.computation.v1:sha256:94b7b1a978da168558f52713c9f106b3ca48af509050a9e920fc561484cce320"
+      ],
+      "source_digest": "pix.ocel.canonical.v1:sha256:eae727fb90ab03f6f81e1c28c4ad0e2111367a24594a4b28b36093f8467ccc2d",
+      "spec": {
+        "observation_policy": "closed",
+        "rules": [
+          {
+            "activity": "sent",
+            "kind": "timed_response",
+            "max_microseconds": 600000000,
+            "min_microseconds": 0,
+            "response_selection": "first",
+            "rule_id": "ack",
+            "target": "received"
+          }
+        ]
+      },
+      "status": "computed",
+      "value": {
+        "object_type": "message",
+        "observation_policy": "closed",
+        "rules": [
+          {
+            "activation_count": 1,
+            "fulfilled_count": 1,
+            "fulfilled_object_count": 1,
+            "fulfillment_ratio": [
+              1,
+              1
+            ],
+            "kind": "timed_response",
+            "object_count": 1,
+            "pending_count": 0,
+            "pending_object_count": 0,
+            "population": "activations",
+            "rule_id": "ack",
+            "traces": [
+              {
+                "activation_count": 1,
+                "fulfilled_count": 1,
+                "object_id": "m",
+                "pending_count": 0,
+                "status": "fulfilled",
+                "vacuous": false,
+                "violated_count": 0,
+                "witnesses": [
+                  {
+                    "activation_event_id": "a",
+                    "elapsed_microseconds": 30000000,
+                    "evidence_event_ids": [
+                      "a",
+                      "b"
+                    ],
+                    "observed_count": null,
+                    "reason": "response_within_inclusive_window",
+                    "status": "fulfilled"
+                  }
+                ]
+              }
+            ],
+            "vacuous_object_count": 0,
+            "violated_count": 0,
+            "violated_object_count": 0
+          }
+        ],
+        "source_trace_computation_id": "pix.computation.v1:sha256:94b7b1a978da168558f52713c9f106b3ca48af509050a9e920fc561484cce320"
+      }
+    },
+    "document_digest": "pix.analysis-result.v1:sha256:b3b5713ca5e1f5ddb677a05a6e18771ea2b1b337fbd33e5dd9d0538a88b1b346",
+    "format": "pix.analysis-result",
+    "payload_kind": "constraint-evaluation",
+    "version": "1.2.0"
+  },
+  {
+    "computation": {
+      "computation_id": "pix.computation.v1:sha256:b70d8e27a05653a89f73f27369c33ab1c609d2e281c874f288b9110760a78fce",
+      "issues": [
+        {
+          "at": [],
+          "code": "service_start_not_selected",
+          "message": "Service time is unavailable without an explicit start attribute"
+        }
+      ],
+      "operator_id": "pix.measure_temporal",
+      "operator_version": "1.0.0",
+      "parent_computation_ids": [
+        "pix.computation.v1:sha256:94b7b1a978da168558f52713c9f106b3ca48af509050a9e920fc561484cce320"
+      ],
+      "source_digest": "pix.ocel.canonical.v1:sha256:eae727fb90ab03f6f81e1c28c4ad0e2111367a24594a4b28b36093f8467ccc2d",
+      "spec": {
+        "object_type": "message",
+        "qualifiers": null,
+        "start_attribute": null,
+        "tie_policy": "reject",
+        "weighting": "event_pairs"
+      },
+      "status": "computed",
+      "value": {
+        "gaps": [
+          {
+            "duration": {
+              "maximum_microseconds": 30000000,
+              "mean_denominator": 1,
+              "mean_numerator": 30000000,
+              "minimum_microseconds": 30000000,
+              "population_count": 1,
+              "sample_count": 1,
+              "samples": [
+                {
+                  "duration_microseconds": 30000000,
+                  "evidence": [
+                    {
+                      "object_id": "m",
+                      "source_event_id": "a",
+                      "source_relations": [
+                        {
+                          "event": "a",
+                          "object": "m",
+                          "qualifier": "sent"
+                        }
+                      ],
+                      "target_event_id": "b",
+                      "target_relations": [
+                        {
+                          "event": "b",
+                          "object": "m",
+                          "qualifier": "received"
+                        }
+                      ]
+                    }
+                  ],
+                  "object_ids": [
+                    "m"
+                  ],
+                  "relations": [],
+                  "source_event_id": "a",
+                  "target_event_id": "b"
+                }
+              ],
+              "total_microseconds": 30000000,
+              "unavailable_count": 0
+            },
+            "source_activity": "sent",
+            "target_activity": "received"
+          }
+        ],
+        "object_type": "message",
+        "service": {
+          "maximum_microseconds": null,
+          "mean_denominator": null,
+          "mean_numerator": null,
+          "minimum_microseconds": null,
+          "population_count": 2,
+          "sample_count": 0,
+          "samples": [],
+          "total_microseconds": 0,
+          "unavailable_count": 2
+        },
+        "service_issues": [
+          {
+            "at": [],
+            "code": "service_start_not_selected",
+            "message": "Service time is unavailable without an explicit start attribute"
+          }
+        ],
+        "service_status": "unavailable",
+        "weighting": "event_pairs"
+      }
+    },
+    "document_digest": "pix.analysis-result.v1:sha256:742a512868c09b106cb5019053445a660d76b3f9e31af33cf15c0aaf851e3cf2",
+    "format": "pix.analysis-result",
+    "payload_kind": "observed-temporal",
+    "version": "1.2.0"
+  }
+]

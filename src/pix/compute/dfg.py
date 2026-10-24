@@ -17,7 +17,7 @@ from pix.contracts.analysis import (
     TraceSpec,
     TransitionEvidence,
 )
-from pix.contracts.result import ComputationResult, ComputeStatus
+from pix.contracts.result import ComputationResult, ComputeIssue, ComputeStatus
 from pix.ocel import OCEL
 
 DFG_OPERATOR_ID = "pix.discover_dfg"
@@ -86,6 +86,20 @@ def discover_dfg(
     """Count (object, source event, target event) occurrences, not relation rows."""
     if not isinstance(spec, TraceSpec):
         raise TypeError("spec must be TraceSpec")
+    if spec.tie_policy == "concurrent":
+        return _result(
+            DFG_OPERATOR_ID,
+            None,
+            spec,
+            ComputeStatus.INVALID_INPUT,
+            None,
+            (
+                ComputeIssue(
+                    "concurrent_dfg_unsupported",
+                    "Directly-follows is not defined for unordered groups",
+                ),
+            ),
+        )
     context, issues = _prepare(log)
     if context is None:
         return _result(

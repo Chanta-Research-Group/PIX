@@ -7,6 +7,7 @@ from pix.compute.context import ComputationContext
 from pix.compute.dfg import discover_dfg
 from pix.compute.discovery import discover_process_tree, process_tree_to_petri_net
 from pix.compute.executions import discover_executions
+from pix.compute.handover import discover_handover
 from pix.compute.model_semantics import (
     enabled_transitions,
     fire,
@@ -40,12 +41,14 @@ from pix.contracts.constraint import (
 )
 from pix.contracts.discovery import DiscoverySpec, ProcessTree
 from pix.contracts.execution import ExecutionSpec, VariantSpec
+from pix.contracts.handover import HandoverSpec
 from pix.contracts.object_conformance import ObjectAlignmentSpec
 from pix.contracts.object_context import ObjectContextSpec
 from pix.contracts.ocpn_discovery import OCPNDiscoverySpec
 from pix.contracts.precision import PrefixPrecisionSpec
 from pix.contracts.replay import ReplaySpec
 from pix.contracts.result import ComputationResult, ComputeIssue, ComputeStatus
+from pix.contracts.time import TimePrecision
 from pix.engine import (
     DFGRequest,
     ExecutionRequest,
@@ -86,8 +89,23 @@ from pix.tabular import (
     ObjectColumn,
     OCELTableMapping,
 )
+from pix.tabular.chat import (
+    CarrierRule,
+    ChatImportResult,
+    ChatLogMapping,
+    MatchRule,
+    import_chat_log,
+)
 
 __all__ = [
+    "CarrierRule",
+    "ChatImportResult",
+    "ChatLogMapping",
+    "MatchRule",
+    "import_chat_log",
+    "HandoverSpec",
+    "discover_handover",
+    "TimePrecision",
     "AttributeColumn",
     "CaseImportResult",
     "CaseLog",

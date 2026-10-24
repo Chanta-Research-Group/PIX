@@ -503,6 +503,16 @@ def discover_process_tree(
             source_digest=trace_result.source_digest,
         )
 
+    if getattr(trace_result.spec, "tie_policy", None) == "concurrent":
+        return result(
+            ComputeStatus.INVALID_INPUT,
+            issues=(
+                ComputeIssue(
+                    "concurrent_traces_unsupported",
+                    "Discovery requires an explicitly ordered sequence",
+                ),
+            ),
+        )
     if trace_result.status is not ComputeStatus.COMPUTED:
         return result(
             ComputeStatus.INVALID_INPUT

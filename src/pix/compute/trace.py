@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections import defaultdict
 
 from pix.compute._common import OPERATOR_VERSION, _prepare, _result
+from pix.compute._time import interval
 from pix.compute.context import ComputationContext
 from pix.contracts.analysis import (
     E2OEvidence,
@@ -46,8 +47,40 @@ def _traces(
             (context.events_by_id[event_id] for event_id in by_event),
             key=lambda event: (event.time, event.id),
         )
+        bounds = {}
+        groups = {}
+        group = -1
+        right = None
+        previous_lower = None
+        try:
+            for event in events:
+                lower, upper = interval(event, spec.time_precision)
+                bounds[event.id] = lower, upper
+                overlaps = group >= 0 and (
+                    right is None or lower < right or lower == previous_lower
+                )
+                if not overlaps:
+                    group += 1
+                    right = upper
+                elif right is not None:
+                    right = None if upper is None else max(right, upper)
+                groups[event.id] = group
+                previous_lower = lower
+        except (ValueError, TypeError, OverflowError) as exc:
+            return None, (
+                ComputeIssue("invalid_time_precision", str(exc), ("object", obj.id)),
+            )
         for previous, following in zip(events, events[1:]):
-            if previous.time == following.time:
+            if groups[previous.id] == groups[following.id]:
+                if spec.tie_policy == "concurrent":
+                    issues.append(
+                        ComputeIssue(
+                            "concurrent_event_order",
+                            "Overlapping observations have no asserted internal order",
+                            ("object", obj.id, "events", previous.id, following.id),
+                        )
+                    )
+                    continue
                 if spec.tie_policy == "reject":
                     issues.append(
                         ComputeIssue(
@@ -72,7 +105,19 @@ def _traces(
                 obj.type,
                 tuple(
                     TraceEvent(
-                        event.id, event.type, event.time, tuple(by_event[event.id])
+                        event.id,
+                        event.type,
+                        event.time,
+                        tuple(by_event[event.id]),
+                        groups[event.id] if spec.tie_policy == "concurrent" else None,
+                        bounds[event.id][0]
+                        if spec.time_precision is not None
+                        or bounds[event.id] != (event.time, event.time)
+                        else None,
+                        bounds[event.id][1]
+                        if spec.time_precision is not None
+                        or bounds[event.id] != (event.time, event.time)
+                        else None,
                     )
                     for event in events
                 ),
@@ -106,7 +151,13 @@ def reconstruct_traces(
         TRACE_OPERATOR_ID,
         context,
         spec,
-        ComputeStatus.COMPUTED if traces is not None else ComputeStatus.UNAVAILABLE,
+        ComputeStatus.COMPUTED
+        if traces is not None
+        else (
+            ComputeStatus.INVALID_INPUT
+            if any(i.code == "invalid_time_precision" for i in issues)
+            else ComputeStatus.UNAVAILABLE
+        ),
         traces,
         issues,
     )

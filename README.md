@@ -7,6 +7,11 @@ interpretation engine.
 
 The current usage work adds grouped trace comparison and a frequency-ranked
 [trace variant catalog](docs/user-guide/TRACE_VARIANT_CATALOG_GUIDE.md).
+
+Conversation logs can be imported with declarative turn and activity rules, then
+analyzed as qualified sender/receiver handovers. Declared timestamp precision
+preserves uncertain ordering and duration bounds. See the
+[chat, handover and time precision guide](docs/user-guide/CHAT_HANDOVER_AND_TIME_PRECISION.md).
 Top 20% selects 20% of distinct variants by count, rounded up; case coverage is
 reported separately. Multiple sequences can be inspected in one offline view.
 See the [current patch plan](docs/requirements/2026-10-10_PIX_USAGE_AND_HANDOFF_PATCH_PLAN.md)

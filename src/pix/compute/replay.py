@@ -334,6 +334,22 @@ def replay_traces(
         raise TypeError("spec must be ReplaySpec")
     resolved = ReplayRequest(model_digest(net), spec)
     parents = (traces.computation_id,) if traces.computation_id is not None else ()
+    if getattr(traces.spec, "tie_policy", None) == "concurrent":
+        return _result(
+            REPLAY_OPERATOR_ID,
+            None,
+            resolved,
+            ComputeStatus.INVALID_INPUT,
+            None,
+            (
+                ComputeIssue(
+                    "concurrent_traces_unsupported",
+                    "This operator requires an explicitly ordered sequence",
+                ),
+            ),
+            source_digest=traces.source_digest,
+            parent_computation_ids=parents,
+        )
     if traces.status is not ComputeStatus.COMPUTED:
         return _result(
             REPLAY_OPERATOR_ID,

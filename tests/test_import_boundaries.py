@@ -79,7 +79,11 @@ def test_contracts_imports_standard_library_only() -> None:
     assert contract_files, "PIX contract source files were not found"
     for path in contract_files:
         imported_roots = {
-            module.split(".", maxsplit=1)[0] for module in _imported_modules(path)
+            module.split(".", maxsplit=1)[0]
+            for module in _imported_modules(path)
+            # Contracts can reuse other standard-library-only contracts. They
+            # still cannot import compute, IO, domain code or third-party code.
+            if module != "pix.contracts" and not module.startswith("pix.contracts.")
         }
         non_standard = sorted(imported_roots - sys.stdlib_module_names)
         if non_standard:
