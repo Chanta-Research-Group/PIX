@@ -290,3 +290,45 @@ def test_uncertain_median_is_an_interval():
         summary.interval_median_denominator,
     ) == (0, 60_000_000, 1)
     assert "median_indeterminate_within_precision" in {i.code for i in result.issues}
+
+
+def test_service_precision_overflow_preserves_gap_measurement():
+    source = log(120)
+    source = replace(
+        source,
+        events=tuple(
+            replace(
+                event,
+                attributes=(
+                    EventAttr("start", datetime.max.replace(tzinfo=timezone.utc)),
+                ),
+            )
+            for event in source.events
+        ),
+    )
+    result = measure_temporal(
+        source, TemporalSpec("message", time_precision=MINUTE, start_attribute="start")
+    )
+    assert result.status.value == "partial"
+    assert len(result.value.gaps) == 1
+    assert result.value.service.sample_count == 0
+    assert result.value.service.unavailable_count == 2
+    assert {issue.code for issue in result.value.service_issues} == {
+        "invalid_service_precision"
+    }
+    assert result_from_json(result_json_bytes(result)) == result
+
+
+def test_concurrent_pair_limit_rejects_without_partial_measurement():
+    source = log()
+    source = replace(
+        source,
+        events=tuple(replace(source.events[0], id=f"e{i}") for i in range(450)),
+        e2o=tuple(E2O(f"e{i}", "m", "sent") for i in range(450)),
+    )
+    result = measure_temporal(
+        source, TemporalSpec("message", tie_policy="concurrent", time_precision=MINUTE)
+    )
+    assert result.status.value == "unavailable"
+    assert result.value is None
+    assert result.issues[0].code == "concurrent_temporal_pair_limit"

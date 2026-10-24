@@ -321,3 +321,8 @@ def test_per_record_precision_is_retained_under_selected_name():
         TraceSpec("request", time_precision=TimePrecision(attribute="resolution")),
     )
     assert result.status.value == "computed"
+
+
+def test_receiving_endpoint_field_is_required():
+    with pytest.raises((TypeError, ValueError)):
+        replace(mapping().carrier_rules[0], receiving_actor_field=None)

@@ -88,6 +88,7 @@ class CarrierRule:
         ):
             if getattr(self, name) is not None:
                 _text(getattr(self, name), name)
+        _text(self.receiving_actor_field, "receiving_actor_field")
         if self.object_type in ("employee", "request", "channel"):
             raise ValueError(
                 "carrier object_type must differ from actor, turn and channel types"

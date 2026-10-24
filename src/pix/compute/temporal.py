@@ -165,11 +165,17 @@ def _service(
                 event.time,
             )
             if use_interval:
-                span = width(event, spec.time_precision)
-                lo, hi = elapsed(
-                    (start, start + timedelta(microseconds=span)),
-                    interval(event, spec.time_precision),
-                )
+                try:
+                    span = width(event, spec.time_precision)
+                    lo, hi = elapsed(
+                        (start, start + timedelta(microseconds=span)),
+                        interval(event, spec.time_precision),
+                    )
+                except (OverflowError, ValueError) as exc:
+                    issues.append(
+                        TemporalIssue("invalid_service_precision", str(exc), location)
+                    )
+                    continue
             if duration < 0 and (not use_interval or (hi is not None and hi < 0)):
                 issues.append(
                     TemporalIssue(
