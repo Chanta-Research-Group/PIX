@@ -45,7 +45,9 @@ def _edges(links, grouping=None):
                     if i.latency_lower_microseconds is not None
                 ),
                 default=None,
-            ),
+            )
+            if all(i.latency_lower_microseconds is not None for i in items)
+            else None,
             max(
                 (
                     i.latency_upper_microseconds
@@ -53,7 +55,9 @@ def _edges(links, grouping=None):
                     if i.latency_upper_microseconds is not None
                 ),
                 default=None,
-            ),
+            )
+            if all(i.latency_upper_microseconds is not None for i in items)
+            else None,
         )
         for (sender, receiver), items in sorted(buckets.items())
     )

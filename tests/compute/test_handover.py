@@ -17,6 +17,7 @@ from pix.ocel import (
     OCEL,
     Attribute,
     Event,
+    EventAttr,
     EventType,
     Object,
     ObjectAttr,
@@ -160,3 +161,47 @@ def test_mixed_carrier_roles_rejected():
 def test_invalid_spec(kwargs):
     with pytest.raises((TypeError, ValueError)):
         HandoverSpec(**kwargs)
+
+
+def test_unbounded_latency_does_not_claim_complete_edge_extrema():
+    source = log()
+    source = replace(
+        source,
+        event_types=source.event_types
+        + (
+            EventType(
+                "anchored",
+                (
+                    Attribute("time_basis", ValueType.STRING),
+                    Attribute("time_lower", ValueType.TIME),
+                ),
+            ),
+        ),
+        events=source.events
+        + (
+            Event(
+                "s3",
+                "anchored",
+                T,
+                (
+                    EventAttr("time_basis", "anchor_previous_observed"),
+                    EventAttr("time_lower", T),
+                ),
+            ),
+            Event("r3", "receive", T + timedelta(minutes=1)),
+        ),
+        objects=source.objects + (Object("m3", "message"),),
+        e2o=source.e2o
+        + (
+            E2O("s3", "A", "actor"),
+            E2O("s3", "m3", "sent"),
+            E2O("r3", "B", "actor"),
+            E2O("r3", "m3", "received"),
+        ),
+    )
+    result = discover_handover(source, HandoverSpec())
+    edge = next(e for e in result.value.edges if (e.sender, e.receiver) == ("A", "B"))
+    assert edge.link_count == 2 and edge.timed_count == 1
+    assert edge.latency_lower_min_microseconds is None
+    assert edge.latency_upper_max_microseconds == 60_000_000
+    assert result_from_json(result_json_bytes(result)) == result
