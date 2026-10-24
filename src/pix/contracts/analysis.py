@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from typing import ClassVar, Literal
+
+from pix.contracts.time import TimePrecision, validate_precision
 
 
 def _text(value: object, name: str, *, blank: bool = False) -> None:
@@ -28,8 +30,8 @@ def _selection(spec: object) -> None:
         object.__setattr__(spec, "qualifiers", tuple(sorted(set(qualifiers))))
     if not isinstance(spec.tie_policy, str):
         raise TypeError("tie_policy must be str")
-    if spec.tie_policy not in ("reject", "event_id"):
-        raise ValueError("tie_policy must be 'reject' or 'event_id'")
+    if spec.tie_policy not in ("reject", "event_id", "concurrent"):
+        raise ValueError("tie_policy must be 'reject', 'event_id' or 'concurrent'")
 
 
 @dataclass(frozen=True, slots=True)
@@ -42,11 +44,15 @@ class TraceSpec:
     SCHEMA_VERSION: ClassVar[str] = "1.0.0"
     object_type: str
     qualifiers: tuple[str, ...] | None = None
-    tie_policy: Literal["reject", "event_id"] = "reject"
+    tie_policy: Literal["reject", "event_id", "concurrent"] = "reject"
+    time_precision: TimePrecision | None = field(
+        default=None, metadata={"wire_optional": True, "identity_omit_none": True}
+    )
 
     def __post_init__(self) -> None:
         _text(self.object_type, "object_type")
         _selection(self)
+        validate_precision(getattr(self, "time_precision", None))
 
 
 @dataclass(frozen=True, slots=True)
@@ -54,7 +60,7 @@ class OCDFGSpec:
     SCHEMA_VERSION: ClassVar[str] = "1.0.0"
     object_types: tuple[str, ...]
     qualifiers: tuple[str, ...] | None = None
-    tie_policy: Literal["reject", "event_id"] = "reject"
+    tie_policy: Literal["reject", "event_id", "concurrent"] = "reject"
 
     def __post_init__(self) -> None:
         if not isinstance(self.object_types, tuple):
@@ -65,6 +71,7 @@ class OCDFGSpec:
             _text(value, "object_type")
         object.__setattr__(self, "object_types", tuple(sorted(set(self.object_types))))
         _selection(self)
+        validate_precision(getattr(self, "time_precision", None))
 
 
 @dataclass(frozen=True, slots=True)
@@ -78,13 +85,17 @@ class TemporalSpec:
     SCHEMA_VERSION: ClassVar[str] = "1.0.0"
     object_type: str
     qualifiers: tuple[str, ...] | None = None
-    tie_policy: Literal["reject", "event_id"] = "reject"
+    tie_policy: Literal["reject", "event_id", "concurrent"] = "reject"
     weighting: Literal["event_pairs", "occurrences"] = "event_pairs"
     start_attribute: str | None = None
+    time_precision: TimePrecision | None = field(
+        default=None, metadata={"wire_optional": True, "identity_omit_none": True}
+    )
 
     def __post_init__(self) -> None:
         _text(self.object_type, "object_type")
         _selection(self)
+        validate_precision(getattr(self, "time_precision", None))
         if not isinstance(self.weighting, str):
             raise TypeError("weighting must be str")
         if self.weighting not in ("event_pairs", "occurrences"):
@@ -112,6 +123,9 @@ class TraceEvent:
     activity: str
     time: datetime | None
     relations: tuple[E2OEvidence, ...]
+    order_group: int | None = field(default=None, metadata={"wire_optional": True})
+    time_lower: datetime | None = field(default=None, metadata={"wire_optional": True})
+    time_upper: datetime | None = field(default=None, metadata={"wire_optional": True})
 
 
 @dataclass(frozen=True, slots=True)
@@ -216,9 +230,15 @@ class TemporalSample:
     source_event_id: str | None
     target_event_id: str
     object_ids: tuple[str, ...]
-    duration_microseconds: int
+    duration_microseconds: int | None
     evidence: tuple[TransitionEvidence, ...] = ()
     relations: tuple[E2OEvidence, ...] = ()
+    duration_lower_microseconds: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    duration_upper_microseconds: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
 
 
 @dataclass(frozen=True, slots=True)
@@ -232,12 +252,46 @@ class DurationSummary:
     population_count: int
     sample_count: int
     unavailable_count: int
-    total_microseconds: int
+    total_microseconds: int | None
     minimum_microseconds: int | None
     maximum_microseconds: int | None
     mean_numerator: int | None
     mean_denominator: int | None
     samples: tuple[TemporalSample, ...]
+    minimum_lower_microseconds: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    minimum_upper_microseconds: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    maximum_lower_microseconds: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    maximum_upper_microseconds: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    mean_lower_numerator: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    mean_upper_numerator: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    interval_mean_denominator: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    median_numerator: int | None = field(default=None, metadata={"wire_optional": True})
+    median_denominator: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    median_lower_numerator: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    median_upper_numerator: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    interval_median_denominator: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
 
 
 @dataclass(frozen=True, slots=True)
@@ -252,6 +306,6 @@ class ObservedTemporal:
     object_type: str
     weighting: str
     gaps: tuple[TemporalEdge, ...]
-    service_status: Literal["computed", "unavailable"]
+    service_status: Literal["computed", "partial", "unavailable"]
     service: DurationSummary
     service_issues: tuple[TemporalIssue, ...]

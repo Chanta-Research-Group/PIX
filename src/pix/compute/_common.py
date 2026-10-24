@@ -33,6 +33,24 @@ def _result(
         if source_digest is not None and source_digest != context.source_digest:
             raise ValueError("explicit source digest does not match context")
         source_digest = context.source_digest
+        mapping_digests = sorted(
+            {
+                a.value
+                for e in context.log.events
+                for a in e.attributes
+                if a.name == "pix:chat_mapping_digest" and isinstance(a.value, str)
+            }
+        )
+        existing = {i.at for i in issues if i.code == "source_mapping_digest"}
+        issues += tuple(
+            ComputeIssue(
+                "source_mapping_digest",
+                "Source chat mapping identity",
+                ("mapping_digest", digest),
+            )
+            for digest in mapping_digests
+            if ("mapping_digest", digest) not in existing
+        )
     computation_id = computation_identity(
         operator_id, operator_version, source_digest, spec, parent_computation_ids
     )

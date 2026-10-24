@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import ClassVar, Literal
+
+from pix.contracts.time import TimePrecision, validate_precision
 
 
 def _text(value: object, name: str) -> None:
@@ -136,8 +138,12 @@ class ConstraintSpec:
     SCHEMA_VERSION: ClassVar[str] = "1.0.0"
     rules: tuple[ConstraintRule, ...]
     observation_policy: Literal["open", "closed"]
+    time_precision: TimePrecision | None = field(
+        default=None, metadata={"wire_optional": True, "identity_omit_none": True}
+    )
 
     def __post_init__(self) -> None:
+        validate_precision(self.time_precision)
         if not isinstance(self.rules, tuple) or not self.rules:
             raise ValueError("rules must be a nonempty tuple")
         supported = (
@@ -163,24 +169,31 @@ class ConstraintWitness:
     and observation policy. Elapsed time is exact for a selected event pair.
     """
 
-    status: Literal["fulfilled", "violated", "pending"]
+    status: Literal["fulfilled", "violated", "pending", "indeterminate"]
     activation_event_id: str | None
     evidence_event_ids: tuple[str, ...]
     observed_count: int | None
     elapsed_microseconds: int | None
     reason: str
+    elapsed_lower_microseconds: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    elapsed_upper_microseconds: int | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
 
 
 @dataclass(frozen=True, slots=True)
 class TraceRuleEvaluation:
     object_id: str
-    status: Literal["fulfilled", "violated", "pending"]
+    status: Literal["fulfilled", "violated", "pending", "indeterminate"]
     activation_count: int
     fulfilled_count: int
     violated_count: int
     pending_count: int
     vacuous: bool
     witnesses: tuple[ConstraintWitness, ...]
+    indeterminate_count: int = field(default=0, metadata={"wire_optional": True})
 
 
 @dataclass(frozen=True, slots=True)
@@ -201,6 +214,14 @@ class RuleEvaluation:
     pending_object_count: int
     vacuous_object_count: int
     traces: tuple[TraceRuleEvaluation, ...]
+    indeterminate_count: int = field(default=0, metadata={"wire_optional": True})
+    indeterminate_object_count: int = field(default=0, metadata={"wire_optional": True})
+    fulfillment_ratio_lower: tuple[int, int] | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
+    fulfillment_ratio_upper: tuple[int, int] | None = field(
+        default=None, metadata={"wire_optional": True}
+    )
 
 
 @dataclass(frozen=True, slots=True)

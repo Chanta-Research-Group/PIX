@@ -132,6 +132,10 @@ def _identity_value(value: object) -> object:
             {
                 field.name: _identity_value(getattr(value, field.name))
                 for field in fields(value)
+                if not (
+                    field.metadata.get("identity_omit_none")
+                    and getattr(value, field.name) is None
+                )
             },
         ]
     if isinstance(value, tuple):

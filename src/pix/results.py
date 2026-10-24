@@ -26,6 +26,7 @@ from pix.contracts import (
     constraint,
     discovery,
     execution,
+    handover,
     models,
     object_conformance,
     object_context,
@@ -36,14 +37,19 @@ from pix.contracts import (
 from pix.contracts.result import ComputationResult, ComputeIssue, ComputeStatus
 
 RESULT_FORMAT = "pix.analysis-result"
-RESULT_VERSION = "1.2.0"
-_READABLE_VERSIONS = ("1.0.0", "1.1.0", RESULT_VERSION)
+RESULT_VERSION = "1.3.0"
+_READABLE_VERSIONS = ("1.0.0", "1.1.0", "1.2.0", RESULT_VERSION)
 _INTEGER_TAG = "$pix.integer.hex"
 
 
 def _schemas() -> dict[str, tuple[str, type, type]]:
     # Import only known modules in code, never module names from persisted data.
     schemas = {
+        "pix.discover_handover": (
+            "handover-network",
+            handover.HandoverSpec,
+            handover.HandoverNetwork,
+        ),
         "pix.case_traces": (
             "case-traces",
             case_log.CaseTraceSpec,
@@ -430,7 +436,8 @@ def _decode(
         if not isinstance(value, dict):
             raise ValueError("expected a result record")
         names = {field.name for field in fields(expected)}
-        if set(value) != names:
+        optional = {f.name for f in fields(expected) if f.metadata.get("wire_optional")}
+        if not set(value) <= names or not names - optional <= set(value):
             raise ValueError(f"unexpected or missing fields in {expected.__name__}")
         hints = get_type_hints(expected)
         # XES values have an explicit type discriminator. An ISO-looking string
@@ -458,7 +465,7 @@ def _decode(
                 name: _decode(
                     value[name], hints[name], depth + 1, large_integers=large_integers
                 )
-                for name in names
+                for name in value
             }
         )
     raise TypeError(f"unregistered result field type: {expected!r}")
@@ -498,8 +505,11 @@ def result_from_json(data: str | bytes) -> ComputationResult:
         raise ValueError("unsupported operator result schema") from exc
     if document["payload_kind"] != kind:
         raise ValueError("payload kind does not match its operator")
-    if record["operator_id"] == "pix.case_traces" and document["version"] != "1.2.0":
-        raise ValueError("case trace results require format version 1.2.0")
+    if record["operator_id"] == "pix.case_traces" and document["version"] in (
+        "1.0.0",
+        "1.1.0",
+    ):
+        raise ValueError("case trace results require format version 1.2.0 or newer")
 
     def decode(value: object, expected: object) -> object:
         return _decode(value, expected, large_integers=document["version"] != "1.0.0")

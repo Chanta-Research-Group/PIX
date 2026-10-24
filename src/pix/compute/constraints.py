@@ -5,6 +5,9 @@ from __future__ import annotations
 from datetime import datetime, timedelta
 
 from pix.compute._common import _derived_result
+from pix.compute._interval_constraints import (
+    activation_witnesses as _interval_witnesses,
+)
 from pix.contracts.analysis import (
     E2OEvidence,
     ObjectTrace,
@@ -52,6 +55,8 @@ def _validate_traces(value: TraceSet, spec: TraceSpec) -> tuple[ComputeIssue, ..
         identities.add(trace.object_id)
         event_ids: set[str] = set()
         previous: TraceEvent | None = None
+        expected_group = -1
+        right = previous_lower = None
         for event in trace.events:
             if not isinstance(event, TraceEvent):
                 raise TypeError("trace events must be TraceEvent records")
@@ -66,7 +71,46 @@ def _validate_traces(value: TraceSet, spec: TraceSpec) -> tuple[ComputeIssue, ..
                 event.time, datetime
             ) or event.time.utcoffset() != timedelta(0):
                 raise ValueError("native trace events require canonical UTC timestamps")
-            signature = event.activity, event.time
+            if event.time_lower is None:
+                if event.time_upper is not None or spec.time_precision is not None:
+                    raise ValueError("precision traces require observation bounds")
+                lower = upper = event.time
+            else:
+                lower, upper = event.time_lower, event.time_upper
+                if (
+                    not isinstance(lower, datetime)
+                    or lower.utcoffset() != timedelta(0)
+                    or lower != event.time
+                ):
+                    raise ValueError(
+                        "observation lower bound must equal canonical event time"
+                    )
+                if upper is not None and (
+                    not isinstance(upper, datetime)
+                    or upper.utcoffset() != timedelta(0)
+                    or upper < lower
+                ):
+                    raise ValueError("invalid observation upper bound")
+            overlaps = expected_group >= 0 and (
+                right is None or lower < right or lower == previous_lower
+            )
+            if not overlaps:
+                expected_group += 1
+                right = upper
+            elif right is not None:
+                right = None if upper is None else max(right, upper)
+            previous_lower = lower
+            if spec.tie_policy == "concurrent":
+                if (
+                    type(event.order_group) is not int
+                    or event.order_group != expected_group
+                ):
+                    raise ValueError(
+                        "concurrent groups must match observation interval components"
+                    )
+            elif event.order_group is not None:
+                raise ValueError("ordered traces cannot assert concurrent groups")
+            signature = event.activity, event.time, event.time_lower, event.time_upper
             if known_events.get(event.event_id, signature) != signature:
                 raise ValueError(
                     "shared event IDs must preserve activity and timestamp"
@@ -96,12 +140,15 @@ def _validate_traces(value: TraceSet, spec: TraceSpec) -> tuple[ComputeIssue, ..
                     raise ValueError("trace events must be chronologically ordered")
                 if previous.time == event.time:
                     if (
-                        spec.tie_policy != "event_id"
+                        spec.tie_policy not in ("event_id", "concurrent")
                         or previous.event_id >= event.event_id
                     ):
                         raise ValueError(
                             "tied timestamps require explicit lexical event_id order"
                         )
+                    if spec.tie_policy == "concurrent":
+                        previous = event
+                        continue
                     issues.append(
                         ComputeIssue(
                             "event_id_order_assumption",
@@ -251,7 +298,11 @@ def _activation_witnesses(
 
 
 def _evaluate_rule(
-    rule: ConstraintRule, traces: TraceSet, closed: bool
+    rule: ConstraintRule,
+    traces: TraceSet,
+    closed: bool,
+    interval_mode=False,
+    concurrent=False,
 ) -> RuleEvaluation:
     rows: list[TraceRuleEvaluation] = []
     object_population = isinstance(rule, (CountRule, NotCoexistenceRule))
@@ -260,12 +311,23 @@ def _evaluate_rule(
             witnesses = (_count(rule, trace, closed),)
         elif isinstance(rule, NotCoexistenceRule):
             witnesses = (_not_coexistence(rule, trace, closed),)
+        elif interval_mode:
+            witnesses = _interval_witnesses(rule, trace, closed, concurrent)
         else:
             witnesses = _activation_witnesses(rule, trace, closed)
         fulfilled = sum(w.status == "fulfilled" for w in witnesses)
         violated = sum(w.status == "violated" for w in witnesses)
         pending = sum(w.status == "pending" for w in witnesses)
-        status = "violated" if violated else "pending" if pending else "fulfilled"
+        indeterminate = sum(w.status == "indeterminate" for w in witnesses)
+        status = (
+            "violated"
+            if violated
+            else "pending"
+            if pending
+            else "indeterminate"
+            if indeterminate
+            else "fulfilled"
+        )
         rows.append(
             TraceRuleEvaluation(
                 trace.object_id,
@@ -276,6 +338,7 @@ def _evaluate_rule(
                 pending,
                 not object_population and not witnesses,
                 witnesses,
+                indeterminate,
             )
         )
     total = sum(row.activation_count for row in rows)
@@ -295,6 +358,12 @@ def _evaluate_rule(
         sum(row.status == "pending" for row in rows),
         sum(row.vacuous for row in rows),
         tuple(rows),
+        sum(row.indeterminate_count for row in rows),
+        sum(row.status == "indeterminate" for row in rows),
+        (fulfilled, total) if total and interval_mode else None,
+        (fulfilled + sum(row.indeterminate_count for row in rows), total)
+        if total and interval_mode
+        else None,
     )
 
 
@@ -355,6 +424,19 @@ def evaluate_constraints(
                 ),
             ),
         )
+    if (
+        spec.time_precision is not None
+        and spec.time_precision != trace_result.spec.time_precision
+    ):
+        return result(
+            ComputeStatus.INVALID_INPUT,
+            issues=(
+                ComputeIssue(
+                    "time_precision_mismatch",
+                    "Constraint precision must match its source trace precision",
+                ),
+            ),
+        )
     try:
         issues = (
             *trace_result.issues,
@@ -371,11 +453,28 @@ def evaluate_constraints(
         spec.observation_policy,
         tuple(
             _evaluate_rule(
-                rule, trace_result.value, spec.observation_policy == "closed"
+                rule,
+                trace_result.value,
+                spec.observation_policy == "closed",
+                trace_result.spec.time_precision is not None
+                or trace_result.spec.tie_policy == "concurrent"
+                or any(
+                    e.time_lower is not None
+                    for t in trace_result.value.traces
+                    for e in t.events
+                ),
+                trace_result.spec.tie_policy == "concurrent",
             )
             for rule in spec.rules
         ),
     )
+    if any(rule.indeterminate_count for rule in value.rules):
+        issues += (
+            ComputeIssue(
+                "indeterminate_obligations",
+                "Observation precision does not determine all obligations; inspect ratio bounds",
+            ),
+        )
     if not trace_result.value.traces:
         issues += (
             ComputeIssue(
