@@ -1,0 +1,71 @@
+{
+  "run_id": 40151918609,
+  "head_sha": "70df30ac38a11ba40536447f33d0fb1a93669418",
+  "status": "completed",
+  "conclusion": "success",
+  "html_url": "https://github.com/Chanta-Research-Group/PIX/actions/runs/40151918609",
+  "jobs": [
+    {
+      "job_id": 121045038017,
+      "name": "python (macos-latest, 3.13)",
+      "status": "completed",
+      "conclusion": "success",
+      "summary_lines": [
+        "2026-10-25T01:47:19.0870360Z 10702 passed, 42 skipped, 1169 subtests passed in 53.91s",
+        "2026-10-25T01:47:23.0339810Z   \"success\": true,",
+        "2026-10-25T01:47:23.8479450Z   \"success\": true,",
+        "2026-10-25T01:47:25.1922630Z {\"status\": \"passed\", \"source_digest\": \"pix.ocel.canonical.v1:sha256:108fbf5f7d6df53efd98fd5ae3351922bba0c485fcaf7d9bee0371a841854fed\", \"output\": \"/Users/runner/work/PIX/PIX/.artifacts/wheel/adapter_contract_demo\"}"
+      ]
+    },
+    {
+      "job_id": 121045038125,
+      "name": "browser",
+      "status": "completed",
+      "conclusion": "success",
+      "summary_lines": [
+        "2026-10-25T01:47:22.3500208Z 42 passed in 29.13s"
+      ]
+    },
+    {
+      "job_id": 121045038126,
+      "name": "python (windows-latest, 3.13)",
+      "status": "completed",
+      "conclusion": "success",
+      "summary_lines": [
+        "2026-10-25T01:48:56.9577263Z 10703 passed, 41 skipped, 1169 subtests passed in 130.59s (0:02:10)\r",
+        "2026-10-25T01:49:07.3634582Z   \"success\": true,\r",
+        "2026-10-25T01:49:09.0340281Z   \"success\": true,\r",
+        "2026-10-25T01:49:11.6711177Z {\"status\": \"passed\", \"source_digest\": \"pix.ocel.canonical.v1:sha256:108fbf5f7d6df53efd98fd5ae3351922bba0c485fcaf7d9bee0371a841854fed\", \"output\": \"D:\\\\a\\\\PIX\\\\PIX\\\\.artifacts\\\\wheel\\\\adapter_contract_demo\"}\r"
+      ]
+    },
+    {
+      "job_id": 121045038151,
+      "name": "python (ubuntu-latest, 3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "summary_lines": [
+        "2026-10-25T01:48:11.5752690Z 10702 passed, 42 skipped, 1169 subtests passed in 103.65s (0:01:43)",
+        "2026-10-25T01:48:16.4552416Z   \"success\": true,",
+        "2026-10-25T01:48:17.9617067Z   \"success\": true,",
+        "2026-10-25T01:48:20.3122794Z {\"status\": \"passed\", \"source_digest\": \"pix.ocel.canonical.v1:sha256:108fbf5f7d6df53efd98fd5ae3351922bba0c485fcaf7d9bee0371a841854fed\", \"output\": \"/home/runner/work/PIX/PIX/.artifacts/wheel/adapter_contract_demo\"}"
+      ]
+    },
+    {
+      "job_id": 121045038192,
+      "name": "python (ubuntu-latest, 3.10)",
+      "status": "completed",
+      "conclusion": "success",
+      "summary_lines": [
+        "2026-10-25T01:48:13.0855334Z 10702 passed, 42 skipped, 1169 subtests passed in 106.13s (0:01:46)",
+        "2026-10-25T01:48:17.8679347Z   \"success\": true,",
+        "2026-10-25T01:48:19.0125944Z   \"success\": true,",
+        "2026-10-25T01:48:20.8959407Z {\"status\": \"passed\", \"source_digest\": \"pix.ocel.canonical.v1:sha256:108fbf5f7d6df53efd98fd5ae3351922bba0c485fcaf7d9bee0371a841854fed\", \"output\": \"/home/runner/work/PIX/PIX/.artifacts/wheel/adapter_contract_demo\"}"
+      ]
+    }
+  ],
+  "node": {
+    "tests": 258,
+    "passed": 258,
+    "failed": 0
+  }
+}
