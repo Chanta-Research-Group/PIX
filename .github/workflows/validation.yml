@@ -35,7 +35,7 @@ jobs:
       - run: python -m build --wheel
       - name: Installed wheel outside checkout
         shell: bash
-        run: python tools/validate_usage_wheel.py --wheel dist/*.whl --output .artifacts/wheel
+        run: python tools/validate_usage_wheel.py --wheel dist/*.whl --output .artifacts/wheel --pix-commit "${{ github.sha }}"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

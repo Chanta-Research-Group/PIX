@@ -26,6 +26,12 @@ prioritizes verification of existing APIs, consumer documentation, and reusable 
 Generic mapping provenance and explicit time-bound extensions are conditional on
 demonstrated contract gaps. These plans do not record implementation or new test passes.
 
+The [consumer API matrix](docs/user-guide/SCHUMPETER_PIX_CONSUMER_API_MATRIX.md)
+and [neutral integration fixture](tests/fixtures/pi_hub/README.md) now provide a
+public-API example covering OCEL round-trips, eight native result artifacts, and
+complete parent-artifact links. Installed-wheel validation runs this example and
+the existing standalone chat demo. This does not certify a Schumpeter deployment.
+
 The [integrated execution index](docs/requirements/2026-10-06_PIX_INTEGRATED_EXECUTION_PLAN.md)
 preserves the review charter and OCPM/UX source documents, maps all 38 additional
 requirement IDs to their amended acceptance criteria, and connects the first
