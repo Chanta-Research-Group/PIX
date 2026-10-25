@@ -6,6 +6,8 @@
 기준 main: `48fe7eb67388cda1144c5bba93adbfe00933ab1c` — PR #12 병합본  
 계획 범위: 현재 채팅 입력 기능을 보존하면서 범용 계산 계약과 외부 연동 경계를 정리한다.
 
+**후속 요구 반영:** 같은 날 전달된 Schumpeter PI Hub Integration Readiness 요구를 반영한 [통합 검증 계획](2026-10-25_SCHUMPETER_PI_HUB_INTEGRATION_READINESS_PLAN.md)을 실행 순서의 기준으로 사용한다. 기존 기능 검증과 소비자 문서·fixture 작성을 먼저 수행한다. 아래 ADP-01/02는 확정 개발 항목이 아니라, 기존 공개 계약으로 필수 사례를 충족하지 못한다는 근거가 확인될 때 적용하는 설계 후보로 변경한다. 이 문서의 단독 사용성·호환성 보호 조건과 Provenance 접수 절차는 계속 유효하다.
+
 ## 1. 이번 결정과 유지할 기준
 
 **PIX는 Schumpeter 없이도 현재 수준의 입력·변환·분석 기능을 사용할 수 있어야 한다.** 채팅 어댑터를 제거하거나 다른 프로젝트로 강제 이전하지 않는다. `import_chat_log`, `ChatLogMapping`, `ChatImportResult`, `MatchRule`, `CarrierRule`과 관련 테스트·예제를 유지하고, 이번 작업에서 폐기 예고하지 않는다.
@@ -22,8 +24,8 @@ Schumpeter는 PIX를 재사용하면서 원천 수집, WMC 전용 정규화·운
 | --- | --- | --- |
 | 채팅 입력 | `src/pix/tabular/chat.py`: 선언형 턴·활동 규칙, JSONL/records, carrier 연결, 앵커, 원문 보존 옵션 | 공개 기능과 기본 동작 유지 |
 | 표 입력 | `import_table`, `OCELTableMapping`, `mapping_fingerprint` | 기존 변환기를 재사용하며 별도 범용 importer를 중복 작성하지 않음 |
-| 출처 정보 | `compute/_common.py`가 `pix:chat_mapping_digest`와 채팅 전용 설명을 직접 해석 | 명시적인 범용 출처 계약으로 정리, 구형 입력 호환 |
-| 시간 구간 | `compute/_time.py`가 `time_basis=anchor_previous_observed`와 lower/upper 속성을 해석 | 기존 규약을 보존하면서 공개·검증 가능한 구간 선택 계약 추가 |
+| 출처 정보 | `compute/_common.py`가 `pix:chat_mapping_digest`와 채팅 전용 설명을 직접 해석 | 기존 결과·부모 계보·호출 측 실행 기록으로 충족하는지 검증한 뒤 필요 시 범용화 |
+| 시간 구간 | `compute/_time.py`가 `time_basis=anchor_previous_observed`와 lower/upper 속성을 해석 | 기존 표현을 검증·문서화하고 필수 입력의 표현 불가가 확인될 때만 공개 계약 확장 |
 | #9 시간 정밀도 | `TimePrecision`, concurrent Trace, 불확실한 제약 판정·시간 범위 구현 | 재개발하지 않고 외부 어댑터 입력과 회귀 검증 |
 | #10 인계망 | `HandoverSpec`, `discover_handover`, qualifier 근거·미연결·충돌·지연 범위 구현 | PIX에 유지, 객체 유형·qualifier 선택으로 외부 입력 수용 |
 | 순차 연산 | concurrent Trace에 대한 DFG/OCDFG·discovery·alignment·replay·prefix precision의 거부 경로 | 지원 경계 보존. 부분순서 알고리즘 신설은 별도 요구 |
@@ -50,15 +52,15 @@ WMC의 `reported_direct`, `verification_passed`, COO/사내이사 등 역할과 
 
 ## 4. 패치 순서와 완료 조건
 
-| 순서 | ID | 패치 | 의존성 | 주요 완료 조건 |
+| 순서 | ID | 작업 / 조건부 패치 | 의존성 | 주요 완료 조건 |
 | --- | --- | --- | --- | --- |
 | 1 | ADP-00 | 현재 단독 사용·호환 기준 고정 | 없음 | 기존 입력, 출력, 공개 API, identity, 미지원 사례의 기준 확보 |
-| 2 | ADP-01 | 변환 출처 정보 범용화 | ADP-00 | 채팅·표·외부 입력의 출처 전달, 구형 채팅 입력 호환 |
-| 3 | ADP-02 | 시간 구간 공개 계약 | ADP-00 | 명시 구간 입력과 기존 앵커 입력의 의미·오류 처리 검증 |
-| 4 | ADP-03 | 외부 어댑터 연동 경로 | ADP-01, ADP-02 | PIX만 설치한 환경에서 외부 정규화 입력을 분석 |
-| 5 | ADP-04 | 통합 회귀·설치 검증과 인계 | ADP-01~03 | 기본 사용 회귀 없음, wheel 검증, 지원 범위·수정 SHA 기록 |
+| 2 | ADP-03 | 기존 API로 외부 어댑터 연동 검증 | ADP-00 | PIX만 설치한 환경에서 외부 정규화 입력을 분석 |
+| 3a | ADP-01 | 필요 시 변환 출처 정보 범용화 | 통합 계획 X1~X3에서 실제 계보 공백 확인 | 채팅·표·외부 입력의 출처 전달, 구형 채팅 입력 호환 |
+| 3b | ADP-02 | 필요 시 시간 구간 공개 계약 확장 | 통합 계획 X1~X3에서 필수 시간 표현 공백 확인 | 명시 구간 입력과 기존 앵커 입력의 의미·오류 처리 검증 |
+| 4 | ADP-04 | 필요한 회귀·설치 검증과 인계 | ADP-03 및 실제 채택된 수정 | 기본 사용 회귀 없음, wheel 검증, 지원 범위·수정 SHA 기록 |
 
-ADP-01과 ADP-02는 공통 기준 확정 뒤 독립적으로 설계할 수 있다. 통합 순서는 위 표를 따른다. 기능별 작은 커밋과 PR로 나누되, 작업 간 의존성 때문에 기능을 반쯤 제거한 상태를 병합하지 않는다. 기존 기능이 이미 요구를 충족하면 문서·검증만으로 해당 항목을 종료할 수 있다.
+실행 순서는 통합 계획의 X0~X5를 따른다. ADP-01과 ADP-02는 각각의 결함·필수 계약 공백에 대한 재현 근거가 있을 때만 X4에서 채택한다. 두 확장을 ADP-03의 선행 조건으로 강제하지 않는다. 기존 기능으로 충족하면 문서·검증으로 종료하며, 설계 정리 자체를 구현 사유로 삼지 않는다. 실제 수정은 기능별 작은 커밋과 PR로 나누고 기존 기능을 반쯤 제거한 상태를 병합하지 않는다.
 
 ### ADP-00 — 현재 단독 사용·호환 기준 고정
 
@@ -72,7 +74,9 @@ ADP-01과 ADP-02는 공통 기준 확정 뒤 독립적으로 설계할 수 있�
 
 완료: 뒤 패치가 바꿔도 되는 선택 기능과 그대로 유지해야 하는 기본 동작을 구분할 수 있다. 현재 스키마를 통과하지 못하는 입력을 새 기능 성공 사례로 기록하지 않는다.
 
-### ADP-01 — 변환 출처 정보 범용화
+### ADP-01 — 조건부 후보: 변환 출처 정보 범용화
+
+적용 조건: 기존 snapshot 속성·결과/부모 계보·Schumpeter 실행 기록으로 PIX-06의 필수 추적을 충족하지 못하는 최소 반례가 확인된다. 아래 설계는 채택 시 지킬 조건이며 구현을 미리 확정하지 않는다.
 
 주요 변경 대상: `src/pix/compute/_common.py`, `compute/context.py`, 관련 출처 계약/helper, `tabular/reader.py`, `tabular/chat.py`, 필요 시 `results.py`와 사용 안내.
 
@@ -91,7 +95,9 @@ ADP-01과 ADP-02는 공통 기준 확정 뒤 독립적으로 설계할 수 있�
 
 완료: 기본 채팅 입력의 기존 digest·identity를 보존하고, 채팅 이외 입력도 동일한 출처 전달 규약으로 분석할 수 있다. 잘못된 출처 정보 때문에 정상 결과처럼 보이는 상태를 만들지 않는다.
 
-### ADP-02 — 시간 구간 공개 계약
+### ADP-02 — 조건부 후보: 시간 구간 공개 계약
+
+적용 조건: 기존 `TimePrecision`과 앵커 표현의 공개 사용·문서 보완으로 필수 입력의 시간 의미를 보존할 수 없다는 사례가 확인된다. 하한조차 없는 시각을 복원하거나 새로운 부분순서 알고리즘을 만드는 사유로 사용하지 않는다.
 
 주요 변경 대상: `contracts/time.py`, 시간 선택을 사용하는 spec, `compute/_time.py`, Trace·constraints·temporal·handover 소비 경로, 필요 시 `results.py`.
 
@@ -112,7 +118,7 @@ ADP-01과 ADP-02는 공통 기준 확정 뒤 독립적으로 설계할 수 있�
 
 ### ADP-03 — 외부 어댑터 연동 경로
 
-주요 변경 대상: 기존 `import_table`/OCEL builder 사용 예제, 사용자 안내, public API 및 통합 테스트. 예제 추가 위치는 `examples/adapter_contract_demo.py`를 제안한다. 아직 존재하는 파일로 간주하지 않는다.
+주요 변경 대상: 기존 `import_table`/OCEL builder 사용 예제, 사용자 안내 및 통합 테스트. 기존 공개 API를 먼저 사용한다. 예제 추가 위치는 `examples/adapter_contract_demo.py`를 제안한다. 통합 계획 X3의 재현 예제를 겸하며 별도 중복 예제를 만들지 않는다. 아직 존재하는 파일로 간주하지 않는다.
 
 1. 기존 채팅 예제를 유지한다. 별도 예제에서 외부 정규화 records/OCEL을 공개 builder 또는 표 mapping으로 입력한다.
 2. 외부 어댑터는 원천 ID·활동·객체·qualifier·시간 의미·mapping 출처를 준비한다. PIX는 이 표현을 검증하고 계산한다.
@@ -126,7 +132,7 @@ ADP-01과 ADP-02는 공통 기준 확정 뒤 독립적으로 설계할 수 있�
 ### ADP-04 — 통합 회귀·설치 검증과 인계
 
 1. ADP-00 기준과 새 계약의 반례 테스트를 통합한다. 채팅·시간·인계·표 입력·공통 결과·codec·dependency 검증을 수행한다.
-2. 공통 계산/identity/codec의 변경이 포함되므로 통합 head에서 전체 Python suite와 저장소 CI의 관련 검사를 실행한다. 변경하지 않은 UI의 수동 검증을 새로 의무화하지 않는다.
+2. 공통 계산/identity/codec 변경을 실제 채택하면 통합 head에서 전체 Python suite와 저장소 CI의 관련 검사를 실행한다. 문서·fixture만 추가하면 해당 집중 검증과 설치 검증을 수행하고 재실행하지 않은 기존 CI는 역사적 근거로 구분한다. 변경하지 않은 UI의 수동 검증을 새로 의무화하지 않는다.
 3. 소스 경로 밖의 깨끗한 wheel 환경에서 기존 채팅 예제와 외부 입력 예제를 실행한다. 입력·샘플 파일 외에 Schumpeter가 설치되지 않은 상태를 확인한다.
 4. 사용 안내에 공개 API, 구형 별칭, null·구간·concurrent 한계, 입력·결과 버전, 실행 명령을 반영한다.
 5. 검증 보고서에 실제 SHA·wheel hash·OS/Python·명령·통과/실패/skip·미검증 범위를 기록한다. 옛 테스트 수치를 새 head의 실행 결과로 사용하지 않는다.
@@ -229,3 +235,5 @@ python examples/chat_handover_demo.py --output /tmp/pix-chat-compat
 - [통합 실행 인덱스](2026-10-06_PIX_INTEGRATED_EXECUTION_PLAN.md): 기존 요구 추적을 유지.
 
 현재 완료된 것은 이 계획과 접수 양식의 작성·문서 점검이다. ADP-00~04는 미착수이며, 새 보고 접수·제품 구현·테스트 통과·배포를 선언하지 않는다.
+
+후속으로 Schumpeter Integration Readiness 요구가 접수되어 실행 계획을 보완했다. 이는 Provenance의 실제 운영 보고 접수나 개발 착수를 뜻하지 않는다. 현재 단계는 계속 계획·소스 검토에 한정된다.

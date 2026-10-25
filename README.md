@@ -19,9 +19,12 @@ and [implementation/handoff](docs/reports/2026-10-10_PIX_VARIANT_CATALOG_HANDOFF
 for tested scope and remaining work. Historical reports retain their original evidence.
 
 The [adapter compatibility patch plan](docs/requirements/2026-10-25_PIX_ADAPTER_COMPATIBILITY_PATCH_PLAN.md)
-preserves standalone chat import and analysis while planning generic mapping provenance
-and explicit time-bound contracts. It also defines how future Provenance operation
-reports and development requests enter follow-up work; these patches are not yet implemented.
+preserves standalone chat import and analysis and defines how future Provenance
+operation reports enter follow-up work. The
+[Schumpeter PI Hub readiness plan](docs/requirements/2026-10-25_SCHUMPETER_PI_HUB_INTEGRATION_READINESS_PLAN.md)
+prioritizes verification of existing APIs, consumer documentation, and reusable fixtures.
+Generic mapping provenance and explicit time-bound extensions are conditional on
+demonstrated contract gaps. These plans do not record implementation or new test passes.
 
 The [integrated execution index](docs/requirements/2026-10-06_PIX_INTEGRATED_EXECUTION_PLAN.md)
 preserves the review charter and OCPM/UX source documents, maps all 38 additional

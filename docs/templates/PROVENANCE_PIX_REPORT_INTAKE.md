@@ -4,6 +4,8 @@
 
 처리 기준: [PIX 독립 사용성·어댑터 호환성 패치 계획](../requirements/2026-10-25_PIX_ADAPTER_COMPATIBILITY_PATCH_PLAN.md).
 
+Schumpeter 연동 사례는 [PI Hub 통합 검증 계획](../requirements/2026-10-25_SCHUMPETER_PI_HUB_INTEGRATION_READINESS_PLAN.md)의 PIX-01~07 및 fixture ID에 연결한다. 운영 보고가 없어도 합성 fixture 검증은 진행할 수 있으며, 그 결과를 실사용 검증으로 표시하지 않는다.
+
 ## 1. 원문과 범위
 
 | 항목 | 기록 |
@@ -28,12 +30,14 @@
 ## 3. 재현 자료
 
 - PIX commit / 패키지 버전 / 설치 방식:
+- wheel SHA-256 / 소비자 환경 / 연결된 PIX 요구·fixture ID:
 - Python / OS / 관련 선택 의존성:
 - 최소 입력 또는 합성 fixture / digest:
 - source ID·mapping 버전·digest:
 - 호출 API / spec / 규범 모델 버전:
 - 관측 정밀도 / 시간 구간 / tie 정책 / open·closed 정책:
 - 실제 출력 / status / issues / computation ID:
+- 부모 결과 artifact / source·mapping 기록 / 미관측·제외 coverage:
 - 실행 명령 / 실패 로그:
 - 기대 결과와 계산 근거:
 - 부족한 정보와 현재 확인 가능한 범위:
