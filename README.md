@@ -31,6 +31,8 @@ and [neutral integration fixture](tests/fixtures/pi_hub/README.md) now provide a
 public-API example covering OCEL round-trips, eight native result artifacts, and
 complete parent-artifact links. Installed-wheel validation runs this example and
 the existing standalone chat demo. This does not certify a Schumpeter deployment.
+See the [readiness report](docs/reports/2026-10-25_SCHUMPETER_PIX_READINESS_REPORT.md)
+for the tested commit, wheel identity, results, and remaining consumer acceptance.
 
 The [integrated execution index](docs/requirements/2026-10-06_PIX_INTEGRATED_EXECUTION_PLAN.md)
 preserves the review charter and OCPM/UX source documents, maps all 38 additional

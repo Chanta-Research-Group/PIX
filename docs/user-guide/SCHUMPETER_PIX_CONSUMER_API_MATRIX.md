@@ -3,7 +3,8 @@
 Date: 2026-10-25. Engine baseline verified: `48fe7eb67388cda1144c5bba93adbfe00933ab1c`,
 PIX `0.5.0`, canonical format V1, native result format `1.3.0`.
 This readiness patch preserves that engine source. The final fixture/tooling
-commit, actual environment and test evidence are recorded in the readiness report.
+commit, actual environment and test evidence are recorded in the
+[readiness report](../reports/2026-10-25_SCHUMPETER_PIX_READINESS_REPORT.md).
 
 `CR[T]` means `ComputationResult[T]`; `CTX` means `ComputationContext`.
 Rows below were exercised through the [consumer fixture](../../tests/fixtures/pi_hub/README.md)
