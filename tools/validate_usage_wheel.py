@@ -70,7 +70,17 @@ def main():
         # Copy examples and inputs out too: no checkout import or runtime needed.
         fixture = outside / "pi_hub"
         shutil.copytree(source / "tests/fixtures/pi_hub", fixture)
-        for name in ("chat_handover_demo.py", "adapter_contract_demo.py"):
+        current_cut_fixture = outside / "current_cut"
+        current_cut_fixture.mkdir()
+        for name in ("input.json", "expected.json"):
+            shutil.copy2(
+                source / "tests/fixtures/current_cut" / name, current_cut_fixture
+            )
+        for name in (
+            "chat_handover_demo.py",
+            "adapter_contract_demo.py",
+            "current_cut_demo.py",
+        ):
             script = outside / name
             shutil.copy2(source / "examples" / name, script)
             command = [
@@ -84,6 +94,8 @@ def main():
                 command += ["--fixture", str(fixture), "--wheel", str(wheel)]
                 if args.pix_commit is not None:
                     command += ["--pix-commit", args.pix_commit]
+            if name == "current_cut_demo.py":
+                command += ["--fixture", str(current_cut_fixture)]
             subprocess.run(command, cwd=outside, check=True)
 
 

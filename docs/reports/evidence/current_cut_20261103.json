@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-03",
+  "base_commit": "3205d832d5dcdc6901f916b35496a0c60b657e7a",
+  "engine": {
+    "package_version": "0.5.0",
+    "python_files": 240,
+    "code_sha256": "b4fef3bce21c49dd4ab700b6188bdef16f9813810718932b23029522609c7510",
+    "src_and_pyproject_unchanged": true
+  },
+  "validation_subject": {
+    "implementation_file_sha256": {
+      "examples/current_cut_demo.py": "d3b939f412cc406c7a751d8f20395dbc70a29cd43d1201e3d0617152d4ff884b",
+      "tests/fixtures/current_cut/expected.json": "8e344d55d9de58703284296e83c45c4e64663746bf1e99253c72e894167e2a34",
+      "tests/fixtures/current_cut/input.json": "e0529cadaae6bb8a2d97a789563e66925eaf3421d081d3a087c9470b45c594a5",
+      "tests/fixtures/current_cut/reference/batch_complete.result.json": "27aa8ae5cd30664586b43e566e582168a90c48506b036cee8089e68b3dc42974",
+      "tests/fixtures/current_cut/reference/batch_limited.result.json": "dea76e2099e296fb79b9610e67b6658cdaa1b8c43e77a206c3e6b58d980c0bbd",
+      "tests/fixtures/current_cut/reference/batch_prefix.result.json": "280e8cc578c135507b7693d3f8726c0fd5090d109e93e1324d4ac1336d026613",
+      "tests/fixtures/current_cut/reference/batch_review.result.json": "374f9825f474d9b2f7c23fd0b9df43d584c21649b2af399698909c77012712fb",
+      "tests/fixtures/current_cut/reference/expected.json": "8e344d55d9de58703284296e83c45c4e64663746bf1e99253c72e894167e2a34",
+      "tests/fixtures/current_cut/reference/input.json": "e0529cadaae6bb8a2d97a789563e66925eaf3421d081d3a087c9470b45c594a5",
+      "tests/fixtures/current_cut/reference/object_context_cut.result.json": "f9eae6c1c7a4c6df49bd701d900731f19f5c2b8539df02d3ed8b4a577831200e",
+      "tests/fixtures/current_cut/reference/objects.model.json": "c06c51e39de6f046ff3a758fa797cdcc3b43517b350e141be42e9de06e35fee1",
+      "tests/fixtures/current_cut/reference/objects_complete.ocel.json": "c07dba230de73a37bc0387d49d75a57e102f0b7557d7a5aa0d2a5f4804c9d08a",
+      "tests/fixtures/current_cut/reference/objects_complete.result.json": "16ab638087584de8fddc3783fc8e31c708600b03de97bca481005e11565577e4",
+      "tests/fixtures/current_cut/reference/objects_limited.result.json": "e48c60e1d2ab793f36c2e2f1e835459ebbb730c8d22b2a50a5988dfabfc57161",
+      "tests/fixtures/current_cut/reference/objects_open_as_terminal.ocel.json": "b1cc958fb8cb6771116ad1a4cbaa721d2bc8b99bc56bda0e1f6eba8051fddd32",
+      "tests/fixtures/current_cut/reference/objects_open_as_terminal.result.json": "04b32e105b14dcb9f97352bdebe04c7187a03795305d256f81aa5f646b7f7b82",
+      "tests/fixtures/current_cut/reference/objects_same_object_tie.ocel.json": "f05c7b0eb1cc700064fa6f5e4e845ceef71b69ded284c5094f74c00b7d1d67e1",
+      "tests/fixtures/current_cut/reference/objects_same_object_tie.result.json": "ba141796d8126a4e30cecc7278906f40ed68f77a3b801565361eae5eb704956a",
+      "tests/fixtures/current_cut/reference/online_checkpoint.result.json": "efc314a261141ec31f7d375f88210ab069a41be927db3b817f4d34dba178c76f",
+      "tests/fixtures/current_cut/reference/online_closed_early.result.json": "65f2930180015a5f954327aee435d3de10a91162d5ceb02aed7cb1da5799262f",
+      "tests/fixtures/current_cut/reference/online_complete.result.json": "221a1bb67e1bb42bb675fa13777ba48bb2d45d96142e1251acca1d8131876ed6",
+      "tests/fixtures/current_cut/reference/online_open.result.json": "0aa9dfe6597700cf5ce4c4fd294c7c3a072a0ff522837fb98bb0200bc2286ee4",
+      "tests/fixtures/current_cut/reference/online_proxy.result.json": "7e1a1a66882507b9a2a11d5b7d77d818152bf4e7e1737d0169c323a9b9dc6ccc",
+      "tests/fixtures/current_cut/reference/proxy_unavailable.result.json": "ef9d208f92b7d2db252b218e4fb6f69736b7aa766f2021da89082a7cc2b9d75d",
+      "tests/fixtures/current_cut/reference/run-record.json": "2dc6c4ebffc7db98ed93848d3b684b986fde0ad16d95d89f8cde16a5ddb2a267",
+      "tests/fixtures/current_cut/reference/sequential.model.json": "843d3db1c45e6a4578d11f0283ebfd9017b9267e880994be8bd0e87e57fec64c",
+      "tests/fixtures/current_cut/reference/traces_complete.result.json": "b18d484e993b8c36bcd87239438ffd6fafaf3af3013839ff4f891e89b102acf7",
+      "tests/fixtures/current_cut/reference/traces_prefix.result.json": "a1ec7a46ed866c84956956477794f6c6986d3003e8d1ff3a5a0d506b03efb4e0",
+      "tests/fixtures/current_cut/reference/traces_review.result.json": "3cd55a77264d493595d91870102420377c69c4b7cff866879910ab0320f68f0c",
+      "tests/test_current_cut_consumer.py": "5d8fcfaecb2b2dd657a158c960560f43ecf77e7e574f10244f5743718a862d0c",
+      "tools/validate_usage_wheel.py": "85c803a37aff36b838a0f68ea7031a8dada772a756954c0b58a8f13c3a2a05b3"
+    }
+  },
+  "local_python": {
+    "environment": "Linux x86_64 / Python 3.12.14 / pytest 9.2.0 / imports extras",
+    "command": "python -m pytest -q --junitxml=.artifacts/current-cut-pytest.xml",
+    "summary": "10727 passed, 42 skipped, 1169 subtests passed in 93.75s (0:01:33)",
+    "junit_suites": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "42",
+        "tests": "11938",
+        "time": "93.679",
+        "timestamp": "2026-11-03T09:11:05.070810+04:00",
+        "hostname": "2efa33c252fd"
+      }
+    ],
+    "new_consumer_cases": 25,
+    "new_consumer_failures": 0,
+    "junit_sha256": "e0a4cce7d54d0013ad50ef7a9a9bd50c0e3275d079b8a0b669390814edfc6c17"
+  },
+  "wheel": {
+    "command": "python tools/validate_usage_wheel.py --wheel .artifacts/dist/pix-0.5.0-py3-none-any.whl --output .artifacts/current-cut-wheel",
+    "sha256": "fe77b74f47c25145e276bf5329aea165ede8c7ff9270c05838a4d52547885a45",
+    "bytes": 2102672,
+    "core_only": [
+      [
+        "pix",
+        "0.5.0"
+      ]
+    ],
+    "isolated": 1,
+    "mining_passed": true,
+    "visualization_passed": true,
+    "chat_and_pi_hub_and_current_cut_examples_passed": true,
+    "current_cut_native_results": 18,
+    "current_cut_matches_reference": true,
+    "commit_declared": null
+  },
+  "pida_batch": {
+    "consumer_commit": "bbc28a39495b0c5d1b5f471ba11927e9ad64b46f",
+    "read_only_scripts": true,
+    "schemaVersion": "pida.pix.acceptance.v1",
+    "inputProfile": "synthetic",
+    "computationProfile": "real-pinned-pix-source",
+    "llmProfile": "not-used",
+    "personaIntegration": "NOT_RUN",
+    "schumpeterDependency": "none",
+    "engine": {
+      "repository": "Chanta-Research-Group/PIX",
+      "sourceCommit": "3205d832d5dcdc6901f916b35496a0c60b657e7a",
+      "sourceDigest": "b4fef3bce21c49dd4ab700b6188bdef16f9813810718932b23029522609c7510",
+      "packageVersion": "0.5.0",
+      "pythonVersion": "3.12.14",
+      "sourceVerified": true
+    },
+    "workerSha256": "f04be8198c42965eb2eb73490e3e99e873eca963bf2abca6fef34fcbf480ea7b",
+    "checks": [
+      "actual pinned engine loads from isolated different cwd",
+      "catalog includes 20 cases and failure variants",
+      "case coverage denominator remains 20",
+      "repeated calculation has identical native result identities",
+      "native parent lineage resolves",
+      "public native result version is preserved",
+      "separate evaluation case conforms to frozen model",
+      "extra review is observable deviation without an obligation verdict",
+      "bounded search is partial and not a fabricated fitness score",
+      "incomplete discovery cannot publish a frozen model",
+      "catalog cap never silently truncates variants",
+      "empty population is unavailable",
+      "unknown input fields fail closed",
+      "duplicate case identities are rejected",
+      "cross-case shared events cannot become independent sequential cases",
+      "unsupported source pin is unavailable before import",
+      "duplicate JSON members are rejected",
+      "source order is not replaced by label sorting"
+    ],
+    "passed": 18,
+    "failed": 0,
+    "limits": [
+      "Sequential batch projection only",
+      "No live agent or long-term improvement claim",
+      "No native Windows or actual Persona integration"
+    ],
+    "artifactDigests": {
+      "reflection.request.json": "21a3afca1703e596ceab556429b25e07969329be905e420be0c4645514e82f11",
+      "reflection.result.json": "0753459fda20a98deb9b86df7d5d35ccc7ac1bf3f2b4111f6a38522432e33c99",
+      "awareness-conforming.request.json": "223a57fc5d3f9c00de03aaa768fa44a68772bc5ac15a5c5ee68886e106bbaae7",
+      "awareness-conforming.result.json": "cb98264c864547105eeadb623e26e96ecb1c09823a153581bcbd41eb45fba274",
+      "awareness-deviation.request.json": "7705a07d868797526e76481ffe5e77265fd151e7d13e28fd34719259b9a21a09",
+      "awareness-deviation.result.json": "c1358b4eae97e5212304db2ead37cf839eb459b6564ec8fdbf497dc4b9aaded5",
+      "awareness-limited.request.json": "468ac0b20c0f5e48f0b61f3e2374fffa891ab11406f3861b872139da282e37c9",
+      "awareness-limited.result.json": "554d24f04a8233952b5e13454a0438b76ca8a82aa6605be5fa19e968f0033f3d",
+      "reflection-limited.request.json": "be26cb254bef8f7f5805b8e91e0144cd0ba03e487278aba0959d268f8424ee11",
+      "reflection-limited.result.json": "726f073a46897e8b78b4d1f0469d49deb656919174240e8490365469961839a5"
+    }
+  },
+  "ci": "pending on delivery commit",
+  "not_run": [
+    "Pida new online/object consumer profiles",
+    "live LLM or actual Persona provider",
+    "production deployment",
+    "long-term behavior improvement",
+    "independent reviewer acceptance"
+  ],
+  "setup_attempts": [
+    "First uninstalled environment had no pytest; installed an isolated editable dev/import environment before tests.",
+    "An initial example invocation omitted export_ocel format; corrected before acceptance runs.",
+    "A no-build-isolation wheel attempt lacked setuptools; normal build isolation succeeded."
+  ]
+}
