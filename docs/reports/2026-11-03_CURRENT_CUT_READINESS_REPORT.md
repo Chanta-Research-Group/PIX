@@ -13,6 +13,7 @@ replacement for Pida's arbitrary accepting DFG.
 | PIX main | `48fe7eb67388cda1144c5bba93adbfe00933ab1c` |
 | Previous readiness work | Draft PR #13, unmerged, `3205d832d5dcdc6901f916b35496a0c60b657e7a` |
 | Work branch | `work-pix-current-cut-20261103`, based on PR #13 |
+| Validated code/fixture pin | `92593f218bd6876ad8195a1ed4d6bf95c3c914dd`, [Draft PR #14](https://github.com/Chanta-Research-Group/PIX/pull/14) |
 | Engine/package | `0.5.0`; all 240 Python files under `src/pix` and `pyproject.toml` unchanged |
 | Engine code SHA-256 | `b4fef3bce21c49dd4ab700b6188bdef16f9813810718932b23029522609c7510` |
 | Requester inspected | `riesling-29/pida@bbc28a39495b0c5d1b5f471ba11927e9ad64b46f`, CR and unmodified worker/check |
@@ -40,7 +41,16 @@ No other app source, runtime hook, deployment, identity or policy was changed.
 | Installed wheel outside checkout, `-I`, core dependencies only | mining + visualization checks and chat + PI Hub + current-cut examples passed |
 | Current-cut native bytes from installed wheel | identical to checked-in reference; serialized checkpoint continuation equals uninterrupted result |
 | Pida's unmodified Python worker/check against exact `3205d832...` source | **18 passed, 0 failed**; actual source computation on synthetic inputs |
-| Remote multi-platform CI | pending on delivery commit; a separate evidence update records completion |
+| Remote multi-platform CI | [run 41583628268](https://github.com/Chanta-Research-Group/PIX/actions/runs/41583628268): all 5 jobs succeeded on code/fixture pin `92593f218bd6876ad8195a1ed4d6bf95c3c914dd` |
+
+Remote Linux Python 3.10 / 3.12 and macOS Python 3.13 each passed 10,727 tests,
+with 42 skips and 1,169 subtests. Windows Python 3.13 passed 10,728 tests, with
+41 skips and 1,169 subtests. All four installed-wheel checks ran all three
+standalone examples successfully. Node tests: 258 passed; browser tests: 42
+passed. The CI checkout merge commit `b36d75408714f3b7fac7fccbe0bcee6b3cacd153`
+has the same Git tree `9f1e5bdca9853b058d07c314e82ad48d85a940bb` as the named
+head, verified through GitHub. Later report/evidence-only commits do not alter
+this validated code, fixtures or attributes.
 
 Local wheel SHA-256:
 `fe77b74f47c25145e276bf5329aea165ede8c7ff9270c05838a4d52547885a45`
