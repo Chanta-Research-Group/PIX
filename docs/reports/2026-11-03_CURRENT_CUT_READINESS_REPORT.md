@@ -63,6 +63,14 @@ Windows checkout, and the 25 consumer tests passed again. Engine source endings
 are untouched. The complete suite above predates this attributes-only behavior
 change; the remote CI revision is recorded separately.
 
+CI run `41583139513` on `c83a551e2f272a8a879c5adcf6967c8ea768cb0f`
+passed all Python test steps but failed the Windows installed-wheel check:
+the fixture attributes edit had accidentally replaced the existing vendor
+`-text` rule, changing `VIZ-LICENSE.txt` bytes at checkout. The existing rule was
+restored alongside the new fixture rule. A fresh `core.autocrlf=true` simulation
+then preserved all 36 fixture/vendor files and verified all four Graphviz
+manifest hashes. This superseded run is not reported as a full CI pass.
+
 ## What these results establish
 
 - The same two-event prefix has terminal DFG cost 2 and online prefix witness

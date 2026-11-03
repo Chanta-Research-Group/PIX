@@ -166,5 +166,18 @@
       "failed": 0
     },
     "gitattributes_sha256": "d3218f30fd09669d2b6daa756834281b9c6b05e348411256d9f3f62db84e9cb4"
+  },
+  "ci_portability_failure": {
+    "commit": "c83a551e2f272a8a879c5adcf6967c8ea768cb0f",
+    "run_id": 41583139513,
+    "failed_job": 125742469437,
+    "step": "Installed wheel outside checkout",
+    "cause": "Fixture attributes edit replaced the pre-existing vendor -text rule; Graphviz VIZ-LICENSE.txt provenance mismatched after Windows checkout.",
+    "correction": "Restored original vendor rule and retained the new fixture LF rule.",
+    "simulation_after_correction": {
+      "byte_identical_files": 36,
+      "graphviz_manifest_hashes_verified": 4
+    },
+    "corrected_gitattributes_sha256": "1b7e28c60f825ac2c8ebe8a4790a87e05496c493bf6fb38874ab05703baf3e39"
   }
 }
