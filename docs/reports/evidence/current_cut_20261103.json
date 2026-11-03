@@ -150,5 +150,21 @@
     "First uninstalled environment had no pytest; installed an isolated editable dev/import environment before tests.",
     "An initial example invocation omitted export_ocel format; corrected before acceptance runs.",
     "A no-build-isolation wheel attempt lacked setuptools; normal build isolation succeeded."
-  ]
+  ],
+  "implementation_commit": "84559006528c8a12ef901fa1fc6ef56650db493b",
+  "portability_followup": {
+    "core_autocrlf_true_before": {
+      "input_CRLF_count": 9,
+      "byte_match": false
+    },
+    "scoped_fixture_LF_after": {
+      "json_files": 28,
+      "all_bytes_match": true
+    },
+    "consumer_recheck": {
+      "passed": 25,
+      "failed": 0
+    },
+    "gitattributes_sha256": "d3218f30fd09669d2b6daa756834281b9c6b05e348411256d9f3f62db84e9cb4"
+  }
 }

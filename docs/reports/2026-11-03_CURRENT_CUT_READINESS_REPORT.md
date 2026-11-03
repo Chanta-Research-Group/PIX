@@ -56,6 +56,13 @@ required OCEL export format and was fixed before acceptance. A wheel attempt
 without build isolation lacked setuptools; the normal isolated build succeeded.
 These setup attempts are not counted as engine defects or hidden test passes.
 
+A portability follow-up reproduced Git's `core.autocrlf=true` changing input
+JSON bytes (9 CRLF endings). Scoped Git attributes now pin only current-cut
+fixture JSON to LF. All 28 JSON files then matched byte-for-byte in a simulated
+Windows checkout, and the 25 consumer tests passed again. Engine source endings
+are untouched. The complete suite above predates this attributes-only behavior
+change; the remote CI revision is recorded separately.
+
 ## What these results establish
 
 - The same two-event prefix has terminal DFG cost 2 and online prefix witness

@@ -1,3 +1,2 @@
-# Vendored bytes are authenticated by provenance manifests. Preserve them on
-# every checkout, including Windows with core.autocrlf enabled.
-src/pix/viewer/assets/vendor/* -text
+# Native current-cut fixture bytes are hashed and compared across platforms.
+/tests/fixtures/current_cut/**/*.json text eol=lf

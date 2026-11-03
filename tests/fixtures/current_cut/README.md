@@ -44,3 +44,7 @@ for unsupported time/order/model conversions and host-owned scope/revision rules
 To deliberately regenerate reference bytes after reviewing a change, run into
 a new directory and compare all artifacts before replacing the tracked fixture.
 Tests also verify the tracked reference bytes against the public calculation.
+
+The fixture JSON paths are pinned to LF through Git attributes, including on
+Windows checkouts with `core.autocrlf=true`. This preserves the native byte
+hashes; it does not normalize or change existing PIX engine source files.
