@@ -1,0 +1,20 @@
+{
+  "source_id": "synthetic",
+  "objects": [
+    {"id": "task:1", "type": "task"},
+    {"id": "agent:A", "type": "agent"},
+    {"id": "agent:B", "type": "agent"},
+    {"id": "artifact:1", "type": "artifact"},
+    {"id": "message:1", "type": "message"}
+  ],
+  "object_relations": [
+    {"source": "artifact:1", "target": "task:1", "qualifier": "produced_for"}
+  ],
+  "events": [
+    {"id": "e1", "activity": "started", "occurred_at": "2026-01-05T09:00:00+09:00", "relationships": [["task:1", "task"], ["agent:A", "actor"]]},
+    {"id": "e2", "activity": "artifact_written", "occurred_at": "2026-01-05T09:01:00+09:00", "relationships": [["task:1", "task"], ["agent:A", "actor"], ["artifact:1", "output"]]},
+    {"id": "e3", "activity": "verification_executed", "occurred_at": "2026-01-05T09:02:00+09:00", "relationships": [["task:1", "task"], ["agent:A", "actor"], ["artifact:1", "checked"]]},
+    {"id": "e4", "activity": "sent", "occurred_at": "2026-01-05T09:03:00+09:00", "relationships": [["task:1", "task"], ["agent:A", "actor"], ["message:1", "sent"]]},
+    {"id": "e5", "activity": "received", "occurred_at": "2026-01-05T09:03:30+09:00", "relationships": [["task:1", "task"], ["agent:B", "actor"], ["message:1", "received"]]}
+  ]
+}

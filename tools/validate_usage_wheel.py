@@ -1,6 +1,7 @@
 """Run existing wheel checks in an external, runtime-dependencies-only venv."""
 
 import argparse
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -12,6 +13,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--wheel", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--pix-commit", help="Caller-declared wheel source commit")
     args = parser.parse_args()
     wheel, output = args.wheel.resolve(), args.output.resolve()
     source = Path(__file__).resolve().parents[1]
@@ -64,6 +66,25 @@ def main():
                 cwd=outside,
                 check=True,
             )
+
+        # Copy examples and inputs out too: no checkout import or runtime needed.
+        fixture = outside / "pi_hub"
+        shutil.copytree(source / "tests/fixtures/pi_hub", fixture)
+        for name in ("chat_handover_demo.py", "adapter_contract_demo.py"):
+            script = outside / name
+            shutil.copy2(source / "examples" / name, script)
+            command = [
+                str(python),
+                "-I",
+                str(script),
+                "--output",
+                str(output / name.removesuffix(".py")),
+            ]
+            if name == "adapter_contract_demo.py":
+                command += ["--fixture", str(fixture), "--wheel", str(wheel)]
+                if args.pix_commit is not None:
+                    command += ["--pix-commit", args.pix_commit]
+            subprocess.run(command, cwd=outside, check=True)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,16 @@
+{
+  "event_count": 5,
+  "object_count": 5,
+  "e2o_count": 14,
+  "o2o_count": 1,
+  "task_sequence": ["started", "artifact_written", "verification_executed", "sent", "received"],
+  "execution_count": 1,
+  "variant_frequencies": [1],
+  "task_dfg_edges": [["artifact_written", "verification_executed", 1], ["sent", "received", 1], ["started", "artifact_written", 1], ["verification_executed", "sent", 1]],
+  "constraint_counts": {"artifact_before_check": [1, 0, 0, 0], "ack_60s": [1, 0, 0, 0]},
+  "task_gap_microseconds": [30000000, 60000000, 60000000, 60000000],
+  "handover": [["agent:A", "agent:B", "message:1", 30000000, 30000000]],
+  "unmatched_sends": [],
+  "unmatched_receives": [],
+  "order_conflicts": []
+}

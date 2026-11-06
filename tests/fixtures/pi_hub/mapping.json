@@ -1,0 +1,8 @@
+{
+  "format": "pix.example.normalized-records.v1",
+  "id_namespace": "demo",
+  "event_id_field": "id",
+  "activity_field": "activity",
+  "time_field": "occurred_at",
+  "time_semantics": "exact"
+}
