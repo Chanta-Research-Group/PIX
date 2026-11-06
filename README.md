@@ -34,6 +34,13 @@ the existing standalone chat demo. This does not certify a Schumpeter deployment
 See the [readiness report](docs/reports/2026-10-25_SCHUMPETER_PIX_READINESS_REPORT.md)
 for the tested commit, wheel identity, results, and remaining consumer acceptance.
 
+The [current-cut capability matrix](docs/user-guide/CURRENT_CUT_PROFILES.md)
+answers [Pida's November 3 request](docs/change_requests/CR-PIDA-PIX-2026-11-03-RESPONSE.md)
+with existing public operators and a [reproducible comparison fixture](tests/fixtures/current_cut/README.md).
+The example contrasts terminal DFG cost, approximate open-prefix bounds, and
+joint object alignment; it preserves unknown and unsupported outcomes.
+Installed-wheel validation also runs this example outside the checkout.
+
 The [integrated execution index](docs/requirements/2026-10-06_PIX_INTEGRATED_EXECUTION_PLAN.md)
 preserves the review charter and OCPM/UX source documents, maps all 38 additional
 requirement IDs to their amended acceptance criteria, and connects the first
