@@ -1,0 +1,89 @@
+{
+  "source_hashes": {
+    ".gitattributes": true,
+    "examples/collaboration_handover_demo.py": true,
+    "tests/test_collaboration_handover_consumer.py": true,
+    "tests/fixtures/collaboration_handover/expected.json": true,
+    "tests/fixtures/collaboration_handover/input.json": true,
+    "tests/fixtures/collaboration_handover/local_projection.json": true,
+    "tests/fixtures/collaboration_handover/pida-envelope-v1.json": true,
+    "tests/fixtures/collaboration_handover/README.md": true,
+    "examples/current_cut_demo.py": true,
+    "tests/fixtures/current_cut/input.json": true,
+    "tests/fixtures/current_cut/expected.json": true,
+    "docs/reports/2026-11-07_PARTICIPANT_LINEAGE_FIX.md": true
+  },
+  "evidence_hashes": {
+    "focused-tests.txt": true,
+    "test-attribute-position-failure.txt": true,
+    "original-review-probe.json": true,
+    "lineage-probe.json": true,
+    "native/run-record.json": true
+  },
+  "record_source_hashes": {
+    "examples/collaboration_handover_demo.py": true,
+    "examples/current_cut_demo.py": true,
+    "tests/fixtures/collaboration_handover/expected.json": true,
+    "tests/fixtures/collaboration_handover/input.json": true,
+    "tests/fixtures/collaboration_handover/local_projection.json": true,
+    "tests/fixtures/collaboration_handover/pida-envelope-v1.json": true,
+    "tests/fixtures/current_cut/expected.json": true,
+    "tests/fixtures/current_cut/input.json": true
+  },
+  "native_artifact_hashes": {
+    "early.ocel.json": true,
+    "early.result.json": true,
+    "expected.json": true,
+    "input.json": true,
+    "late.ocel.json": true,
+    "late.result.json": true,
+    "local.ocel.json": true,
+    "local.result.json": true,
+    "local_projection.json": true,
+    "objects_complete.ocel.json": true,
+    "objects_complete.result.json": true,
+    "objects_open_as_terminal.ocel.json": true,
+    "objects_open_as_terminal.result.json": true,
+    "online_complete.result.json": true,
+    "online_open.result.json": true,
+    "pida-envelope-v1.json": true
+  },
+  "python": "3.13.14 (main, Jun 23 2026, 15:19:27) [MSC v.1944 64 bit (AMD64)]",
+  "participant_binding_mutations": {
+    "host_id": {
+      "source_digest_changed": true,
+      "computation_id_changed": true,
+      "native_bytes_changed": true,
+      "numerical_value_same": true,
+      "status": "computed"
+    },
+    "org_session_id": {
+      "source_digest_changed": true,
+      "computation_id_changed": true,
+      "native_bytes_changed": true,
+      "numerical_value_same": true,
+      "status": "computed"
+    },
+    "agent_id": {
+      "source_digest_changed": true,
+      "computation_id_changed": true,
+      "native_bytes_changed": true,
+      "numerical_value_same": true,
+      "status": "computed"
+    },
+    "binding_revision": {
+      "source_digest_changed": true,
+      "computation_id_changed": true,
+      "native_bytes_changed": true,
+      "numerical_value_same": true,
+      "status": "computed"
+    }
+  },
+  "independent_native_matches_committed": true,
+  "independent_result_count": 7,
+  "full_binding_roundtrip": {
+    "participant-a@binding-1": true,
+    "participant-b@binding-7": true
+  },
+  "restored_computation_matches": true
+}

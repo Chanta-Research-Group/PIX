@@ -1,0 +1,36 @@
+{
+  "recorded_at": "2026-11-07T12:34:24.005731+00:00",
+  "owner_baseline": "158e791dd601cf63ca02d3ebc824774dcfd86d3e",
+  "scope": "historical input conversion and direct native public API probe; no new model/runtime/network calls",
+  "commands": [
+    "node docs/reports/evidence/live-pida-smoke-20261107/export.mjs D:/ChantaResearchGroup/pida",
+    "uv run --no-project --with tzdata python docs/reports/evidence/live-pida-smoke-20261107/analyze.py --output docs/reports/evidence/live-pida-smoke-20261107/native-final"
+  ],
+  "source_hashes": {
+    "docs/reports/evidence/live-pida-smoke-20261107/export.mjs": "06f461899de9897b3becce607e5a0b200dd639e287623cfce515ea1c1594decb",
+    "docs/reports/evidence/live-pida-smoke-20261107/analyze.py": "a0282167838ee2839613129d1cbbf758fb4c60ddac28016273b01e68efc9b0c5",
+    "docs/reports/evidence/live-pida-smoke-20261107/export-record.json": "1b63a0883c58d94ba4d2dc50bc9ad4a4e390c91239bb30972fe06d0cb227dd8f",
+    "docs/reports/evidence/live-pida-smoke-20261107/historical-source-check.json": "cefdd87ad9cd462bad5c0001c8c867fbb39127f54fef63c1712b07f958d1affa",
+    "docs/reports/evidence/live-pida-smoke-20261107/export.json": "2a0f67aa0bbd9a0faf50ea74985e540bcbefe7e3a733e3dcb6e86b936ef27fb6",
+    "docs/reports/evidence/live-pida-smoke-20261107/actual.ocel.json": "5650f29a238247da888172beb2f861021a1a05a2f23f25cdc47496bd249a40ef",
+    "docs/reports/evidence/live-pida-smoke-20261107/source/historical-live-harness.mjs": "e15abf1f1204556b69033ed70ef3007fde33096f94dc184b7cd84f10ae27031d",
+    "docs/reports/evidence/live-pida-smoke-20261107/source/observation-bundle.json": "870f07cb277608845d52bf682db4bccf6e615959fb47632d3bbbdb8a065c824b",
+    "docs/reports/evidence/live-pida-smoke-20261107/source/result.json": "fa27691ac5acd7d70dd1d504af6f89bec62a5d4785e58d998837c45d8f1082ce",
+    "docs/reports/evidence/live-pida-smoke-20261107/source/start.json": "17681fe76c30b4d211c18cdb366b3d458ca2ff1b1fcb116f5cc6062b6883e1d4",
+    "docs/reports/evidence/live-pida-smoke-20261107/native-final/run-record.json": "1a2011877b75900df7fd530eeffdccfcd036ccc0fa118b2b780072d3ddaa1cce"
+  },
+  "result_artifact_count": 18,
+  "checks": [
+    "source events/times/sequence unchanged",
+    "nine unique event times",
+    "single source/session/run contiguous sequence1..9",
+    "hand counted edges8/8/8/8/4/2",
+    "native codecs exact bytes",
+    "all result parents resolve",
+    "engine source diff from3205d832 empty"
+  ],
+  "test_suite_rerun": "NOT_RUN; no new compatible engine defect or production change",
+  "independent_probe_review": "NOT_RUN",
+  "desktop_acceptance": "NOT_RUN",
+  "new_model_calls": 0
+}

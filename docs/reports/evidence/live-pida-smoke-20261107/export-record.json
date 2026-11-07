@@ -1,0 +1,31 @@
+{
+  "operation": "exportOcel on historical immutable bundle only",
+  "node": "v24.18.0",
+  "producerCheckoutHead": "e98c23e4a1794e144ffaf700aa0b908b90515c7d",
+  "sourceBundleSha256": "870f07cb277608845d52bf682db4bccf6e615959fb47632d3bbbdb8a065c824b",
+  "moduleHashes": {
+    "dist/ocel.js": "1a26da2766675239344561a293e96a37cb5bc5f6aaaaafc7ba35a9df9d98072a",
+    "dist/private-state.js": "a4476582166c944ea96d2c124387167bf2f38833e21e59ba92c52f14f59329b7",
+    "dist/integration-contract.js": "170cd6865587afe63e2822d2ef99d86308ed80d27dc9af7ed46859c521d1ff31",
+    "dist/execution-contract.js": "8ce55644e6c56e0f680db84cd88ae781e0225cc9a6aaf633ab9afeab57fa9636",
+    "dist/run-context.js": "5e36928e4483a989b28fae187c7edfaf9d3b660f4f765559e295c7251c58e42a",
+    "src/ocel.ts": "13efdb5cb6c33eb5b15c42845c98811f025bc069963495b8f70fb62ebbe346b9",
+    "src/observation.ts": "fdecd46e1a4a75ff4608090ecd1d89afecbdd83a6c2f346a112958c777d83ebe",
+    "package.json": "5f392005c4b3bebd19b9acae97dc92f8d2488f130f2548ae0b438693f160ffa4",
+    "pnpm-lock.yaml": "2c4756e8c8dab7b2287f73c26f7f1862d22cbabf91324313fdf148c4c4b37af0",
+    "bun.lock": "77804b53563060bd1c18a7287ae50697e463f61c26c552a222a2315d9359fc53"
+  },
+  "scriptSha256": "06f461899de9897b3becce607e5a0b200dd639e287623cfce515ea1c1594decb",
+  "sourceRunHistorical": "See copied start.json and result.json; exporter execution is later and separate",
+  "metadata": {
+    "mapping": "pida.ocel20/1",
+    "sourceDigest": "80294049a426f6aae2b431d01b0ec414b19acbb8f9dcadc5999713eecfc7176a",
+    "digest": "b441895caac687f5bba2e0a305b7210b626cac4bd348a527bbab4caf29157240",
+    "complete": true,
+    "knownLimits": [
+      "RUNTIME_OBSERVED_EVENTS_ONLY",
+      "SEQUENCE_IS_OBSERVATION_ORDER_NOT_CAUSAL_ORDER",
+      "PROCESS_CONFORMANCE_IS_NOT_ARTIFACT_CORRECTNESS"
+    ]
+  }
+}

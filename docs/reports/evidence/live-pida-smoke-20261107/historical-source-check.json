@@ -1,0 +1,35 @@
+{
+  "reviewed_consumer_commit": "039d8ef3f153e1d8499566223fad876c8f2105b8",
+  "checks": {
+    "src/vera-dispatch-provider.ts": {
+      "recorded_sha256": "5a6cf0968e69fa2c24630813756a2d49f63a091c63a2e8033057ee308dc849de",
+      "at_reviewed_commit": "5a6cf0968e69fa2c24630813756a2d49f63a091c63a2e8033057ee308dc849de",
+      "git_object_available": true,
+      "matches_reviewed_commit": true
+    },
+    "src/vera-persona-provider.ts": {
+      "recorded_sha256": "46b007094f107459a7685e578bf32432a6da9fd3a9695e1f4e76a3575adb7610",
+      "at_reviewed_commit": "46b007094f107459a7685e578bf32432a6da9fd3a9695e1f4e76a3575adb7610",
+      "git_object_available": true,
+      "matches_reviewed_commit": true
+    },
+    "src/provider-catalog.ts": {
+      "recorded_sha256": "bf605762e85db11090fd9c355a80e886bb0b3a53c7991052548534b2ad19b87c",
+      "at_reviewed_commit": "bf605762e85db11090fd9c355a80e886bb0b3a53c7991052548534b2ad19b87c",
+      "git_object_available": true,
+      "matches_reviewed_commit": true
+    },
+    "src/runtime.ts": {
+      "recorded_sha256": "5924418e5e30406830da233df9116cbea9f3c1ed597330a0fd7103284756b7ed",
+      "at_reviewed_commit": "5924418e5e30406830da233df9116cbea9f3c1ed597330a0fd7103284756b7ed",
+      "git_object_available": true,
+      "matches_reviewed_commit": true
+    },
+    "scripts/vera-dispatch-live-smoke.mjs": {
+      "recorded_sha256": "e15abf1f1204556b69033ed70ef3007fde33096f94dc184b7cd84f10ae27031d",
+      "at_reviewed_commit": null,
+      "git_object_available": false,
+      "matches_reviewed_commit": false
+    }
+  }
+}

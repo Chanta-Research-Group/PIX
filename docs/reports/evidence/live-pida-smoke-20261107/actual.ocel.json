@@ -1,0 +1,1243 @@
+{
+  "eventTypes": [
+    {
+      "name": "context_input_included",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.attempt",
+          "type": "float"
+        },
+        {
+          "name": "payload.authorization",
+          "type": "string"
+        },
+        {
+          "name": "payload.fingerprint_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload.inclusion_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload.input_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.input_digest_scheme",
+          "type": "string"
+        },
+        {
+          "name": "payload.request_id",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_id",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_index",
+          "type": "float"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "context_snapshot_loaded",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "model_request",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.api",
+          "type": "string"
+        },
+        {
+          "name": "payload.attempt",
+          "type": "float"
+        },
+        {
+          "name": "payload.context_window",
+          "type": "float"
+        },
+        {
+          "name": "payload.effective_config_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.fingerprint_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload.model",
+          "type": "string"
+        },
+        {
+          "name": "payload.model_max_tokens",
+          "type": "float"
+        },
+        {
+          "name": "payload.provider_generation",
+          "type": "string"
+        },
+        {
+          "name": "payload.request_id",
+          "type": "string"
+        },
+        {
+          "name": "payload.system_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.thinking_level",
+          "type": "string"
+        },
+        {
+          "name": "payload.tools_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_id",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_index",
+          "type": "float"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "model_response",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.attempt",
+          "type": "float"
+        },
+        {
+          "name": "payload.cache_read_tokens",
+          "type": "float"
+        },
+        {
+          "name": "payload.duration_ms",
+          "type": "float"
+        },
+        {
+          "name": "payload.first_output_ms",
+          "type": "float"
+        },
+        {
+          "name": "payload.input_tokens",
+          "type": "float"
+        },
+        {
+          "name": "payload.output_tokens",
+          "type": "float"
+        },
+        {
+          "name": "payload.reasoning_tokens",
+          "type": "float"
+        },
+        {
+          "name": "payload.request_id",
+          "type": "string"
+        },
+        {
+          "name": "payload.stop_reason",
+          "type": "string"
+        },
+        {
+          "name": "payload.tokens",
+          "type": "float"
+        },
+        {
+          "name": "payload.turn_id",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_index",
+          "type": "float"
+        },
+        {
+          "name": "payload.usage_status",
+          "type": "string"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "run_context_loaded",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "run_finished",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.status",
+          "type": "string"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "run_started",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "turn_finished",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_id",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_index",
+          "type": "float"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "turn_started",
+      "attributes": [
+        {
+          "name": "capture_mode",
+          "type": "string"
+        },
+        {
+          "name": "data_scope",
+          "type": "string"
+        },
+        {
+          "name": "payload_digest",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_id",
+          "type": "string"
+        },
+        {
+          "name": "payload.turn_index",
+          "type": "float"
+        },
+        {
+          "name": "sequence_number",
+          "type": "float"
+        },
+        {
+          "name": "source_event_id",
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "objectTypes": [
+    {
+      "name": "Agent",
+      "attributes": [
+        {
+          "name": "agent_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "ModelRequest",
+      "attributes": [
+        {
+          "name": "request_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Run",
+      "attributes": [
+        {
+          "name": "reported_status",
+          "type": "string"
+        },
+        {
+          "name": "run_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Session",
+      "attributes": [
+        {
+          "name": "session_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Task",
+      "attributes": [
+        {
+          "name": "task_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Turn",
+      "attributes": [
+        {
+          "name": "index",
+          "type": "float"
+        },
+        {
+          "name": "turn_id",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "pida:Event:ff75c4868d0dcdd5d3b1727d94b399cfb8280eba6c99565f85a7dd6bad11e2ef",
+      "type": "run_started",
+      "time": "2026-11-07T12:10:22.296Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "bdec3102-5d5a-45d1-a9c7-b61da344df20"
+        },
+        {
+          "name": "sequence_number",
+          "value": 1
+        },
+        {
+          "name": "payload_digest",
+          "value": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        }
+      ]
+    },
+    {
+      "id": "pida:Event:ffa5c7cb65e5e7ba8c7cfdd775937e9bc9a4cb7d4329cc1f1fe7f569397462ef",
+      "type": "context_snapshot_loaded",
+      "time": "2026-11-07T12:10:22.383Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "12009b4c-56cd-4c47-b49f-516e84a24a73"
+        },
+        {
+          "name": "sequence_number",
+          "value": 2
+        },
+        {
+          "name": "payload_digest",
+          "value": "76ad303404efe031a784fce3a26fa6f7853a9cc9fdec47d5f429876c8a922df1"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        }
+      ]
+    },
+    {
+      "id": "pida:Event:869cdee58676a0058b4826bee56d644c3ae383bc5ed06f909f2892a079be575b",
+      "type": "run_context_loaded",
+      "time": "2026-11-07T12:10:22.384Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "c6326e7c-b771-4f68-a5c9-fedb0f854009"
+        },
+        {
+          "name": "sequence_number",
+          "value": 3
+        },
+        {
+          "name": "payload_digest",
+          "value": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        }
+      ]
+    },
+    {
+      "id": "pida:Event:3345940edffcc4fb9176d938bd8cdf8d1e5832f5029caf1cd81fc72c2379a6cf",
+      "type": "turn_started",
+      "time": "2026-11-07T12:10:22.387Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "9013fccc-5346-4e6d-b755-eeba3271f64d"
+        },
+        {
+          "name": "sequence_number",
+          "value": 4
+        },
+        {
+          "name": "payload_digest",
+          "value": "ab2415bbb82ac704baaecbc20c5950f30b8ae259d7f5be78f2e1ef97f84bf88f"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        },
+        {
+          "name": "payload.turn_id",
+          "value": "943cb2ab-0c55-4560-a188-62cfb1f4e918"
+        },
+        {
+          "name": "payload.turn_index",
+          "value": 1
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:5b66a0a55ba81e19ab5202fa5f5e2cd17bc33a3ed2146482049c2b6218aaee4c",
+          "qualifier": "turn"
+        }
+      ]
+    },
+    {
+      "id": "pida:Event:58eab7a8d57c2e88d8fe3728614117a66463a5777f44506a76cecd5a977d8321",
+      "type": "model_request",
+      "time": "2026-11-07T12:10:22.389Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "f8169d79-085b-492e-bb09-0a307da7755e"
+        },
+        {
+          "name": "sequence_number",
+          "value": 5
+        },
+        {
+          "name": "payload_digest",
+          "value": "9983ffc29f820b812a0c3d7103eb85179a512ecf81f3e1a61e94e37b056caccd"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        },
+        {
+          "name": "payload.turn_id",
+          "value": "943cb2ab-0c55-4560-a188-62cfb1f4e918"
+        },
+        {
+          "name": "payload.turn_index",
+          "value": 1
+        },
+        {
+          "name": "payload.model",
+          "value": "gpt-6-astra"
+        },
+        {
+          "name": "payload.api",
+          "value": "openai-responses"
+        },
+        {
+          "name": "payload.request_id",
+          "value": "942aca38-01a5-4128-95b9-c755a297cace"
+        },
+        {
+          "name": "payload.attempt",
+          "value": 1
+        },
+        {
+          "name": "payload.provider_generation",
+          "value": "8eb9dbb8-df64-495d-8d68-f80015a0d17f"
+        },
+        {
+          "name": "payload.thinking_level",
+          "value": "low"
+        },
+        {
+          "name": "payload.context_window",
+          "value": 272000
+        },
+        {
+          "name": "payload.model_max_tokens",
+          "value": 128000
+        },
+        {
+          "name": "payload.effective_config_digest",
+          "value": "8a9e6b55e1b5bd83f7cffd45676f9217de34a35b8801ef9bcdf3cbf8d61a3c86"
+        },
+        {
+          "name": "payload.system_digest",
+          "value": "eee8ad6f25dc7d61351364ef2b4c5e7c67f3291ae9756f41e77748818f09710a"
+        },
+        {
+          "name": "payload.tools_digest",
+          "value": "9153cb64fead616e6bb00a0e35948cbcaf9658a220e9ebb723367e1dcb51bc54"
+        },
+        {
+          "name": "payload.fingerprint_scope",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:5b66a0a55ba81e19ab5202fa5f5e2cd17bc33a3ed2146482049c2b6218aaee4c",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:79ba818f23a58c563e7cf8015f1a75ff489d16d06c7d958306e862402fc06ece",
+          "qualifier": "request"
+        }
+      ]
+    },
+    {
+      "id": "pida:Event:7039bdab2f96d28615811182c47de37d0909819a933007ccb8d66438fa44f04d",
+      "type": "context_input_included",
+      "time": "2026-11-07T12:10:22.393Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "a4cf1267-c19f-4f59-a0fc-cfaba3f405ab"
+        },
+        {
+          "name": "sequence_number",
+          "value": 6
+        },
+        {
+          "name": "payload_digest",
+          "value": "75908ed63620cf27e92545796206076b7b2c2417bb966a49c4d20268eb5e51b8"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        },
+        {
+          "name": "payload.turn_id",
+          "value": "943cb2ab-0c55-4560-a188-62cfb1f4e918"
+        },
+        {
+          "name": "payload.turn_index",
+          "value": 1
+        },
+        {
+          "name": "payload.request_id",
+          "value": "942aca38-01a5-4128-95b9-c755a297cace"
+        },
+        {
+          "name": "payload.attempt",
+          "value": 1
+        },
+        {
+          "name": "payload.inclusion_scope",
+          "value": "pi-logical-context"
+        },
+        {
+          "name": "payload.input_digest",
+          "value": "73f6d49667c28e5588d71fe9afb937184ad812e996f6ade934f0bc5c37f8f574"
+        },
+        {
+          "name": "payload.input_digest_scheme",
+          "value": "source-hmac-sha256"
+        },
+        {
+          "name": "payload.fingerprint_scope",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "payload.authorization",
+          "value": "current-provider-check"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:5b66a0a55ba81e19ab5202fa5f5e2cd17bc33a3ed2146482049c2b6218aaee4c",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:79ba818f23a58c563e7cf8015f1a75ff489d16d06c7d958306e862402fc06ece",
+          "qualifier": "request"
+        }
+      ]
+    },
+    {
+      "id": "pida:Event:b463554aa8c8788b34dd4401cb5e01c97fe70d1517dd109b135a548b61baf162",
+      "type": "model_response",
+      "time": "2026-11-07T12:10:26.441Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "10596209-51dd-4219-99e2-2c22eeb70804"
+        },
+        {
+          "name": "sequence_number",
+          "value": 7
+        },
+        {
+          "name": "payload_digest",
+          "value": "22242716f57878319216e9ad4420034c4ab64b3f97296c8f51e8df7ff27cec98"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        },
+        {
+          "name": "payload.turn_id",
+          "value": "943cb2ab-0c55-4560-a188-62cfb1f4e918"
+        },
+        {
+          "name": "payload.turn_index",
+          "value": 1
+        },
+        {
+          "name": "payload.request_id",
+          "value": "942aca38-01a5-4128-95b9-c755a297cace"
+        },
+        {
+          "name": "payload.attempt",
+          "value": 1
+        },
+        {
+          "name": "payload.stop_reason",
+          "value": "stop"
+        },
+        {
+          "name": "payload.usage_status",
+          "value": "reported"
+        },
+        {
+          "name": "payload.input_tokens",
+          "value": 477
+        },
+        {
+          "name": "payload.output_tokens",
+          "value": 9
+        },
+        {
+          "name": "payload.cache_read_tokens",
+          "value": 0
+        },
+        {
+          "name": "payload.reasoning_tokens",
+          "value": 0
+        },
+        {
+          "name": "payload.tokens",
+          "value": 486
+        },
+        {
+          "name": "payload.first_output_ms",
+          "value": 3794.0645999999997
+        },
+        {
+          "name": "payload.duration_ms",
+          "value": 4052.5314
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:5b66a0a55ba81e19ab5202fa5f5e2cd17bc33a3ed2146482049c2b6218aaee4c",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:79ba818f23a58c563e7cf8015f1a75ff489d16d06c7d958306e862402fc06ece",
+          "qualifier": "request"
+        }
+      ]
+    },
+    {
+      "id": "pida:Event:4f4928f86bfc273c255fd04b30e3e17c0a048da0f64b2f5ae75151925d61dc7a",
+      "type": "turn_finished",
+      "time": "2026-11-07T12:10:26.443Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "bd5f6167-c0ef-450f-ad64-c406423730e3"
+        },
+        {
+          "name": "sequence_number",
+          "value": 8
+        },
+        {
+          "name": "payload_digest",
+          "value": "ab2415bbb82ac704baaecbc20c5950f30b8ae259d7f5be78f2e1ef97f84bf88f"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        },
+        {
+          "name": "payload.turn_id",
+          "value": "943cb2ab-0c55-4560-a188-62cfb1f4e918"
+        },
+        {
+          "name": "payload.turn_index",
+          "value": 1
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:5b66a0a55ba81e19ab5202fa5f5e2cd17bc33a3ed2146482049c2b6218aaee4c",
+          "qualifier": "turn"
+        }
+      ]
+    },
+    {
+      "id": "pida:Event:975018808579d2942c77f4c63f162c67fdf5683eec89b88576ffab8695de136e",
+      "type": "run_finished",
+      "time": "2026-11-07T12:10:26.454Z",
+      "attributes": [
+        {
+          "name": "source_id",
+          "value": "26653b7d-c79b-4dc7-9057-92cee8feee22"
+        },
+        {
+          "name": "source_event_id",
+          "value": "d8c972ba-b525-4a32-9247-00bf7e052517"
+        },
+        {
+          "name": "sequence_number",
+          "value": 9
+        },
+        {
+          "name": "payload_digest",
+          "value": "da885275a7120c1868be8b6bcb26f82735a3662651245d4deb52faad3b0eb389"
+        },
+        {
+          "name": "capture_mode",
+          "value": "native-runtime"
+        },
+        {
+          "name": "data_scope",
+          "value": "metadata-only"
+        },
+        {
+          "name": "payload.status",
+          "value": "completed"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "run"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+      "type": "Agent",
+      "attributes": [
+        {
+          "name": "agent_id",
+          "value": "faca69c0-776a-4398-a975-f61607f7822d",
+          "time": "2026-11-07T12:10:22.296Z"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "pida:ModelRequest:79ba818f23a58c563e7cf8015f1a75ff489d16d06c7d958306e862402fc06ece",
+      "type": "ModelRequest",
+      "attributes": [
+        {
+          "name": "request_id",
+          "value": "942aca38-01a5-4128-95b9-c755a297cace",
+          "time": "2026-11-07T12:10:22.389Z"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "in_run"
+        },
+        {
+          "objectId": "pida:Turn:5b66a0a55ba81e19ab5202fa5f5e2cd17bc33a3ed2146482049c2b6218aaee4c",
+          "qualifier": "in_turn"
+        }
+      ]
+    },
+    {
+      "id": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+      "type": "Run",
+      "attributes": [
+        {
+          "name": "run_id",
+          "value": "bf18229d-3b96-4c6a-bb86-572e450b3358",
+          "time": "2026-11-07T12:10:22.296Z"
+        },
+        {
+          "name": "reported_status",
+          "value": "completed",
+          "time": "2026-11-07T12:10:26.454Z"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+          "qualifier": "in_session"
+        },
+        {
+          "objectId": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+          "qualifier": "for_task"
+        },
+        {
+          "objectId": "pida:Agent:39afb69fecc3e0dbc48eae0a3728b319ffc1d2a6728b5d38109009aebb66b224",
+          "qualifier": "executed_by"
+        }
+      ]
+    },
+    {
+      "id": "pida:Session:eb3ae93bd1c577eab1d8a91c61346113620b479e3e25f316cda46e6048577768",
+      "type": "Session",
+      "attributes": [
+        {
+          "name": "session_id",
+          "value": "01a1b5ea-bcd1-71cc-971a-7ad21e15fc1f",
+          "time": "2026-11-07T12:10:22.296Z"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "pida:Task:7a6ca2e0836c04370a838c689532d0b74b86f73f58c51725f36f1e83108736c0",
+      "type": "Task",
+      "attributes": [
+        {
+          "name": "task_id",
+          "value": "53cad4a1-0882-4772-8726-29f906cc17da",
+          "time": "2026-11-07T12:10:22.296Z"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "pida:Turn:5b66a0a55ba81e19ab5202fa5f5e2cd17bc33a3ed2146482049c2b6218aaee4c",
+      "type": "Turn",
+      "attributes": [
+        {
+          "name": "turn_id",
+          "value": "943cb2ab-0c55-4560-a188-62cfb1f4e918",
+          "time": "2026-11-07T12:10:22.387Z"
+        },
+        {
+          "name": "index",
+          "value": 1,
+          "time": "2026-11-07T12:10:22.387Z"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "pida:Run:5aa645faef984beb22f7de02028b1820bf46f5a9802ab2948b8909d46184f32d",
+          "qualifier": "in_run"
+        }
+      ]
+    }
+  ]
+}
