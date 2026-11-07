@@ -19,3 +19,4 @@ src/pix/viewer/assets/vendor/* -text
 /docs/reports/evidence/live-pida-smoke-20261107/independent-review/* -text whitespace=cr-at-eol
 /docs/reports/evidence/local-analysis-peer-20261107/**/*.json -text
 /docs/reports/evidence/local-analysis-peer-20261107/binding_oracle.py -text
+/docs/reports/evidence/organization-linked-runs-20261107/*.json -text

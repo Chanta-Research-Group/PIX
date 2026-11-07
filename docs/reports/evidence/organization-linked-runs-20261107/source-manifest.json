@@ -1,0 +1,28 @@
+{
+  "schema": "pix.owner-proposal.organization-linked-runs-source/1",
+  "recorded_at": "2026-11-07T13:27:18.438456+00:00",
+  "pida_commit": "5ea098c0f06e12d0024878446ec3a2705f949934",
+  "source_blob_sha256": {
+    "src/organization.ts": "d1e2a4bd00fde5f88564c3b05e874ed16057dae0acb7e1fab824c0ae9043d49e",
+    "src/agent-supervisor.ts": "f0c1e45cf927119ed769c9c025f6e7ad7bbc4a4483068da3acf17a62cea05090",
+    "src/client.ts": "79b41ce7b758a134adf1e2103643a913ddf78ff19b739eede3f1dc62f9e9a222",
+    "test/organization.test.mjs": "38c7512f079d20251f7cf6a975f96bb19b40f1176ec95a19f9a680e55a3baa1f",
+    "test/organization-admission.test.mjs": "3a8137353cec44559a3ad996b3c5f3d8727a42078c9c99a98df481e0dbb2a51a"
+  },
+  "consumer_root_only_commit": "b4025ee18c8c099fd6e00c864117dbad707c1bed",
+  "own_base_commit": "f72147cbfd747d92a4f2a7bce31ef353aff1a167",
+  "engine_pin": "3205d832d5dcdc6901f916b35496a0c60b657e7a",
+  "engine_changed": false,
+  "files": {
+    "docs/reports/2026-11-07_ORGANIZATION_LINKED_RUN_PROTOCOL.md": "e759634f1452563159f1ac1c84d7a58f9ffb137630646a3bc89583658d5b9ab7",
+    "docs/reports/evidence/organization-linked-runs-20261107/protocol-vectors.json": "cbf0f47907b6827e41177a0f06c9612cd3e80267db445e93f4270a6a37ea3e9f"
+  },
+  "validation": {
+    "source_and_test_files": "read only; no producer tests rerun",
+    "symbolic_vectors": 12,
+    "runtime_or_model_calls": 0
+  },
+  "owner_confirmation": "pida owner confirmed no public org-wide snapshot token/revision; proposed linked exports non-atomic",
+  "approval_scope": "root accepted proposal direction; optional narrow index only if it does not delay final package, otherwise artifact-link report",
+  "remaining": "No aggregate implementation, independent review, actual multi-agent run or desktop acceptance in this slice"
+}

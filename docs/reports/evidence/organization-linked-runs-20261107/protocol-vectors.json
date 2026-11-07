@@ -1,0 +1,37 @@
+{
+  "schema": "pix.owner-proposal.organization-linked-runs-vectors/1",
+  "provenance": "Symbolic contract examples only; these IDs are not actual runtime observations",
+  "profile": "schumpeter.pida-organization-linked-runs/1",
+  "base": {
+    "org_session": "O",
+    "root_receipt": {"job_id": "A0", "root_task_id": "TA", "root_attempt_id": "AA0"},
+    "tasks": [
+      {"id": "TA", "orgId": "O", "agentId": "agent-A", "attempts": ["AA0", "AA1"]},
+      {"id": "TB", "orgId": "O", "agentId": "agent-B", "attempts": ["AB0"]}
+    ],
+    "attempts": [
+      {"id": "AA0", "taskId": "TA", "jobId": "A0", "kind": "initial", "number": 1},
+      {"id": "AA1", "taskId": "TA", "jobId": "A1", "kind": "continuation", "number": 2},
+      {"id": "AB0", "taskId": "TB", "jobId": "B0", "kind": "initial", "number": 1}
+    ],
+    "join": {"id": "J", "orgId": "O", "taskId": "TA", "parentJobId": "A0", "revision": 1, "required": ["B0"], "optional": [], "continuationJobId": "A1", "results": [{"assignmentJobId": "B0", "attemptId": "AB0", "jobId": "B0"}]},
+    "expected_job_membership": ["A0", "A1", "B0"],
+    "snapshot_atomic": false,
+    "coverage": "partial",
+    "global_order": null
+  },
+  "vectors": [
+    {"name": "initial-child-continuation", "expected": "Three separately captured native runs; receipt still identifies A0; no merged DFG"},
+    {"name": "nested-child-final-attempt", "change": "Add TB attempt AB1/job B1; outer join assignment stays B0 while result job/attempt becomes B1/AB1", "expected": "Retain B0 and B1 as distinct component jobs on TB; do not reject solely for assignmentJobId != jobId"},
+    {"name": "same-agent-unrelated", "change": "agent-A also has job X on task TX in org O2", "expected": "Exclude X; agent equality does not establish membership"},
+    {"name": "missing-child-export", "change": "B0 export unavailable", "expected": "Keep B0 expected but unavailable; retain A0/A1 results; no zero count or whole-org claim"},
+    {"name": "receipt-replaced-by-latest", "change": "Receipt job changed A0 to A1", "expected": "Reject anchor mismatch"},
+    {"name": "wrong-native-join", "change": "B0 job reports another owner/task/attempt", "expected": "Reject contradictory component identity, not ordinary coverage gap"},
+    {"name": "moving-cut", "change": "Membership, join revision or any component export differs on reread", "expected": "Mark capture unstable/partial; new bounded capture has new identity"},
+    {"name": "same-time-different-journals", "change": "A0 and B0 events share timestamps and local sequence 1", "expected": "Keep separate journal domains; no cross-run ordering"},
+    {"name": "native-time-tie", "change": "Two original events in B0 have equal timestamps", "expected": "Preserve times, counts and original sequence; preserve native sequential-unavailable status"},
+    {"name": "complete-but-unknown", "change": "Bundle complete true with manifest EVIDENCE_OR_STORAGE_INCOMPLETE and verification UNKNOWN", "expected": "Retain all three coverage domains; execution completed is not accepted artifact"},
+    {"name": "never-started", "change": "Expected job cancelled before native run/session exists", "expected": "No-run component, not zero-event successful trace or fabricated native IDs"},
+    {"name": "conflicting-duplicate", "change": "Same producer source_event_id appears with different metadata in two component exports", "expected": "Reject conflicting identity; never silently double-count or repair"}
+  ]
+}
