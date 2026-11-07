@@ -1,0 +1,250 @@
+{
+  "artifacts": {
+    "early.ocel.json": "f2e26104377737a72d37a7133dde97ec6fdcb96c6034dd01fdf6f8033345644a",
+    "early.result.json": "eda1cfadb85ee5ba0daa64184d7e5fcddfb9c5f6b088a2a8a34b782fcf610ac5",
+    "expected.json": "0a4305c40686a296fedc57d212168a9aedc93e8b9236ff0d5f1327491865f12b",
+    "input.json": "1c8b66b8e19877b05704f4efd7060a553e8448fa7bf59012ed4e62a0185476a8",
+    "late.ocel.json": "8e839f2edfd59e42d6e599a44e9f311d30b5cbbc173608b775ae831a33fab8fe",
+    "late.result.json": "510b59e2235dd2459cf19f86aae34f67f3935ca15b2a2aae36e99c9b1efacd29",
+    "local.ocel.json": "cb0d54e6bde488a17cda84c77799de9c094da08f2028d65cc15efc2a45bf81f2",
+    "local.result.json": "cef425c613e3c43bc416084bfd4cba30a24f064e26404c66e63e265dc0d50361",
+    "local_projection.json": "8b20a641447dfde5b160f64af1a712779c5385093d7f3cfea4e01d249e1fdea6",
+    "objects_complete.ocel.json": "c07dba230de73a37bc0387d49d75a57e102f0b7557d7a5aa0d2a5f4804c9d08a",
+    "objects_complete.result.json": "16ab638087584de8fddc3783fc8e31c708600b03de97bca481005e11565577e4",
+    "objects_open_as_terminal.ocel.json": "b1cc958fb8cb6771116ad1a4cbaa721d2bc8b99bc56bda0e1f6eba8051fddd32",
+    "objects_open_as_terminal.result.json": "04b32e105b14dcb9f97352bdebe04c7187a03795305d256f81aa5f646b7f7b82",
+    "online_complete.result.json": "e28e4bec5e02385af1f42f458fd366e5f2503d6b39a5c2d489afb35dc4251651",
+    "online_open.result.json": "6e67b355c2fd8fa3b993b1745eaae7c1adc40b41e01c1ff7b74dd1fd3101c8df",
+    "pida-envelope-v1.json": "ee7386c009799ac52b976b26c99b45b4fceae4dc78338581045da8c71aebfdfe"
+  },
+  "fixture": "pix.synthetic-collaboration-observations/1",
+  "limits": [
+    "Synthetic evidence, not a deployed producer adapter or desktop acceptance.",
+    "Receipt means durable enqueue, not model input, execution or acceptance.",
+    "Case sequence is separate explicit evidence; receipt offsets cannot supply it.",
+    "Object terminal completion is not live object-cut conformance.",
+    "Participant grouping is a declared immutable binding snapshot."
+  ],
+  "ocel_source_digests": {
+    "early": {
+      "algorithm": "sha256",
+      "hexdigest": "b41cc1a2b0138dc50473d6dac9fb830e26a22736afac4a77cc193f6f383a531d",
+      "version": "pix.ocel.canonical.v1"
+    },
+    "late": {
+      "algorithm": "sha256",
+      "hexdigest": "95bf30544cc38676cedbc6485e7eab43a02d899c0750896b3aedc5b14a414eaa",
+      "version": "pix.ocel.canonical.v1"
+    },
+    "local": {
+      "algorithm": "sha256",
+      "hexdigest": "c15d1568e25cd99b9a17558eb3acdaec539ffc72550d0d566a84e68652c1590c",
+      "version": "pix.ocel.canonical.v1"
+    },
+    "objects_complete": {
+      "algorithm": "sha256",
+      "hexdigest": "577b0dc83aa501c26bffd24d3f655f67afca40bd4170495cca8d85b15c7c7669",
+      "version": "pix.ocel.canonical.v1"
+    },
+    "objects_open_as_terminal": {
+      "algorithm": "sha256",
+      "hexdigest": "e890d5d1553582c753b9f90117caaae22b0d9adc5e18286b3fcbcc4e7044a6d5",
+      "version": "pix.ocel.canonical.v1"
+    }
+  },
+  "results": {
+    "early": {
+      "artifact": "early.result.json",
+      "computation_id": "pix.computation.v1:sha256:b102ab20e4b60012b0c21b49dd56390962c5db5b00c4088cb97bac67b266ccb2",
+      "issues": [
+        "unmatched_handover_events"
+      ],
+      "operator": "pix.discover_handover",
+      "sha256": "eda1cfadb85ee5ba0daa64184d7e5fcddfb9c5f6b088a2a8a34b782fcf610ac5",
+      "source_digest": "pix.ocel.canonical.v1:sha256:b41cc1a2b0138dc50473d6dac9fb830e26a22736afac4a77cc193f6f383a531d"
+    },
+    "late": {
+      "artifact": "late.result.json",
+      "computation_id": "pix.computation.v1:sha256:811d76db122d8906d7e8808cc7541414381ee0826287afc836a81140a2e68b56",
+      "issues": [
+        "unmatched_handover_events",
+        "handover_order_conflicts"
+      ],
+      "operator": "pix.discover_handover",
+      "sha256": "510b59e2235dd2459cf19f86aae34f67f3935ca15b2a2aae36e99c9b1efacd29",
+      "source_digest": "pix.ocel.canonical.v1:sha256:95bf30544cc38676cedbc6485e7eab43a02d899c0750896b3aedc5b14a414eaa"
+    },
+    "local": {
+      "artifact": "local.result.json",
+      "computation_id": "pix.computation.v1:sha256:4e5deedb7e0fcc0e57c44e43ddd01d3b00ca0e7bcb81f27958006c7d408f4ad0",
+      "issues": [
+        "unmatched_handover_events"
+      ],
+      "operator": "pix.discover_handover",
+      "sha256": "cef425c613e3c43bc416084bfd4cba30a24f064e26404c66e63e265dc0d50361",
+      "source_digest": "pix.ocel.canonical.v1:sha256:c15d1568e25cd99b9a17558eb3acdaec539ffc72550d0d566a84e68652c1590c"
+    },
+    "objects_complete": {
+      "artifact": "objects_complete.result.json",
+      "computation_id": "pix.computation.v1:sha256:568487aff509337b71eaf4f31ef7728ea2c2fcfe0a1fecd7c06072cfa25a7e8c",
+      "issues": [],
+      "operator": "pix.align_object_log",
+      "sha256": "16ab638087584de8fddc3783fc8e31c708600b03de97bca481005e11565577e4",
+      "source_digest": "pix.ocel.canonical.v1:sha256:577b0dc83aa501c26bffd24d3f655f67afca40bd4170495cca8d85b15c7c7669"
+    },
+    "objects_open_as_terminal": {
+      "artifact": "objects_open_as_terminal.result.json",
+      "computation_id": "pix.computation.v1:sha256:50d228495b9b7e506eb3689736fedf69fae2b34691644c0c8e28d5a4ab935152",
+      "issues": [],
+      "operator": "pix.align_object_log",
+      "sha256": "04b32e105b14dcb9f97352bdebe04c7187a03795305d256f81aa5f646b7f7b82",
+      "source_digest": "pix.ocel.canonical.v1:sha256:e890d5d1553582c753b9f90117caaae22b0d9adc5e18286b3fcbcc4e7044a6d5"
+    },
+    "online_complete": {
+      "artifact": "online_complete.result.json",
+      "computation_id": "pix.computation.v1:sha256:46384273185bd0acb9d2b4750925055337b5d2b3393cf3c163fed1225a84e1a5",
+      "issues": [
+        "approximate_online_alignment"
+      ],
+      "operator": "pix.case_centric.online_alignment.snapshot",
+      "sha256": "e28e4bec5e02385af1f42f458fd366e5f2503d6b39a5c2d489afb35dc4251651",
+      "source_digest": "pix.stream.prefix.v1:sha256:7702d44390feb47c755b85c5ebdd201cea419fce6eace4bfc2ffde7b46ab2e29"
+    },
+    "online_open": {
+      "artifact": "online_open.result.json",
+      "computation_id": "pix.computation.v1:sha256:b7d90c19ef8c15ab31f068f7c648e5e6b5a36292261dcaebd5eff14c288ec7cd",
+      "issues": [
+        "approximate_online_alignment",
+        "open_cases",
+        "final_cost_unresolved"
+      ],
+      "operator": "pix.case_centric.online_alignment.snapshot",
+      "sha256": "6e67b355c2fd8fa3b993b1745eaae7c1adc40b41e01c1ff7b74dd1fd3101c8df",
+      "source_digest": "pix.stream.prefix.v1:sha256:618e0d1863d979987d7b404e4ac65f8cebf6b27e25ccf301cafef18defdfd8fa"
+    }
+  },
+  "sources": {
+    "examples/collaboration_handover_demo.py": "4c8189d31b517ef591db98cb262c9ec1220f0a7c0c877a5c76f5ab44f97e3e22",
+    "examples/current_cut_demo.py": "d3b939f412cc406c7a751d8f20395dbc70a29cd43d1201e3d0617152d4ff884b",
+    "tests/fixtures/collaboration_handover/expected.json": "0a4305c40686a296fedc57d212168a9aedc93e8b9236ff0d5f1327491865f12b",
+    "tests/fixtures/collaboration_handover/input.json": "1c8b66b8e19877b05704f4efd7060a553e8448fa7bf59012ed4e62a0185476a8",
+    "tests/fixtures/collaboration_handover/local_projection.json": "8b20a641447dfde5b160f64af1a712779c5385093d7f3cfea4e01d249e1fdea6",
+    "tests/fixtures/collaboration_handover/pida-envelope-v1.json": "ee7386c009799ac52b976b26c99b45b4fceae4dc78338581045da8c71aebfdfe",
+    "tests/fixtures/current_cut/expected.json": "8e344d55d9de58703284296e83c45c4e64663746bf1e99253c72e894167e2a34",
+    "tests/fixtures/current_cut/input.json": "e0529cadaae6bb8a2d97a789563e66925eaf3421d081d3a087c9470b45c594a5"
+  },
+  "summary": {
+    "early": {
+      "group_edges": [
+        [
+          "org-b",
+          "org-a",
+          1
+        ]
+      ],
+      "links": [
+        [
+          "send-response",
+          "receive-response"
+        ]
+      ],
+      "order_conflicts": [],
+      "status": "computed",
+      "unmatched_receives": [
+        "receive-orphan"
+      ],
+      "unmatched_sends": [
+        "send-pending",
+        "send-request"
+      ]
+    },
+    "late": {
+      "group_edges": [
+        [
+          "org-a",
+          "org-b",
+          1
+        ],
+        [
+          "org-b",
+          "org-a",
+          1
+        ]
+      ],
+      "links": [
+        [
+          "send-request",
+          "receive-request"
+        ],
+        [
+          "send-response",
+          "receive-response"
+        ]
+      ],
+      "order_conflicts": [
+        [
+          "send-request",
+          "receive-request"
+        ]
+      ],
+      "status": "computed",
+      "unmatched_receives": [
+        "receive-orphan"
+      ],
+      "unmatched_sends": [
+        "send-pending"
+      ]
+    },
+    "local": {
+      "group_edges": [],
+      "links": [
+        [
+          "local-post",
+          "local-receipt"
+        ]
+      ],
+      "order_conflicts": [],
+      "status": "computed",
+      "unmatched_receives": [],
+      "unmatched_sends": [
+        "local-answer"
+      ]
+    },
+    "objects_complete": {
+      "cost": 0,
+      "moves": {
+        "log": 0,
+        "model": 0,
+        "silent": 0,
+        "synchronous": 4
+      },
+      "outcome": "optimal",
+      "status": "computed"
+    },
+    "objects_open_as_terminal": {
+      "cost": 1,
+      "moves": {
+        "log": 0,
+        "model": 1,
+        "silent": 0,
+        "synchronous": 3
+      },
+      "outcome": "optimal",
+      "status": "computed"
+    },
+    "online_complete": {
+      "bound_scope": "accepting_model_alignment_upper_bound",
+      "closed": true,
+      "cost": 0,
+      "final_cost_unresolved": false,
+      "status": "partial"
+    },
+    "online_open": {
+      "bound_scope": "model_prefix_alignment_upper_bound",
+      "closed": false,
+      "cost": 0,
+      "final_cost_unresolved": true,
+      "status": "partial"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "provenance": "Hand-authored semantic projection of Schumpeter PR8 qualifiers, not captured exporter bytes. Source and native ID encodings remain consumer-owned.",
+  "source_revision": "237417a5e5742888f565b30581387c7a2833a7f3",
+  "artifact_bytes": {
+    "result-a.json": "{\"total\":42}\n",
+    "result-b.txt": "verified input\n"
+  },
+  "artifact_revisions": {
+    "result-a.json": "sha256:248ebeb0b683f0d77a826b33eaba67543c4f4d89e9b3495565300dae105fb838",
+    "result-b.txt": "sha256:b7c1a36bce79ae90e25b8cc260af1fd22ded88c0b59904a2176fd5e4bba6c788"
+  },
+  "criterion_bytes": "{\"fixture\":\"two-exact-revisions\"}\n",
+  "acceptance_bytes": "{\"fixture\":\"observed-local-review\",\"verdict\":\"UNKNOWN\"}\n",
+  "objects": [
+    [
+      "message-q",
+      "message"
+    ],
+    [
+      "message-answer",
+      "message"
+    ],
+    [
+      "org-a",
+      "organization"
+    ],
+    [
+      "org-b",
+      "organization"
+    ],
+    [
+      "task-1",
+      "task"
+    ],
+    [
+      "sha256:641f9b0a5f181b14f703e8a6146712c46e205b17f95822430ce22a5a63054a95",
+      "criterion_revision"
+    ],
+    [
+      "45ae6053cae980be65eabd986149fd65749b65c000b1ef914c9b07f7606e61e5",
+      "acceptance"
+    ],
+    [
+      "sha256:248ebeb0b683f0d77a826b33eaba67543c4f4d89e9b3495565300dae105fb838",
+      "artifact_revision"
+    ],
+    [
+      "sha256:b7c1a36bce79ae90e25b8cc260af1fd22ded88c0b59904a2176fd5e4bba6c788",
+      "artifact_revision"
+    ]
+  ],
+  "events": [
+    {
+      "id": "local-post",
+      "activity": "message.post",
+      "time": "2026-01-01T00:00:00+00:00",
+      "relations": [
+        [
+          "message-q",
+          "sent"
+        ],
+        [
+          "org-a",
+          "sender"
+        ],
+        [
+          "org-b",
+          "recipient"
+        ]
+      ]
+    },
+    {
+      "id": "local-receipt",
+      "activity": "message.receipt",
+      "time": "2026-01-01T00:00:01+00:00",
+      "relations": [
+        [
+          "message-q",
+          "received"
+        ],
+        [
+          "org-b",
+          "recipient"
+        ]
+      ]
+    },
+    {
+      "id": "local-answer",
+      "activity": "message.post",
+      "time": "2026-01-01T00:00:02+00:00",
+      "relations": [
+        [
+          "message-answer",
+          "sent"
+        ],
+        [
+          "message-q",
+          "responds_to"
+        ],
+        [
+          "org-b",
+          "sender"
+        ],
+        [
+          "org-a",
+          "recipient"
+        ]
+      ]
+    },
+    {
+      "id": "local-submit",
+      "activity": "contract.submit",
+      "time": "2026-01-01T00:00:03+00:00",
+      "relations": [
+        [
+          "sha256:248ebeb0b683f0d77a826b33eaba67543c4f4d89e9b3495565300dae105fb838",
+          "submitted"
+        ],
+        [
+          "sha256:b7c1a36bce79ae90e25b8cc260af1fd22ded88c0b59904a2176fd5e4bba6c788",
+          "submitted"
+        ],
+        [
+          "sha256:641f9b0a5f181b14f703e8a6146712c46e205b17f95822430ce22a5a63054a95",
+          "evaluated_against"
+        ],
+        [
+          "task-1",
+          "subject"
+        ]
+      ]
+    },
+    {
+      "id": "local-review",
+      "activity": "contract.review",
+      "time": "2026-01-01T00:00:04+00:00",
+      "relations": [
+        [
+          "sha256:248ebeb0b683f0d77a826b33eaba67543c4f4d89e9b3495565300dae105fb838",
+          "evaluated"
+        ],
+        [
+          "sha256:b7c1a36bce79ae90e25b8cc260af1fd22ded88c0b59904a2176fd5e4bba6c788",
+          "evaluated"
+        ],
+        [
+          "sha256:641f9b0a5f181b14f703e8a6146712c46e205b17f95822430ce22a5a63054a95",
+          "evaluated_against"
+        ],
+        [
+          "45ae6053cae980be65eabd986149fd65749b65c000b1ef914c9b07f7606e61e5",
+          "records"
+        ],
+        [
+          "task-1",
+          "subject"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Correction recorded during the subsequent collaboration fixture slice, 2026-11-07.
+The initial readiness report and focused-tests.txt incorrectly labelled the 61-test
+uv run as Python 3.11.9 after querying bare `python --version` separately.
+That bare interpreter was not the interpreter selected by `uv run --no-project`.
+Running the same uv tool/dependency selection and printing sys.version reported:
+3.13.14 (main, Jun 23 2026, 15:19:27) [MSC v.1944 64 bit (AMD64)].
+The subsequent pytest traceback also identified the uv-managed Python 3.13 path.
+The readiness report/log environment label was corrected; the original executed
+command, output (61 passed in 2.62s) and tool chunk 0553f7 are unchanged.
+No Python 3.11 acceptance is claimed from that run.

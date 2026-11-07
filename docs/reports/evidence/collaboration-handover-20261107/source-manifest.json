@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-11-07T12:02:31.780803+00:00",
+  "pix_base_commit": "6e9af5ee1b670de39a87be406518fea49dffdfec",
+  "branch": "work/pix-owner-intake-20261107",
+  "test_python_version": "3.13.14 (uv-selected, printed during native run)",
+  "os": "Windows-10-10.0.26200-SP0",
+  "direct_tests": {
+    "command": "uv run --no-project --with pytest --with tzdata python -m pytest -q tests/test_collaboration_handover_consumer.py tests/test_current_cut_consumer.py tests/test_pi_hub_consumer.py tests/compute/test_handover.py",
+    "passed": 82,
+    "new_tests": 21,
+    "exit_code": 0,
+    "output_sha256": "a450a411439f74095c3381173205830f164317795d0b7ad6230182d174145d90"
+  },
+  "source_hashes": {
+    ".gitattributes": "a103180bd4cd869240e14dc54c42634b90bcd8abf68c865e2db9646e8cc2727c",
+    "examples/collaboration_handover_demo.py": "434c89fb5a7eadacef1dfe0ab4aba497fcca139ad2ae3c7f30daaa7b00ffdf3e",
+    "tests/test_collaboration_handover_consumer.py": "c32dcb309599caceaaf50a455d9fb8898ce253187666d55eb71352df458a66db",
+    "tests/fixtures/collaboration_handover/expected.json": "0a4305c40686a296fedc57d212168a9aedc93e8b9236ff0d5f1327491865f12b",
+    "tests/fixtures/collaboration_handover/input.json": "795262a8487ace2218951d764dd0331837902ccfa1be4840bb87ee13619b7b42",
+    "tests/fixtures/collaboration_handover/local_projection.json": "8b20a641447dfde5b160f64af1a712779c5385093d7f3cfea4e01d249e1fdea6",
+    "tests/fixtures/collaboration_handover/pida-envelope-v1.json": "ee7386c009799ac52b976b26c99b45b4fceae4dc78338581045da8c71aebfdfe",
+    "tests/fixtures/collaboration_handover/README.md": "6d61f8fd6830342b0954896329d8f71fd7ed0b18e42f479db286581dd6f80664",
+    "examples/current_cut_demo.py": "d3b939f412cc406c7a751d8f20395dbc70a29cd43d1201e3d0617152d4ff884b",
+    "tests/fixtures/current_cut/input.json": "e0529cadaae6bb8a2d97a789563e66925eaf3421d081d3a087c9470b45c594a5",
+    "tests/fixtures/current_cut/expected.json": "8e344d55d9de58703284296e83c45c4e64663746bf1e99253c72e894167e2a34"
+  },
+  "inspected_owner_files": {
+    "D:/ChantaResearchGroup/pida/src/collaboration.ts": "af264d0477c52b5243c5e3c6dd77713f11aa7cd29ed62062754570f597a941b2",
+    "D:/ChantaResearchGroup/pida/fixtures/collaboration/envelope-v1.json": "ee7386c009799ac52b976b26c99b45b4fceae4dc78338581045da8c71aebfdfe",
+    "D:/ChantaResearchGroup/Schumpeter-integration-20261107/src/schumpeter/collaboration.py": "70662902fdee412c272bc89b7c705b4f6d18671d21927ef5d2a09355d34715a9",
+    "D:/ChantaResearchGroup/Schumpeter-integration-20261107/src/schumpeter/collaboration_cli.py": "f8f568e490b8da9dd326cbdb83fc3186f45c104af72afcbbcd03cc151608073f"
+  },
+  "owner_revisions": {
+    "schumpeter_pr8": "237417a5e5742888f565b30581387c7a2833a7f3",
+    "pida_local_commit": "50d1ed49294cb8acfabb00badd72da6877e22c30"
+  },
+  "native_record_sha256": "a5fc7f251842ad7ac8e4700df03c077788c7e15a6090860264d7562921d39cb5",
+  "independent_review": "NOT_RUN",
+  "consumer_projection": "NOT_RUN",
+  "desktop_acceptance": "NOT_RUN"
+}

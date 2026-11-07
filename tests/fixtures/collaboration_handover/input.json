@@ -1,0 +1,181 @@
+{
+  "schema": "pix.synthetic-collaboration-observations/1",
+  "provenance": "Hand-authored fixture, not a captured Schumpeter/Pida deployment",
+  "participants": [
+    {
+      "id": "participant-a@binding-1",
+      "organization_id": "org-a",
+      "host_id": "host-a",
+      "org_session_id": "session-a",
+      "agent_id": "agent-a",
+      "binding_revision": "binding-1"
+    },
+    {
+      "id": "participant-b@binding-7",
+      "organization_id": "org-b",
+      "host_id": "host-b",
+      "org_session_id": "session-b",
+      "agent_id": "agent-b",
+      "binding_revision": "binding-7"
+    }
+  ],
+  "observations": [
+    {
+      "id": "send-request",
+      "kind": "dispatch_observed",
+      "actor": "participant-a@binding-1",
+      "producer_id": "schumpeter-fixture",
+      "payload_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "time": "2026-01-01T00:00:10+00:00",
+      "source_ref": "fixture:dispatch-ledger-a@r1",
+      "source_position": 0,
+      "request_id": "request-1",
+      "recipient_organization_id": "org-b"
+    },
+    {
+      "id": "send-response",
+      "kind": "dispatch_observed",
+      "actor": "participant-b@binding-7",
+      "producer_id": "schumpeter-fixture",
+      "payload_digest": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "time": "2026-01-01T00:00:20+00:00",
+      "source_ref": "fixture:dispatch-ledger-b@r1",
+      "source_position": 0,
+      "request_id": "response-1",
+      "recipient_organization_id": "org-a"
+    },
+    {
+      "id": "unrelated-input",
+      "kind": "context_input_included",
+      "actor": "participant-a@binding-1",
+      "job_id": "unrelated-9",
+      "time": "2026-01-01T00:00:20+00:00",
+      "source_ref": "fixture:runtime-ledger-a@r1",
+      "source_position": 0
+    },
+    {
+      "id": "receive-response",
+      "kind": "job_enqueued",
+      "actor": "participant-a@binding-1",
+      "receipt_id": "receipt-response@r1",
+      "producer_id": "schumpeter-fixture",
+      "job_id": "native-response-1",
+      "payload_digest": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "time": "2026-01-01T00:00:21+00:00",
+      "source_ref": "fixture:receipt-ledger-a@r1",
+      "source_position": 0,
+      "request_id": "response-1",
+      "recipient_organization_id": "org-a"
+    },
+    {
+      "id": "send-pending",
+      "kind": "dispatch_observed",
+      "actor": "participant-a@binding-1",
+      "producer_id": "schumpeter-fixture",
+      "payload_digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+      "time": "2026-01-01T00:00:22+00:00",
+      "source_ref": "fixture:dispatch-ledger-a@r1",
+      "source_position": 1,
+      "request_id": "pending-1",
+      "recipient_organization_id": "org-b"
+    },
+    {
+      "id": "receive-orphan",
+      "kind": "job_enqueued",
+      "actor": "participant-b@binding-7",
+      "receipt_id": "receipt-orphan@r1",
+      "producer_id": "other-producer",
+      "job_id": "native-pending-1",
+      "payload_digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+      "time": "2026-01-01T00:00:22+00:00",
+      "source_ref": "fixture:receipt-ledger-b@r1",
+      "source_position": 1,
+      "request_id": "pending-1",
+      "recipient_organization_id": "org-b"
+    },
+    {
+      "id": "accept-local",
+      "kind": "local_acceptance_observed",
+      "actor": "participant-b@binding-7",
+      "artifact_revisions": [
+        "artifact-a@r1",
+        "artifact-b@r7"
+      ],
+      "decision_ref": "fixture:acceptance-local@r1",
+      "time": "2026-01-01T00:00:23+00:00",
+      "source_ref": "fixture:acceptance-ledger-b@r1",
+      "source_position": 0
+    },
+    {
+      "id": "receive-request",
+      "kind": "job_enqueued",
+      "actor": "participant-b@binding-7",
+      "receipt_id": "receipt-request@r1",
+      "producer_id": "schumpeter-fixture",
+      "job_id": "native-request-1",
+      "payload_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "time": "2026-01-01T00:00:09+00:00",
+      "source_ref": "fixture:receipt-ledger-b@r1",
+      "source_position": 0,
+      "request_id": "request-1",
+      "recipient_organization_id": "org-b"
+    }
+  ],
+  "cuts": {
+    "early": [
+      "send-request",
+      "send-response",
+      "unrelated-input",
+      "receive-response",
+      "send-pending",
+      "receive-orphan",
+      "accept-local"
+    ],
+    "late": [
+      "send-request",
+      "send-response",
+      "unrelated-input",
+      "receive-response",
+      "send-pending",
+      "receive-orphan",
+      "accept-local",
+      "receive-request"
+    ]
+  },
+  "sequential_source": {
+    "source_ref": "fixture:case-ledger-1@r1",
+    "sequence_basis": "explicit_per_case_append_sequence",
+    "case_id": "case-1",
+    "records": [
+      {
+        "event_id": "case-request",
+        "sequence": 0,
+        "activity": "request",
+        "timestamp": null
+      },
+      {
+        "event_id": "case-edit",
+        "sequence": 1,
+        "activity": "edit",
+        "timestamp": null
+      },
+      {
+        "event_id": "case-test",
+        "sequence": 2,
+        "activity": "test",
+        "timestamp": null
+      },
+      {
+        "event_id": "case-deliver",
+        "sequence": 3,
+        "activity": "deliver",
+        "timestamp": null
+      }
+    ],
+    "close": {
+      "event_id": "case-close",
+      "sequence": 4
+    }
+  },
+  "authenticated_owner_scope": "fixture-owner-a"
+}

@@ -4,3 +4,7 @@ src/pix/viewer/assets/vendor/* -text
 
 # Native current-cut fixture bytes are hashed and compared across platforms.
 /tests/fixtures/current_cut/**/*.json text eol=lf
+
+# Collaboration native artifacts use exact UTF-8 bytes across platforms.
+/tests/fixtures/collaboration_handover/*.json -text
+/docs/reports/evidence/collaboration-handover-20261107/**/*.json -text
