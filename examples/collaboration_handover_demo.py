@@ -46,6 +46,13 @@ ROLES = {
 }
 KINDS = set(ROLES) | {"context_input_included", "local_acceptance_observed"}
 ATTRS = ("source_ref", "source_position", "source_observation_sha256")
+BINDING_FIELDS = (
+    "organization_id",
+    "host_id",
+    "org_session_id",
+    "agent_id",
+    "binding_revision",
+)
 LOCAL_SPEC = HandoverSpec(
     actor_object_type="organization",
     sender_qualifiers=("sender",),
@@ -111,13 +118,7 @@ def mapped_log(document, cut):
         require(
             all(
                 isinstance(participant.get(key), str) and participant[key]
-                for key in (
-                    "organization_id",
-                    "host_id",
-                    "org_session_id",
-                    "agent_id",
-                    "binding_revision",
-                )
+                for key in BINDING_FIELDS
             ),
             "incomplete_participant_binding",
         )
@@ -139,12 +140,13 @@ def mapped_log(document, cut):
         objects[participant["id"]] = Object(
             participant["id"],
             "collaboration_participant",
-            (
+            tuple(
                 ObjectAttr(
-                    "organization_id",
-                    participant["organization_id"],
+                    field,
+                    participant[field],
                     datetime.fromisoformat("2026-01-01T00:00:00+00:00"),
-                ),
+                )
+                for field in BINDING_FIELDS
             ),
         )
         attributes = (
@@ -211,7 +213,7 @@ def mapped_log(document, cut):
             ObjectType("message"),
             ObjectType(
                 "collaboration_participant",
-                (Attribute("organization_id", ValueType.STRING),),
+                tuple(Attribute(field, ValueType.STRING) for field in BINDING_FIELDS),
             ),
         ),
         events=tuple(events),

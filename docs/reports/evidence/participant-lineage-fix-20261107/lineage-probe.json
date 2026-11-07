@@ -1,0 +1,39 @@
+{
+  "python": "3.13.14 (main, Jun 23 2026, 15:19:27) [MSC v.1944 64 bit (AMD64)]",
+  "baseline_source_digest": "pix.ocel.canonical.v1:sha256:8ca8a756dc0f2734f8e68a784a77a7ed29c7dbf02cc80acfdbc6d1b6c3f0c09b",
+  "baseline_computation_id": "pix.computation.v1:sha256:29ee55505140aa5ae50518955d12d1f64f396fe7c02891c24fc3fa6d1c2afa9f",
+  "mutations": {
+    "host_id": {
+      "source_digest": "pix.ocel.canonical.v1:sha256:9dc61698a31e7369ead3b2b6416942765e3dc14aac848082f4bdb48c0dd9d8c2",
+      "computation_id": "pix.computation.v1:sha256:2ee3d80608b7747422e9479811a70cd847902407729b2bf01feaae0ba4798d65",
+      "source_digest_changed": true,
+      "computation_id_changed": true,
+      "native_bytes_changed": true,
+      "handover_value_unchanged": true
+    },
+    "org_session_id": {
+      "source_digest": "pix.ocel.canonical.v1:sha256:daf4292fc1326d654e68238ac93f91865566a3c8b02080ccb3ac9cd5dd035f92",
+      "computation_id": "pix.computation.v1:sha256:6846a65c77feabea307ce1e51870cf5642cb6b3fc71f9bc7b8a748b060363318",
+      "source_digest_changed": true,
+      "computation_id_changed": true,
+      "native_bytes_changed": true,
+      "handover_value_unchanged": true
+    },
+    "agent_id": {
+      "source_digest": "pix.ocel.canonical.v1:sha256:405b389f93addfb66e4aeaeb3e9b70e5c1d3cfb045a9f32c1034e84da07a6ef0",
+      "computation_id": "pix.computation.v1:sha256:f4a10425cc8179361e543e04b9b59a41f531880ee6a5991a348f9470dee7111d",
+      "source_digest_changed": true,
+      "computation_id_changed": true,
+      "native_bytes_changed": true,
+      "handover_value_unchanged": true
+    },
+    "binding_revision": {
+      "source_digest": "pix.ocel.canonical.v1:sha256:687db1a4761fe2980cdeea679ca6fb93c7191e8dfb51cfea25bdd3ac752101c0",
+      "computation_id": "pix.computation.v1:sha256:f663d790388d369f27e6808911c4e0defa5d7fee6a0c46423fd0b1caed799023",
+      "source_digest_changed": true,
+      "computation_id_changed": true,
+      "native_bytes_changed": true,
+      "handover_value_unchanged": true
+    }
+  }
+}

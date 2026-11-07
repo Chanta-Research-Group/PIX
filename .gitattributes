@@ -8,3 +8,8 @@ src/pix/viewer/assets/vendor/* -text
 # Collaboration native artifacts use exact UTF-8 bytes across platforms.
 /tests/fixtures/collaboration_handover/*.json -text
 /docs/reports/evidence/collaboration-handover-20261107/**/*.json -text
+/docs/reports/evidence/participant-lineage-fix-20261107/**/*.json -text
+# Preserve the independent reviewer's original CRLF evidence without treating CR as trailing space.
+/docs/reports/evidence/participant-lineage-fix-20261107/original-review-probe.json whitespace=cr-at-eol
+# Pytest's captured failure output contains an intentional blank assertion gutter.
+/docs/reports/evidence/participant-lineage-fix-20261107/test-attribute-position-failure.txt whitespace=-blank-at-eol

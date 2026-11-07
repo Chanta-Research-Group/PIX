@@ -1,0 +1,35 @@
+{
+  "recorded_at": "2026-11-07T12:06:38.311884+00:00",
+  "fix_base_commit": "bb67602ff60cb7927ad8419a9fd4752baccddd6c",
+  "pix_engine_base": "6e9af5ee1b670de39a87be406518fea49dffdfec",
+  "source_hashes": {
+    ".gitattributes": "66ab0635d20dd8b8c51a0bcba4ae026fb1a5d84aaa22945d210de2985495ef92",
+    "examples/collaboration_handover_demo.py": "6f7c01bd13480a7a7516c4392cf5de7ccf9b094361356f55af727788e1862473",
+    "tests/test_collaboration_handover_consumer.py": "a5b7793bb000e33acad3e132a2637420cb6fac70e9a18b145a2baca6df030c36",
+    "tests/fixtures/collaboration_handover/expected.json": "0a4305c40686a296fedc57d212168a9aedc93e8b9236ff0d5f1327491865f12b",
+    "tests/fixtures/collaboration_handover/input.json": "795262a8487ace2218951d764dd0331837902ccfa1be4840bb87ee13619b7b42",
+    "tests/fixtures/collaboration_handover/local_projection.json": "8b20a641447dfde5b160f64af1a712779c5385093d7f3cfea4e01d249e1fdea6",
+    "tests/fixtures/collaboration_handover/pida-envelope-v1.json": "ee7386c009799ac52b976b26c99b45b4fceae4dc78338581045da8c71aebfdfe",
+    "tests/fixtures/collaboration_handover/README.md": "5c4933e9a4deb432bf8202d7eb373d9e817cd314d36589ea58a922550d969e31",
+    "examples/current_cut_demo.py": "d3b939f412cc406c7a751d8f20395dbc70a29cd43d1201e3d0617152d4ff884b",
+    "tests/fixtures/current_cut/input.json": "e0529cadaae6bb8a2d97a789563e66925eaf3421d081d3a087c9470b45c594a5",
+    "tests/fixtures/current_cut/expected.json": "8e344d55d9de58703284296e83c45c4e64663746bf1e99253c72e894167e2a34",
+    "docs/reports/2026-11-07_PARTICIPANT_LINEAGE_FIX.md": "bda932c0ef3e038222292260d833c1aa6a4f782af253d8e682d9823fc8eaacf5"
+  },
+  "test_command": "uv run --no-project --with pytest --with tzdata python -m pytest -q tests/test_collaboration_handover_consumer.py tests/test_current_cut_consumer.py tests/test_pi_hub_consumer.py tests/compute/test_handover.py",
+  "direct_test_result": {
+    "passed": 86,
+    "seconds": 1.73,
+    "exit_code": 0,
+    "python": "3.13.14 uv-selected Windows"
+  },
+  "evidence_hashes": {
+    "focused-tests.txt": "dd81ff0dc950abf0ed8015d1b552deb363ad8bb6a921ef47061b88ef9c20d7a5",
+    "test-attribute-position-failure.txt": "186c2ead3b1b3641398f9047db845732ffbfb1b5a1492e8b988a5c705e2bf67f",
+    "original-review-probe.json": "1659298cb7665a0abafbe6f604d3b524ab99cd96845403c45bab3a96d781a2fa",
+    "lineage-probe.json": "a6abec830f28774528c0276a2e7b30aaa34c5c6b4ecc6a046aa424b1bbeb4104",
+    "native/run-record.json": "4b0799c1e9437e67f69c9dbad05f42f9f5964e4f0f8899ac209fb7e7c3b326a4"
+  },
+  "review_fix_recheck": "PENDING",
+  "production_projection": "NOT_RUN"
+}

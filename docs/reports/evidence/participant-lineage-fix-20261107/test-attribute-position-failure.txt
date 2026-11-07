@@ -1,0 +1,33 @@
+.................F...................................................... [ 83%]
+..............                                                           [100%]
+================================== FAILURES ===================================
+__________ test_dynamic_membership_is_not_collapsed_to_latest_group ___________
+
+    def test_dynamic_membership_is_not_collapsed_to_latest_group():
+        log = EXAMPLE["mapped_log"](INPUT, "late")
+        participant = next(o for o in log.objects if o.id == "participant-a@binding-1")
+        changed = replace(
+            participant.attributes[0],
+            value="org-b",
+            time=participant.attributes[0].time.replace(second=30),
+        )
+        log = replace(
+            log,
+            objects=tuple(
+                replace(o, attributes=o.attributes + (changed,))
+                if o.id == participant.id
+                else o
+                for o in log.objects
+            ),
+        )
+        result = discover_handover(log, EXAMPLE["SPEC"])
+>       assert result.status.value == "invalid_input"
+E       AssertionError: assert 'computed' == 'invalid_input'
+E         
+E         - invalid_input
+E         + computed
+
+tests\test_collaboration_handover_consumer.py:212: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_collaboration_handover_consumer.py::test_dynamic_membership_is_not_collapsed_to_latest_group
+1 failed, 85 passed in 1.83s

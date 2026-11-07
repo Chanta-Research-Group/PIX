@@ -85,6 +85,12 @@ The remote `HandoverSpec` uses `collaboration_participant`, sender/receiver
 qualifiers, and grouping by a declared immutable `organization_id` binding.
 Participant IDs represent exact organization/host/session/agent/binding snapshots;
 neither UUID shape nor current membership lookup justifies historical grouping.
+All five binding fields are retained as participant OCEL attributes. An unchanged
+participant ID does not imply an unchanged binding: changing host, native session,
+agent or binding revision changes native source/computation identity even when
+the handover counts remain equal. Consumers must re-evaluate applicability, not
+reuse an old result because its numeric answer happens to match. This retention
+does not authenticate the binding or resolve temporal membership.
 Changing membership is rejected by the native grouping operator rather than
 collapsed into the newest organization. This spec must have a distinct consumer
 configuration/cache identity from the local organization spec.

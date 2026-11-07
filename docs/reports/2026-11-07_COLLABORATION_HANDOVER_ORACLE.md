@@ -1,5 +1,10 @@
 # Two-organization mapping fixture — 2026-11-07
 
+This preserves the developer snapshot at `bb67602ff60cb7927ad8419a9fd4752baccddd6c`.
+Independent review subsequently found participant lineage loss. Its resolution
+and replacement final artifacts are in the
+[participant lineage fix](2026-11-07_PARTICIPANT_LINEAGE_FIX.md).
+
 ## Scope and implementation
 
 PIX owner added a synthetic collaboration mapping example, fixture and developer

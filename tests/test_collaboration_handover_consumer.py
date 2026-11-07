@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pytest
 
-from pix.api import discover_handover
+from pix.api import discover_handover, read_ocel
 from pix.results import read_result, result_json_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,6 +39,15 @@ def test_hand_oracle_and_native_artifacts_are_repeatable(tmp_path):
         assert (
             result_json_bytes(read_result(tmp_path / "first" / row["artifact"])) == raw
         )
+    restored = read_ocel(tmp_path / "first/late.ocel.json")
+    for participant in INPUT["participants"]:
+        obj = next(o for o in restored.objects if o.id == participant["id"])
+        assert {a.name: a.value for a in obj.attributes} == {
+            field: participant[field] for field in EXAMPLE["BINDING_FIELDS"]
+        }
+    assert discover_handover(restored, EXAMPLE["SPEC"]) == read_result(
+        tmp_path / "first/late.result.json"
+    )
 
 
 def test_wrong_hand_oracle_cannot_publish_pass(tmp_path):
@@ -194,10 +203,11 @@ def test_open_case_is_partial_and_terminal_object_cost_is_not_live_failure(tmp_p
 def test_dynamic_membership_is_not_collapsed_to_latest_group():
     log = EXAMPLE["mapped_log"](INPUT, "late")
     participant = next(o for o in log.objects if o.id == "participant-a@binding-1")
+    organization = next(a for a in participant.attributes if a.name == "organization_id")
     changed = replace(
-        participant.attributes[0],
+        organization,
         value="org-b",
-        time=participant.attributes[0].time.replace(second=30),
+        time=organization.time.replace(second=30),
     )
     log = replace(
         log,
@@ -286,3 +296,24 @@ def test_authenticated_owner_scope_is_required_and_carriers_never_alias():
     del other["authenticated_owner_scope"]
     with pytest.raises(ValueError, match="missing_authenticated_owner_scope"):
         EXAMPLE["mapped_log"](other, "late")
+
+
+@pytest.mark.parametrize(
+    "field", ["host_id", "org_session_id", "agent_id", "binding_revision"]
+)
+def test_binding_changes_retain_lineage_and_invalidate_native_identity(field):
+    original = calculate()
+    changed = copy.deepcopy(INPUT)
+    participant = changed["participants"][1]
+    participant[field] += "-changed"
+    log = EXAMPLE["mapped_log"](changed, "late")
+    mapped = next(obj for obj in log.objects if obj.id == participant["id"])
+    assert {attr.name: attr.value for attr in mapped.attributes} == {
+        name: participant[name] for name in EXAMPLE["BINDING_FIELDS"]
+    }
+    result = discover_handover(log, EXAMPLE["SPEC"])
+    assert result.source_digest != original.source_digest
+    assert result.computation_id != original.computation_id
+    assert result_json_bytes(result) != result_json_bytes(original)
+    # Equal counts do not establish equal lineage or authorize result reuse.
+    assert result.value == original.value

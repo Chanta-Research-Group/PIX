@@ -1,0 +1,114 @@
+{
+  "early": {
+    "status": "computed",
+    "links": [
+      [
+        "send-response",
+        "receive-response"
+      ]
+    ],
+    "group_edges": [
+      [
+        "org-b",
+        "org-a",
+        1
+      ]
+    ],
+    "unmatched_sends": [
+      "send-pending",
+      "send-request"
+    ],
+    "unmatched_receives": [
+      "receive-orphan"
+    ],
+    "order_conflicts": []
+  },
+  "late": {
+    "status": "computed",
+    "links": [
+      [
+        "send-request",
+        "receive-request"
+      ],
+      [
+        "send-response",
+        "receive-response"
+      ]
+    ],
+    "group_edges": [
+      [
+        "org-a",
+        "org-b",
+        1
+      ],
+      [
+        "org-b",
+        "org-a",
+        1
+      ]
+    ],
+    "unmatched_sends": [
+      "send-pending"
+    ],
+    "unmatched_receives": [
+      "receive-orphan"
+    ],
+    "order_conflicts": [
+      [
+        "send-request",
+        "receive-request"
+      ]
+    ]
+  },
+  "online_open": {
+    "status": "partial",
+    "cost": 0,
+    "closed": false,
+    "final_cost_unresolved": true,
+    "bound_scope": "model_prefix_alignment_upper_bound"
+  },
+  "online_complete": {
+    "status": "partial",
+    "cost": 0,
+    "closed": true,
+    "final_cost_unresolved": false,
+    "bound_scope": "accepting_model_alignment_upper_bound"
+  },
+  "objects_complete": {
+    "status": "computed",
+    "outcome": "optimal",
+    "cost": 0,
+    "moves": {
+      "synchronous": 4,
+      "log": 0,
+      "model": 0,
+      "silent": 0
+    }
+  },
+  "objects_open_as_terminal": {
+    "status": "computed",
+    "outcome": "optimal",
+    "cost": 1,
+    "moves": {
+      "synchronous": 3,
+      "log": 0,
+      "model": 1,
+      "silent": 0
+    }
+  },
+  "local": {
+    "status": "computed",
+    "links": [
+      [
+        "local-post",
+        "local-receipt"
+      ]
+    ],
+    "group_edges": [],
+    "unmatched_sends": [
+      "local-answer"
+    ],
+    "unmatched_receives": [],
+    "order_conflicts": []
+  }
+}
