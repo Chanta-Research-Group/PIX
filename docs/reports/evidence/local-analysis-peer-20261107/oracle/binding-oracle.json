@@ -1,0 +1,186 @@
+{
+  "fixture": "pix.owner-peer-local-pida-binding/1",
+  "scope": "frozen actual scripted mock runtime evidence, not a new model call or production source approval",
+  "producer_evidence_commit": "81c8a9485b2ca0df9bb9c971e45b90107aa25e94",
+  "source_hashes": {
+    "actual-admission.json": "bc001fa67e5dcf01be949f7c77cdd25fc54401dc7c85295d1b4d612a53e367eb",
+    "first-root.bundle.json": "e40c0dd90d0c1f13c7d93f9b0012fe8fb9169a666c9a9172e192fc49a95e63ce",
+    "first-root.ocel.json": "d602d3fc9a24c27a99a86f9c7fc59f17dd7ddf97ff719a520212c70e22225de1"
+  },
+  "script_sha256": "3365098656de68a2ecc0f8a47a9f90e14e7bd6d5a28107ee831a5b99a6fa2b7d",
+  "owner_scope": "[\"bb9156d4-0105-49a8-8b4b-454628c20100\",\"local-owner\",\"host-first\",\"local-user\"]",
+  "carrier": {
+    "producer_id": "schumpeter",
+    "request_id": "first",
+    "recipient_organization_id": "092a282d-e24f-4571-9e26-3f8c30b1fa72"
+  },
+  "receipt": {
+    "schema_version": "pida.organization.admission.receipt/1",
+    "receipt_id": "9046dcc4-199b-48fa-9eba-306f0d236b3d",
+    "producer_id": "schumpeter",
+    "request_id": "first",
+    "payload_digest": "553c538d62cc54aab7bc99d895a72c0836d8f5ea0c5f3bc62c4a83f7ba8cefa5",
+    "definition_digest": "3a0aae19ce70cd97f8d212a21fc8d415fcfde597e97e5ccdcfc30478f96518c1",
+    "admission_digest": "5594a90d03cd86002fe7bb756af8c3446e350a2992395fbcca4abfc0c2fb05cf",
+    "reservation_id": "dafb4bb1-fb2d-4fc1-b321-7a467ca63435",
+    "recipient": {
+      "agent_id": "034294ec-1559-4c47-8c30-ee65df3cafeb",
+      "host_id": "host-first",
+      "org_session_id": "c2bfc83e-1f64-443e-b9cf-68d800df5810",
+      "organization_id": "092a282d-e24f-4571-9e26-3f8c30b1fa72"
+    },
+    "received_at": "2026-11-07T12:51:44.096Z",
+    "job_id": "9c4a9131-417f-49f1-b8dd-4039f483c62d",
+    "root_task_id": "074f8994-2359-4510-84ed-01095741ae27",
+    "root_attempt_id": "80d2e621-3f6b-4a19-8f63-0a95ec99db43",
+    "phase": "organization_root_enqueued",
+    "durable": true,
+    "durability_scope": "local-process-restart"
+  },
+  "operator_binding": {
+    "id": "operator:3600c90a-3d4f-4881-bf58-ccaa6a5618c5",
+    "org_id": "be2e99ae-d345-4f8c-af4b-94404159b3ec",
+    "principal_id": "local-owner",
+    "revision": 1,
+    "enabled": 1,
+    "kind": "operator"
+  },
+  "observed_recipient_binding": {
+    "agent_id": "034294ec-1559-4c47-8c30-ee65df3cafeb",
+    "enabled": 1,
+    "host_id": "host-first",
+    "id": "dafb4bb1-fb2d-4fc1-b321-7a467ca63435",
+    "org_id": "092a282d-e24f-4571-9e26-3f8c30b1fa72",
+    "org_session_id": "c2bfc83e-1f64-443e-b9cf-68d800df5810",
+    "revision": 1
+  },
+  "native_job": {
+    "id": "9c4a9131-417f-49f1-b8dd-4039f483c62d",
+    "agentId": "034294ec-1559-4c47-8c30-ee65df3cafeb",
+    "organizationTaskId": "074f8994-2359-4510-84ed-01095741ae27",
+    "attemptId": "80d2e621-3f6b-4a19-8f63-0a95ec99db43",
+    "sessionId": "01a1b610-9b72-74ff-aa37-3662ae9ac2cd",
+    "runId": "1c2537f2-763a-4b41-9b33-4a237e1da84e",
+    "status": "completed"
+  },
+  "source_event_refs": [
+    {
+      "id": "6be35eac-67f1-450b-ac11-25083cc90df9",
+      "sequence": 1,
+      "kind": "organization_reserved",
+      "occurred_at": "2026-11-07T12:51:44.063488+00:00"
+    },
+    {
+      "id": "ca3d0f08-aac1-4125-b3ab-4a17355fe43d",
+      "sequence": 2,
+      "kind": "admission_attempted",
+      "occurred_at": "2026-11-07T12:51:44.067490+00:00"
+    },
+    {
+      "id": "9defe93a-ed86-4feb-944c-39aebe170e41",
+      "sequence": 3,
+      "kind": "admission_attempted",
+      "occurred_at": "2026-11-07T12:51:45.003602+00:00"
+    },
+    {
+      "id": "35792916-c407-4442-98a6-3f78bf0a7e1e",
+      "sequence": 4,
+      "kind": "admission_receipt_observed",
+      "occurred_at": "2026-11-07T12:51:45.025116+00:00"
+    },
+    {
+      "id": "af2d1c92-d6c3-4ec4-b08b-b5b849aba4a3",
+      "sequence": 5,
+      "kind": "organization_admission_observed",
+      "occurred_at": "2026-11-07T12:51:45.049131+00:00"
+    }
+  ],
+  "binding_evidence_event": "af2d1c92-d6c3-4ec4-b08b-b5b849aba4a3",
+  "handover": "UNAVAILABLE: admission intent/attempt/receipt are not a reviewed logical-message handover projection",
+  "counts": {
+    "events": 16,
+    "objects": 9,
+    "e2o": 84,
+    "o2o": 11,
+    "run_dfg_distinct_edges": 12,
+    "run_dfg_occurrences": 15
+  },
+  "coverage": {
+    "bundle_complete": true,
+    "bundle_limits": [],
+    "export_limits": [
+      "RUNTIME_OBSERVED_EVENTS_ONLY",
+      "SEQUENCE_IS_OBSERVATION_ORDER_NOT_CAUSAL_ORDER",
+      "PROCESS_CONFORMANCE_IS_NOT_ARTIFACT_CORRECTNESS"
+    ],
+    "manifest_limits": [
+      "NO_INDEPENDENT_TASK_ACCEPTANCE",
+      "AGENT_SUPPLIED_CHECKS_ARE_SCOPED",
+      "FINAL_ARTIFACT_STATE_UNCONFIRMED",
+      "PI_INTERNAL_REQUEST_USAGE_NOT_EXPORTED",
+      "COST_UNKNOWN",
+      "EVIDENCE_OR_STORAGE_INCOMPLETE"
+    ],
+    "verification_status": "UNKNOWN"
+  },
+  "excluded_bodies": [
+    "admission.envelope.input",
+    "definition.goal",
+    "job.input",
+    "job.latestText",
+    "job.result",
+    "observation.payload.descriptor"
+  ],
+  "results": {
+    "run_traces": {
+      "status": "computed",
+      "artifact": "run_traces.json",
+      "sha256": "82fd7d6b71b9f8b05e292086382f0ee7acb98ca7cb4a7c6ee89b98dca11b618f",
+      "computation_id": "pix.computation.v1:sha256:7e0deea39383d846bdfa5f1aab8a24683a5e460df08c5069309f7d96fe621ff9",
+      "source_digest": "pix.ocel.canonical.v1:sha256:2ac066367843565935cccf00af36886fb880c2576b8b81db4348ff458f0afd0e",
+      "parents": [],
+      "issues": []
+    },
+    "run_dfg": {
+      "status": "computed",
+      "artifact": "run_dfg.json",
+      "sha256": "992e5f16538113a2087559bbb7b72b828c3a9858d844b8c687aa7ef27413c93c",
+      "computation_id": "pix.computation.v1:sha256:dc8f4ae448c95367483a9be0d3464638576f3dff47b5f9206b9725d5500e18a5",
+      "source_digest": "pix.ocel.canonical.v1:sha256:2ac066367843565935cccf00af36886fb880c2576b8b81db4348ff458f0afd0e",
+      "parents": [
+        "run_traces.json"
+      ],
+      "issues": []
+    },
+    "run_executions": {
+      "status": "computed",
+      "artifact": "run_executions.json",
+      "sha256": "9812c5d004394cab55d6b959558bc5ff63558a818a9b97b162a72df5824ed581",
+      "computation_id": "pix.computation.v1:sha256:4c9abde26e1b5c73788a62ad107d9a10d9dabfc28e36bfb2ac05256c479f1f0f",
+      "source_digest": "pix.ocel.canonical.v1:sha256:2ac066367843565935cccf00af36886fb880c2576b8b81db4348ff458f0afd0e",
+      "parents": [],
+      "issues": []
+    },
+    "run_variants": {
+      "status": "computed",
+      "artifact": "run_variants.json",
+      "sha256": "88ed82a86617c84a65978477845b79f5f418c2e1e10ffce1070c03153c0a24fe",
+      "computation_id": "pix.computation.v1:sha256:1fe890835b9b41e400061e4756a36c972eef0d05b789e6cb755b1f02419d1d89",
+      "source_digest": "pix.ocel.canonical.v1:sha256:2ac066367843565935cccf00af36886fb880c2576b8b81db4348ff458f0afd0e",
+      "parents": [
+        "run_executions.json"
+      ],
+      "issues": []
+    }
+  },
+  "required_negative_cases": [
+    "operator must not gain fake native agent/session",
+    "reserved fields must not imply observed runtime existence",
+    "native OrgTask must not alias bundle task/job",
+    "Pi session must not alias OrgSession",
+    "material binding field changes invalidate applicability",
+    "ACK-loss attempted events must not multiply logical handovers",
+    "manifest incomplete/UNKNOWN must survive bundle complete=true",
+    "unknown/tied order must not become event-ID or invented microsecond order"
+  ]
+}

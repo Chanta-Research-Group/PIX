@@ -1,0 +1,306 @@
+{
+  "manifest_source_hashes": {
+    "docs/reports/evidence/live-pida-smoke-20261107/export.mjs": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/analyze.py": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/export-record.json": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/historical-source-check.json": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/export.json": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/actual.ocel.json": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/source/historical-live-harness.mjs": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/source/observation-bundle.json": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/source/result.json": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/source/start.json": true,
+    "docs/reports/evidence/live-pida-smoke-20261107/native-final/run-record.json": true
+  },
+  "historical_source_hashes": {
+    "src/vera-dispatch-provider.ts": true,
+    "src/vera-persona-provider.ts": true,
+    "src/provider-catalog.ts": true,
+    "src/runtime.ts": true
+  },
+  "exporter_git_source_hashes": {
+    "src/ocel.ts": true,
+    "src/observation.ts": true,
+    "package.json": true,
+    "pnpm-lock.yaml": true,
+    "bun.lock": true
+  },
+  "source_file_hashes": {
+    "source/observation-bundle.json": true,
+    "source/result.json": true,
+    "source/start.json": true,
+    "export.json": true,
+    "actual.ocel.json": true,
+    "export-record.json": true,
+    "analyze.py": true
+  },
+  "export_matches_actual_document": true,
+  "export_source_canonical_digest": true,
+  "export_document_canonical_digest": true,
+  "historical_runtime_commit": "039d8ef3f153e1d8499566223fad876c8f2105b8",
+  "later_exporter_commit": "e98c23e4a1794e144ffaf700aa0b908b90515c7d",
+  "separately_hashed_harness": true,
+  "exporter_sources_unchanged_from_windows_fix": true,
+  "compiled_module_independent_rebuild": "NOT_RUN; recorded hashes are historical execution evidence",
+  "native_artifacts": {
+    "traces_Agent": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "dfg_Agent": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "traces_ModelRequest": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "dfg_ModelRequest": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "traces_Run": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "dfg_Run": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "traces_Session": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "dfg_Session": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "traces_Task": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "dfg_Task": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "traces_Turn": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "dfg_Turn": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "ocdfg": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "executions": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "variants": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "traces_Run_millisecond": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "temporal_Run": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    },
+    "handover_not_applicable": {
+      "matches_frozen_bytes": true,
+      "matches_recorded_hash": true,
+      "codec_roundtrip": true,
+      "computation_id": true
+    }
+  },
+  "native_parents": {
+    "traces_Agent": true,
+    "dfg_Agent": true,
+    "traces_ModelRequest": true,
+    "dfg_ModelRequest": true,
+    "traces_Run": true,
+    "dfg_Run": true,
+    "traces_Session": true,
+    "dfg_Session": true,
+    "traces_Task": true,
+    "dfg_Task": true,
+    "traces_Turn": true,
+    "dfg_Turn": true,
+    "ocdfg": true,
+    "executions": true,
+    "variants": true,
+    "traces_Run_millisecond": true,
+    "temporal_Run": true,
+    "handover_not_applicable": true
+  },
+  "run_record_changed_keys": [
+    "imported_checkout_head"
+  ],
+  "reviewed_head_is_expected_only_difference": true,
+  "import": {
+    "status": "valid",
+    "issues": 0,
+    "transformations": 0
+  },
+  "canonical_ocel_digest": "9d2aac265003068ff0a8985cad6f642780f297d9e48935a04e7ca3ec4400b637",
+  "counts": {
+    "events": 9,
+    "objects": 6,
+    "e2o": 44,
+    "o2o": 6
+  },
+  "source_event_mapping": {
+    "1": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    },
+    "2": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    },
+    "3": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    },
+    "4": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    },
+    "5": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    },
+    "6": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    },
+    "7": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    },
+    "8": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    },
+    "9": {
+      "same_activity": true,
+      "same_time": true,
+      "same_source_id": true,
+      "same_sequence": true,
+      "expected_native_id": true
+    }
+  },
+  "sequence": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "distinct_increasing_times": true,
+  "point_timestamp_span_seconds": 4.158,
+  "synthetic_descriptor_absent_from_ocel": true,
+  "object_types": [
+    "Agent",
+    "ModelRequest",
+    "Run",
+    "Session",
+    "Task",
+    "Turn"
+  ],
+  "handover_status": "invalid_input",
+  "handover_issues": [
+    "unknown_object_type"
+  ],
+  "unrun_questions": {
+    "alignment": "No independent DFG/Petri-net/OCPN reference model supplied; no conformance cost computed",
+    "online": "No adopted model or stream identity supplied; not started from an invented model",
+    "cross_org": "No organization/message carrier or remote receipt object in this single run",
+    "artifact_correctness": "No artifact/verification objects; manifest task verification UNKNOWN",
+    "improvement": "Unknown; one task is not comparative efficiency evidence"
+  },
+  "coverage": {
+    "bundle_complete": true,
+    "bundle_limits": [],
+    "export_limits": [
+      "RUNTIME_OBSERVED_EVENTS_ONLY",
+      "SEQUENCE_IS_OBSERVATION_ORDER_NOT_CAUSAL_ORDER",
+      "PROCESS_CONFORMANCE_IS_NOT_ARTIFACT_CORRECTNESS"
+    ],
+    "manifest_limits": [
+      "NO_INDEPENDENT_TASK_ACCEPTANCE",
+      "AGENT_SUPPLIED_CHECKS_ARE_SCOPED",
+      "FINAL_ARTIFACT_STATE_UNCONFIRMED",
+      "PI_INTERNAL_REQUEST_USAGE_NOT_EXPORTED",
+      "COST_UNKNOWN"
+    ],
+    "verification_status": "UNKNOWN"
+  }
+}

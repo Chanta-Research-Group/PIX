@@ -1,0 +1,58 @@
+{
+  "schema": "pix.owner-peer.local-analysis/1",
+  "recorded_at": "2026-11-07T13:08:51.802889+00:00",
+  "own_base_commit": "afc3f4719b9406fb5fe1d7750af30fbedee72f1a",
+  "engine_pin": "3205d832d5dcdc6901f916b35496a0c60b657e7a",
+  "engine_diff_empty": true,
+  "inspected_local_port": {
+    "source_commit": "b900ef494c61b4840640c2bed2a44541f23cfe80",
+    "evidence_commit": "6f0bb692110dbed871e98dbc0916c12a1930fe7a",
+    "path": "src/schumpeter/local_analysis.py",
+    "sha256": "d49c468d01984cee28b8e28db0880abf1bbb53307b725a83e6fb1b7ddb10f700"
+  },
+  "pida_draft": {
+    "checkout": "D:\\ChantaResearchGroup\\Schumpeter-analysis-20261107",
+    "observed_head": "e4f4fef7b011d16da3ca3756ad8bbd3840caca8d",
+    "uncommitted_source": "src/schumpeter/local_analysis_pida.py",
+    "sha256": "eb4b8f3091286fc0ac1ff7df25c93474e15607a669691d73e391869b4285d66b",
+    "acceptance": "semantic source reading only; adapter API and developer execution not verified"
+  },
+  "command": "uv run --no-project --with tzdata python docs/reports/evidence/local-analysis-peer-20261107/binding_oracle.py D:/ChantaResearchGroup/Schumpeter-pida-adapter-20261107 <fresh-output-directory>",
+  "result": {
+    "events": 16,
+    "objects": 9,
+    "e2o": 84,
+    "o2o": 11,
+    "run_dfg_distinct_edges": 12,
+    "run_dfg_occurrences": 15
+  },
+  "body_nonpersistence_checks": {
+    "job_input_and_latest_text_values_checked": 2,
+    "scope": "known concrete source strings only; not a general privacy proof"
+  },
+  "independent_historical_trace_review": {
+    "REVIEW.md": "7f8df1b644a8699d10872649bfeab49b6ad59ad4160a4fc1948dd8a815361b48",
+    "artifact-verification.json": "422e4518fef2e4f956d43758b56bc4b4fbbec908bc3adf7d3ebec5b5005f5601"
+  },
+  "source_hashes": {
+    "actual-admission.json": "bc001fa67e5dcf01be949f7c77cdd25fc54401dc7c85295d1b4d612a53e367eb",
+    "first-root.bundle.json": "e40c0dd90d0c1f13c7d93f9b0012fe8fb9169a666c9a9172e192fc49a95e63ce",
+    "first-root.ocel.json": "d602d3fc9a24c27a99a86f9c7fc59f17dd7ddf97ff719a520212c70e22225de1"
+  },
+  "files": {
+    "docs/reports/2026-11-07_LOCAL_ANALYSIS_OWNER_PEER_NOTE.md": "c5129dd843f0ef79fa224ec44537d009e4be642581ed46e81b4c73d59ca885b3",
+    "docs/reports/evidence/local-analysis-peer-20261107/binding_oracle.py": "3365098656de68a2ecc0f8a47a9f90e14e7bd6d5a28107ee831a5b99a6fa2b7d",
+    "docs/reports/evidence/local-analysis-peer-20261107/oracle/actual-metadata.ocel.json": "022d021390a417d6b8ff5bfda68966e6ad1ae55ed852b59214a9d4dd6c0709c4",
+    "docs/reports/evidence/local-analysis-peer-20261107/oracle/binding-oracle.json": "e2f3717e658ba2f87f47ef2be7a6161b6297a3d0932a90f13c5ce061bb84a4e2",
+    "docs/reports/evidence/local-analysis-peer-20261107/oracle/run_dfg.json": "992e5f16538113a2087559bbb7b72b828c3a9858d844b8c687aa7ef27413c93c",
+    "docs/reports/evidence/local-analysis-peer-20261107/oracle/run_executions.json": "9812c5d004394cab55d6b959558bc5ff63558a818a9b97b162a72df5824ed581",
+    "docs/reports/evidence/local-analysis-peer-20261107/oracle/run_traces.json": "82fd7d6b71b9f8b05e292086382f0ee7acb98ca7cb4a7c6ee89b98dca11b618f",
+    "docs/reports/evidence/local-analysis-peer-20261107/oracle/run_variants.json": "88ed82a86617c84a65978477845b79f5f418c2e1e10ffce1070c03153c0a24fe"
+  },
+  "limits": [
+    "No new model call, engine code or consumer pin change",
+    "Mock native IDs are actual mock runtime observations, not real model proof",
+    "No new port independent review or desktop acceptance",
+    "Organization improvement unknown"
+  ]
+}

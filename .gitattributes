@@ -16,3 +16,6 @@ src/pix/viewer/assets/vendor/* -text
 /docs/reports/evidence/participant-lineage-fix-20261107/independent-review/* -text whitespace=cr-at-eol
 /docs/reports/evidence/live-pida-smoke-20261107/**/*.json -text whitespace=cr-at-eol
 /docs/reports/evidence/live-pida-smoke-20261107/source/historical-live-harness.mjs -text whitespace=cr-at-eol
+/docs/reports/evidence/live-pida-smoke-20261107/independent-review/* -text whitespace=cr-at-eol
+/docs/reports/evidence/local-analysis-peer-20261107/**/*.json -text
+/docs/reports/evidence/local-analysis-peer-20261107/binding_oracle.py -text
