@@ -1,0 +1,1641 @@
+{
+  "schema": "pix.repository-persona.metadata-compatibility/1",
+  "engine_pin": "6e9af5ee1b670de39a87be406518fea49dffdfec",
+  "producer_evidence_commit": "ff68457f7d032bfa0aa81badf27bdf4079cadc5e",
+  "python": "3.13.14 (main, Jun 23 2026, 15:19:27) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "script_sha256": "1b43a3f43d6215653cacf2f6986a021380677361a7ae8aaa560f9fcc4081325d",
+  "approved_source_hashes": {
+    "handoff.json": "4863f97cf8169f722d901b6ff6d400c59540e80f1c0b5abfac5cb8075667cdac",
+    "stock-profile-a.ocel.json": "5b88270d8edd31252aefd9c61cd466539716bc259b3e794d18445c5df54de56f",
+    "stock-profile-a.ocel.meta.json": "27ff08ef0dabe312f3f497fbb08f13dc512422932e114f7b1b31e73440135c53",
+    "stock-profile-a.manifest.json": "506339918dede8b62159db373c07c6326d04b7b459c3151a1d165285b685fdf6",
+    "stock-profile-b.ocel.json": "d9c901156f1f320027e2ea2c5e04b1e60583cc3a428fb8e723332b325842f7ed",
+    "stock-profile-b.ocel.meta.json": "37fcb03d9048920f06f4e9b8ec44dae2078ee85f24ec582825f71342f6089935",
+    "stock-profile-b.manifest.json": "8102319667acb75bac82097f84a696221626a7e0751b81d84fce91b0f538500a",
+    "sdk-profile-a.ocel.json": "e461f6e7ba41178cfafffab77c4ac07a142e326c2d7237f5992a59818e396c39",
+    "sdk-profile-a.ocel.meta.json": "e6de0c84f1d3748b01a53922519afb346580d7cce40d53453f442eff07496578",
+    "sdk-profile-a.manifest.json": "d8caf96c595640deae5fdccda6898f47820e4e1fe8246b992791fcf39ecec234",
+    "sdk-profile-b.ocel.json": "2d45f348b33daf799f32a288146e97b6f14d0f66dd66cc61295f4791dfa460d2",
+    "sdk-profile-b.ocel.meta.json": "c308d554d98fdb05d15e89e5f36dda6c2d32069db11c98e9ffe851773d503e09",
+    "sdk-profile-b.manifest.json": "acba2013325507ae070b3edab0fa2157f8677ab0f2257c5c3bd22dfe98561408"
+  },
+  "source_runtime_and_persona_identity": {
+    "schema": "pida.synthetic-combination.metadata-handoff/1",
+    "source_commit": "e9a1d31140bcff34e3c9ef0f82f4b3dbca0ddd68",
+    "manifest_sha256": "f1b9156e6bee986a88666da451b352e006e18c83639408aa8a062b15f62f8ed1",
+    "sidecar_sha256": "8f4bd65fe7a74ac6944059bc97158b13f98fd473b95240352cd2e0ff49d8e579",
+    "persona_source": "f6edd022d4389237fcee5d6c0a4db8a0d0b13399",
+    "persona_runtime_digest": "0f85831175f24aea7237a6a003bdb14972a32cf13a7e76394c3fa9898b3763d6",
+    "limits": [
+      "HOST_PROJECT_ARTIFACTS_NOT_CAPTURED",
+      "Native run task_id is job identity; separate organization_task_id supplied by exact supervisor join.",
+      "Failed baseline and separate repair belong to distinct native organizations; no within-run recovery claim.",
+      "Stock provider is mock; SDK provider usage is simulated, not observed external billing.",
+      "Only per-run observation order; no cross-run causality or aggregate efficiency claim.",
+      "Live project file hash is separate from empty native ResultManifest artifacts."
+    ]
+  },
+  "identity_scope": "OCEL job/run/session/agent directly checked; OrgTask/attempt/org/Persona selection are approved owner sidecar claims, not reread from private state",
+  "source_bundle_digest_scope": "retained owner/exporter digest; raw bundle not accessed or recomputed",
+  "unavailable": [
+    "handover: no reviewed message/organization projection",
+    "conformance: no independent reference model",
+    "host project artifact correctness",
+    "cross-run causal order",
+    "organizational efficiency"
+  ],
+  "runs": {
+    "stock-profile-a": {
+      "handoff_record": {
+        "agent_id": "46280801-2d66-47ec-bcae-265a777a5629",
+        "source_id": "profile-a",
+        "org_id": "71a0de55-628a-404a-a5ce-a1a6c922810b",
+        "job_id": "4ac5ec9d-8137-4911-b2cd-df07b913de08",
+        "attempt_id": "8dea3134-b9c5-48da-b558-850d9a23eb08",
+        "run_id": "4ffafbd4-b6e6-4ff6-a0ad-f15ee68796ab",
+        "inclusion_events": 2,
+        "provenance": "actual stock mock host",
+        "organization_task_id": "c2391e0d-cf85-4840-8f1e-ba6a56303b07",
+        "session_id": "01a1b74a-3a8b-775e-992a-8a8a5b6867ba",
+        "status": "completed",
+        "code": null,
+        "native_organization_status": "unknown",
+        "source_state_sha256": "bfbb1774401ac24501475c45a76057093f7985e419ad6373e5b893c02e7b2782",
+        "files": {
+          "stock-profile-a.ocel.json": "5b88270d8edd31252aefd9c61cd466539716bc259b3e794d18445c5df54de56f",
+          "stock-profile-a.ocel.meta.json": "27ff08ef0dabe312f3f497fbb08f13dc512422932e114f7b1b31e73440135c53",
+          "stock-profile-a.manifest.json": "506339918dede8b62159db373c07c6326d04b7b459c3151a1d165285b685fdf6"
+        }
+      },
+      "source_events": [
+        {
+          "ocel_id": "pida:Event:1c3cd226cb127459580c239e4d605601e14cddcea1c00e7a7254c29eb1204e43",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "7b6f7b77-0155-408a-80c1-116739c9f4a1",
+          "sequence_number": 1,
+          "time": "2026-11-07T18:34:17.623Z",
+          "activity": "run_started"
+        },
+        {
+          "ocel_id": "pida:Event:31f5d09f355bcb78eedd5d011649a2468e02007f85ae780c0d0ae1215bb4dd72",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "2db3b9a6-06d2-484e-9b24-fe1ee65088c5",
+          "sequence_number": 2,
+          "time": "2026-11-07T18:34:17.645Z",
+          "activity": "context_snapshot_loaded"
+        },
+        {
+          "ocel_id": "pida:Event:29cf4db6c108b9f231a938bbcfb86730ed9aba82ef8b0ecbf6d660070d4dbc1e",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "10da0c1b-33e5-49a0-90cd-c9cdd501f150",
+          "sequence_number": 3,
+          "time": "2026-11-07T18:34:17.646Z",
+          "activity": "run_context_loaded"
+        },
+        {
+          "ocel_id": "pida:Event:91fba8e5cbe883008f09136c4e00ded9326177dd676e92f68c646e53ebb74680",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "60e04146-b367-4036-9451-933854bd3e3f",
+          "sequence_number": 4,
+          "time": "2026-11-07T18:34:17.650Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:5fbcc165b0eedb24473d6043ce6431dd5f4c1cf0c09a30fc1d670c88cd893d18",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "7b258559-6b35-4388-b25d-80c70faccdf5",
+          "sequence_number": 5,
+          "time": "2026-11-07T18:34:17.654Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:b2e57c6fd6bb08ba045b53f03fcef4182ddbde10025f78b4e0e58da378c845b6",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "bee661de-a88d-4986-b0c5-fe2881858e2f",
+          "sequence_number": 6,
+          "time": "2026-11-07T18:34:17.660Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:bcfc0fffd2c64845932428f8b7a55eb6e943d71dbdf77764e6367c3aa6b7428c",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "bd1ab61f-01da-40d2-8a19-9651a455473e",
+          "sequence_number": 7,
+          "time": "2026-11-07T18:34:17.686Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:6d2c0959376520b86698b049fe9ec3e9c8b1a27d975a02341d01e946433643c1",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "247d0aa6-2bff-4b5f-ac9a-5e020d2d1b13",
+          "sequence_number": 8,
+          "time": "2026-11-07T18:34:17.688Z",
+          "activity": "tool_started"
+        },
+        {
+          "ocel_id": "pida:Event:f27179e70ded6f0efc6b875df34bb59ba5ba0f1245d97fb29dd94ee47f69d434",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "670a5e68-8960-4452-99f5-5e99d01f6cf9",
+          "sequence_number": 9,
+          "time": "2026-11-07T18:34:17.692Z",
+          "activity": "tool_completed"
+        },
+        {
+          "ocel_id": "pida:Event:a4eecc19df7510e6d6532f4696dcdfe8680b278a51693fc85cd65eafd2a732af",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "261db5f7-7fd7-47df-9a4f-825b652282a3",
+          "sequence_number": 10,
+          "time": "2026-11-07T18:34:17.695Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:037456b78ca70a9921789b85a3fe7e0319e8c04ecc4a9c283916889d0f9f8b3a",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "49c315c4-8350-4f9a-9973-63944a08ccd6",
+          "sequence_number": 11,
+          "time": "2026-11-07T18:34:17.704Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:384429cdb1dd9d20c5a378ae93012358dcff8511822c99eafd6d32da95298635",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "ea3597a0-185e-41fd-b47b-0cb4df3bad77",
+          "sequence_number": 12,
+          "time": "2026-11-07T18:34:17.707Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:613d9a308963fd951ee52d0a198f8e401c96ba4da5c046246551d8fc4a005e6b",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "93450463-ad82-4a02-a41b-228356f1acc8",
+          "sequence_number": 13,
+          "time": "2026-11-07T18:34:17.713Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:23c833456ebc7a5a2ac0a601cc93e567243c45b8b4ab15b1ceba0f9ab0824074",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "d2937fb6-b69c-45e6-8c9f-79ad2b024512",
+          "sequence_number": 14,
+          "time": "2026-11-07T18:34:17.811Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:ad75bb14464ca1a4cefd74f8b573b422d5412287bd1cf98c38c5f5643e7009d3",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "b9589194-8ae6-440b-b1ea-f62e5c9a4021",
+          "sequence_number": 15,
+          "time": "2026-11-07T18:34:17.813Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:a4d3f165ab03aa1170ccc59fc868a0272e3561cc05cdd5194e303fe7997f1fe6",
+          "source_id": "db9386cf-f0ef-4b4d-8415-7e2d1adc1e3c",
+          "source_event_id": "330e3f19-3917-49c2-8d7a-760f879d4bf7",
+          "sequence_number": 16,
+          "time": "2026-11-07T18:34:17.921Z",
+          "activity": "run_finished"
+        }
+      ],
+      "counts": {
+        "events": 16,
+        "objects": 9,
+        "e2o": 84,
+        "o2o": 11
+      },
+      "timestamp_ties": 0,
+      "canonical_ocel": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+      "producer_meta": {
+        "mapping": "pida.ocel20/1",
+        "sourceDigest": "191c35c52a28b19e242f7b7fd105d55cf38a917ddddc52acb573ff39b2f4050f",
+        "digest": "a1e2be7dd32c18b936c6fb8b4a0cad1bb5aba45998d4373890d5a2a4e7b1a011",
+        "complete": true,
+        "knownLimits": [
+          "RUNTIME_OBSERVED_EVENTS_ONLY",
+          "SEQUENCE_IS_OBSERVATION_ORDER_NOT_CAUSAL_ORDER",
+          "PROCESS_CONFORMANCE_IS_NOT_ARTIFACT_CORRECTNESS"
+        ]
+      },
+      "manifest": {
+        "schema_version": "pida.result/0.1-draft",
+        "task_id": "4ac5ec9d-8137-4911-b2cd-df07b913de08",
+        "run_id": "4ffafbd4-b6e6-4ff6-a0ad-f15ee68796ab",
+        "session_id": "01a1b74a-3a8b-775e-992a-8a8a5b6867ba",
+        "agent_id": "46280801-2d66-47ec-bcae-265a777a5629",
+        "reported_status": "completed",
+        "reported_by": "runtime",
+        "verification_status": "UNKNOWN",
+        "artifact_refs": [],
+        "current_artifact_refs": [],
+        "evidence_refs": [],
+        "verification_results": [],
+        "runtime_version": "0.8.18",
+        "known_limits": [
+          "NO_INDEPENDENT_TASK_ACCEPTANCE",
+          "AGENT_SUPPLIED_CHECKS_ARE_SCOPED",
+          "PI_INTERNAL_REQUEST_USAGE_NOT_EXPORTED",
+          "HOST_PROJECT_ARTIFACTS_NOT_CAPTURED",
+          "HOST_PROGRAM_NOT_SANDBOXED",
+          "PROGRAM_DEPENDENCIES_NOT_PINNED",
+          "PROGRAM_DESCENDANTS_NOT_GUARANTEED_STOPPED",
+          "COST_UNKNOWN"
+        ]
+      },
+      "native_results": {
+        "Agent_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "741355b3535ee9d6e4cb470787887a1cc27dd4ac6c98232c2505e87cc6381c74",
+          "computation_id": "pix.computation.v1:sha256:b2a5983fe425e253ea70ac2ef82ee0197d4f7bf5e900bc2523d280ef9f3f10ee",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": []
+        },
+        "Agent_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "54f17ee6a0ed3b2fca568ad1c643cc8d82c0d4a19b7f76f3783342b4d9bd7a43",
+          "computation_id": "pix.computation.v1:sha256:b95df3540e7922d57ba43d0e6927ef4203cf300308199303650b5f8009cdf249",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "Agent_traces.json"
+          ]
+        },
+        "ModelRequest_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "301b0191c7a44223c1d7cf886185511f340076ec44318086dbac1870cbef2015",
+          "computation_id": "pix.computation.v1:sha256:018b10c9aee6dee633c67d74579187521c2290c4aad4aeab7d13895f06594c09",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": []
+        },
+        "ModelRequest_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "19dcd76010f96b468eebe92553991e13eb10c4b22f77734894123942016722ae",
+          "computation_id": "pix.computation.v1:sha256:1af21030e421bb472e99ce5db142fb8320133d5fcf850bdcbecd8d2bd54ba42e",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "ModelRequest_traces.json"
+          ]
+        },
+        "Run_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "66733b04d6c9bc84ad4a797dee6592ffdd9a955cc628b1e67b40eb526f3a2e08",
+          "computation_id": "pix.computation.v1:sha256:f187da11709236482c226a5166cdee003c064594f751c2a90e2ed2f7f4808264",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": []
+        },
+        "Run_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "cf76bcd42c6a6b0265200f7a1fab222ba85144463da7c8aed92eff94a05c2af7",
+          "computation_id": "pix.computation.v1:sha256:da31ad9ffb985abcf5210f97007ed2e40a3197fc9219f9a898fadaf7d6083fa6",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "Run_traces.json"
+          ]
+        },
+        "Session_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "0e07f951943c04b3b7994cf4a61562a9a54199819208a7ff0ab69d231f347f1c",
+          "computation_id": "pix.computation.v1:sha256:083824d2a546225fbd9036fef4ce576843626f01ebe89c30efaf90fba9e76097",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": []
+        },
+        "Session_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "87140bfa62c8211fe4d4f078b6f4415e52887907749ca3571d0e3ceeea948c22",
+          "computation_id": "pix.computation.v1:sha256:e236c46a44daef2f8857691afa22fae41e819cecde650909e26e7efbb0808f51",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "Session_traces.json"
+          ]
+        },
+        "Task_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "10d1972a44c6eb00d8c65f1ef6b79584fbd4a746e6ca8fe664062f8a637e7e95",
+          "computation_id": "pix.computation.v1:sha256:f9d891c56fc92b33761cf1ac69116714f26f1af295907dc3d8027f1da9f0ad2f",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": []
+        },
+        "Task_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "4e2b8ec99f6a60d962f8251db58b92a1599181053668018e1ecf83b0d7793f66",
+          "computation_id": "pix.computation.v1:sha256:17f1e728a931d3ecc15b44dedc561bd7fdbbb0338e7e584825ef00dccb66c813",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "Task_traces.json"
+          ]
+        },
+        "ToolCall_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "2fdcce7a5712458391e613b643da1094ed9f01e3af0e090fdc96cf5f843a65d4",
+          "computation_id": "pix.computation.v1:sha256:217a3453183f31453e4d42c1ddf7fe014fead54be3896ea45ad8cfd6adb6908f",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": []
+        },
+        "ToolCall_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "6009c92d970b5ea04b7a3ac6f418fb955a44e9babba2e0d1dd67b1ad3188a243",
+          "computation_id": "pix.computation.v1:sha256:b65083e1c2d21231bbcb851676a3bd42b1e7244404283a83a2618ebe26c59300",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "ToolCall_traces.json"
+          ]
+        },
+        "Turn_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "29b97cf1e4e3eb76af81b6ef321670c15ed8babb61b38fb77f3a97e327269d0e",
+          "computation_id": "pix.computation.v1:sha256:2914b4abf9881cb9ee2ecd9f5cbe73055f395604ab9e14564112ad711c315576",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": []
+        },
+        "Turn_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "01c60fe582310dd27e5e091d9014e6479550aa5c128234766f17f9c3464a9c41",
+          "computation_id": "pix.computation.v1:sha256:3a338178c781fe092983e09310212be3ad045b92629ba92647d237a092d11458",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "Turn_traces.json"
+          ]
+        },
+        "ocdfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "73ff816674912d37d60a9f70a587adcab6f784bb3ceffc215061e7d42b348bd1",
+          "computation_id": "pix.computation.v1:sha256:5d601f905dfccbe65d9a35cb5ffc7cddaaf63d97ff9d8b4db8b838274a6bcf25",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "Agent_dfg.json",
+            "ModelRequest_dfg.json",
+            "Run_dfg.json",
+            "Session_dfg.json",
+            "Task_dfg.json",
+            "ToolCall_dfg.json",
+            "Turn_dfg.json"
+          ]
+        },
+        "executions": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "353997f3093fd7d9d71420f9dc0b278744824890ff187ab27e88cbefdde97358",
+          "computation_id": "pix.computation.v1:sha256:c01125995cc0366140c6fe62ae7c2ec988ebbd73029ccf518065f9e6375ffac7",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": []
+        },
+        "variants": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "4ae434aed1c58cda7b5f18db22e0cc3463cacd43b5dcb8f253cabc0d891237cd",
+          "computation_id": "pix.computation.v1:sha256:c2dc7bf185743e98c49526dcc93c27c3aaafb5abc9c9b8d5886e0ac03a86d400",
+          "source_digest": "pix.ocel.canonical.v1:sha256:7584460e70645d433055c2a62b50f594b68b9ea964218c351ca8a96f4b10d704",
+          "parents": [
+            "executions.json"
+          ]
+        }
+      },
+      "coverage": "partial: exact per-run saved metadata; no atomic cross-run cut or host-project artifact capture",
+      "snapshot_atomic": false,
+      "run_dfg_distinct_edges": 12,
+      "run_dfg_occurrences": 15
+    },
+    "stock-profile-b": {
+      "handoff_record": {
+        "agent_id": "16d64712-1317-427a-98c8-4cd7615ffd84",
+        "source_id": "profile-b",
+        "org_id": "4feb5ea5-cbad-4917-b2c2-c5fd92caa1e7",
+        "job_id": "31a7a2ed-6af5-4948-8395-52df01fc331a",
+        "attempt_id": "c7da21a3-7572-430c-930f-ab009860ee8e",
+        "run_id": "0101421b-1024-485b-be35-018ea0a63b41",
+        "inclusion_events": 2,
+        "provenance": "actual stock mock host",
+        "organization_task_id": "e885e1fd-25cd-47cb-9e85-947f902e0e7d",
+        "session_id": "01a1b74a-3be5-775e-992a-8a8ce3041f9b",
+        "status": "completed",
+        "code": null,
+        "native_organization_status": "unknown",
+        "source_state_sha256": "bfbb1774401ac24501475c45a76057093f7985e419ad6373e5b893c02e7b2782",
+        "files": {
+          "stock-profile-b.ocel.json": "d9c901156f1f320027e2ea2c5e04b1e60583cc3a428fb8e723332b325842f7ed",
+          "stock-profile-b.ocel.meta.json": "37fcb03d9048920f06f4e9b8ec44dae2078ee85f24ec582825f71342f6089935",
+          "stock-profile-b.manifest.json": "8102319667acb75bac82097f84a696221626a7e0751b81d84fce91b0f538500a"
+        }
+      },
+      "source_events": [
+        {
+          "ocel_id": "pida:Event:7da5d99a1f8aa9a5c8476172dfec6211d35026b52498f919a85a4b24d6a5b6bb",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "222f2608-f072-474d-a6d8-f032501c724f",
+          "sequence_number": 1,
+          "time": "2026-11-07T18:34:17.964Z",
+          "activity": "run_started"
+        },
+        {
+          "ocel_id": "pida:Event:82f480f1e9dc4172043b5f706cfcb229c6e7988e80d21c57170e0c856c1fdffb",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "c1c8a225-a831-4ad9-8e74-9d0ed13b0bae",
+          "sequence_number": 2,
+          "time": "2026-11-07T18:34:17.982Z",
+          "activity": "context_snapshot_loaded"
+        },
+        {
+          "ocel_id": "pida:Event:d50283d1efa7364d961310d5d06a95d4adaf28e58ceed5ea64f6d44e79aff543",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "8c95f7e4-df4e-4d30-a693-627aa874e4ce",
+          "sequence_number": 3,
+          "time": "2026-11-07T18:34:17.983Z",
+          "activity": "run_context_loaded"
+        },
+        {
+          "ocel_id": "pida:Event:ac0146c4da83013b3a4a15f5d73e53010f0ae788db61f7e8c1ee4ce541185acc",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "04db9fe4-f111-4689-ae78-cd9f1e1a50e5",
+          "sequence_number": 4,
+          "time": "2026-11-07T18:34:17.985Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:7d4c959dd572172b9f521ec97c9d8fce5edf7184f4db22209e28bbf2a0546882",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "3051e043-1212-4708-9804-c2208422cda7",
+          "sequence_number": 5,
+          "time": "2026-11-07T18:34:17.988Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:18a2cf90ae4a3e9a25e51814b82960c2334ec0136f75da5f54e8e93b2cb8dc56",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "beb11152-3691-4851-b7e0-427a5dcc33af",
+          "sequence_number": 6,
+          "time": "2026-11-07T18:34:17.993Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:b26d958306eb3bd191faaa2ba78d144c4a59146efa718c19649d84fbe095a5e3",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "1d9b8522-e79c-4e11-96bf-a245878f347b",
+          "sequence_number": 7,
+          "time": "2026-11-07T18:34:18.031Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:167636632978eaa4c1047c85a991677ab85431ae48e9fa0e97be6e8b296190a7",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "e71d0c14-038e-44a5-a729-73133b02488f",
+          "sequence_number": 8,
+          "time": "2026-11-07T18:34:18.033Z",
+          "activity": "tool_started"
+        },
+        {
+          "ocel_id": "pida:Event:b9a9a043666aad1270e03836599493e16661fe3f0f7e40319da936cf5de267c3",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "59ba7c8e-166c-4657-b207-c030e4c3f6fa",
+          "sequence_number": 9,
+          "time": "2026-11-07T18:34:18.035Z",
+          "activity": "tool_completed"
+        },
+        {
+          "ocel_id": "pida:Event:83919f8cf9a5df72a4572cba5ea65fd60e4482ee8e3e76b39b48fe5e3031e234",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "55f5ba03-6466-41e6-90fe-8939d1ad980b",
+          "sequence_number": 10,
+          "time": "2026-11-07T18:34:18.038Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:32cf3b11d2e2612dbb60041ce85c0df2481b4db7276762160f22b2dffc4f28c2",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "020f6816-3e70-4de3-9cf2-ea33f56b8a21",
+          "sequence_number": 11,
+          "time": "2026-11-07T18:34:18.044Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:fab2173f70566fa0c3a9bcf28f8e0246f837b5fb1f9ed03c7839b59db2e4c532",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "373915d5-ced3-4238-ad2d-87fe86cb30ab",
+          "sequence_number": 12,
+          "time": "2026-11-07T18:34:18.047Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:cdcef4a28c78cb3c9ba8f884d7e3c06b13c108185530b8415aa1297ddda1edfb",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "f61ba725-b0aa-4cfb-9888-c6bcb7c6a9fa",
+          "sequence_number": 13,
+          "time": "2026-11-07T18:34:18.053Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:be91e98205c53369fa31703666d09adc4c34e77c10e9b85b7289bb19c4f99515",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "6c86720b-62d4-4908-9ea1-195453c8b42c",
+          "sequence_number": 14,
+          "time": "2026-11-07T18:34:18.157Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:9cce41b98f2855e80684192c008afb285314b702de52e6b3a325e0982de43024",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "174b39ea-9f25-4bf2-8e72-75d77d07297b",
+          "sequence_number": 15,
+          "time": "2026-11-07T18:34:18.158Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:1dd1487fb0b06c104d7a34d981384828337c79b4efe86be9fc8d5e7d8a0748e3",
+          "source_id": "ccff815e-5300-4b12-b514-54376fabc4b6",
+          "source_event_id": "58b18ead-dad1-4127-8985-37c7c5c7ca77",
+          "sequence_number": 16,
+          "time": "2026-11-07T18:34:18.265Z",
+          "activity": "run_finished"
+        }
+      ],
+      "counts": {
+        "events": 16,
+        "objects": 9,
+        "e2o": 84,
+        "o2o": 11
+      },
+      "timestamp_ties": 0,
+      "canonical_ocel": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+      "producer_meta": {
+        "mapping": "pida.ocel20/1",
+        "sourceDigest": "1a0a41a4cd98d81b8d0db63887dbd1c282d67a5f85afc3fc129f842f66f6a908",
+        "digest": "ccab2b78e629727ffa4bdb28bb025f3859d2cda4154d4c471dd7089bab57c6ab",
+        "complete": true,
+        "knownLimits": [
+          "RUNTIME_OBSERVED_EVENTS_ONLY",
+          "SEQUENCE_IS_OBSERVATION_ORDER_NOT_CAUSAL_ORDER",
+          "PROCESS_CONFORMANCE_IS_NOT_ARTIFACT_CORRECTNESS"
+        ]
+      },
+      "manifest": {
+        "schema_version": "pida.result/0.1-draft",
+        "task_id": "31a7a2ed-6af5-4948-8395-52df01fc331a",
+        "run_id": "0101421b-1024-485b-be35-018ea0a63b41",
+        "session_id": "01a1b74a-3be5-775e-992a-8a8ce3041f9b",
+        "agent_id": "16d64712-1317-427a-98c8-4cd7615ffd84",
+        "reported_status": "completed",
+        "reported_by": "runtime",
+        "verification_status": "UNKNOWN",
+        "artifact_refs": [],
+        "current_artifact_refs": [],
+        "evidence_refs": [],
+        "verification_results": [],
+        "runtime_version": "0.8.18",
+        "known_limits": [
+          "NO_INDEPENDENT_TASK_ACCEPTANCE",
+          "AGENT_SUPPLIED_CHECKS_ARE_SCOPED",
+          "PI_INTERNAL_REQUEST_USAGE_NOT_EXPORTED",
+          "HOST_PROJECT_ARTIFACTS_NOT_CAPTURED",
+          "HOST_PROGRAM_NOT_SANDBOXED",
+          "PROGRAM_DEPENDENCIES_NOT_PINNED",
+          "PROGRAM_DESCENDANTS_NOT_GUARANTEED_STOPPED",
+          "COST_UNKNOWN"
+        ]
+      },
+      "native_results": {
+        "Agent_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "245e4701e07254fa97f73fb540288d07a7496451130bcc23055b7112987c0ea9",
+          "computation_id": "pix.computation.v1:sha256:6c9beb8247f8ca60d8999f4aa0cf7589c1010445b4aa9a8371a69f21f21ef6c8",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": []
+        },
+        "Agent_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "d52ebe74381c4af07d06f52466a290d3d8abbcda651f2fdad94c07607c5bb039",
+          "computation_id": "pix.computation.v1:sha256:6a1d23e82d88e8242dc30bb453b029b77d48cf3d225a0a8a93962e3bd05246be",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "Agent_traces.json"
+          ]
+        },
+        "ModelRequest_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "ae8901e04d59ee5615f912aaac6d524b7f3b4025861d13e1bb717a5f705948fb",
+          "computation_id": "pix.computation.v1:sha256:75cae895fc70cf0cf434b814c4db17735207c03b9a6e847e1e2587081c65e3b6",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": []
+        },
+        "ModelRequest_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "9263129d915070cd5f377bfa183a9ff4af8fe6a732a4f6367c41f260c62e36d2",
+          "computation_id": "pix.computation.v1:sha256:6f1220476a818656b54eb7c61f0c2407418a2ce2126f72e26f9ed08d2bac275a",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "ModelRequest_traces.json"
+          ]
+        },
+        "Run_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "e371774c6d489cfef62cff5fe7c2b4c20871c80266d3d2e287a857eef244e315",
+          "computation_id": "pix.computation.v1:sha256:3ace7765ddad25fc6d4e8e4378e53d4aade9b046ee555af3d924a6f4089aac22",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": []
+        },
+        "Run_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "e1d4080fe1225990e5d3e4a010eadad37d143c38e64e852f07d2ac5b8450e305",
+          "computation_id": "pix.computation.v1:sha256:c2ca489300bdfec313a3a169fa3941eb4c2b87058299a61a3d73e92dd1d643c6",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "Run_traces.json"
+          ]
+        },
+        "Session_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "0d659cdb97fed08e2bc328cef6e3a621ae2619e55abde015d5efb998080df7f1",
+          "computation_id": "pix.computation.v1:sha256:8b418a899678b326d3c2034115cf125fb3ab273a2145d4068b26f53d0b0e4267",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": []
+        },
+        "Session_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "53150d4088036cae7f5f2b2a6f3db8e5894fac94f9e5da817ad95f5383cd2b4c",
+          "computation_id": "pix.computation.v1:sha256:9c6cc88c8a7cd000e3a99f4296e34baf5b7a17c11061dfd8ac1bf602d78380fb",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "Session_traces.json"
+          ]
+        },
+        "Task_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "39de8d8391b7c1caacfa21379f249e90cdde697fa4775634594db7da28b620dd",
+          "computation_id": "pix.computation.v1:sha256:4d9ce9dcb8565d89c494051318d3e9d5bea25c5c8be236a6c3e388f03271aecb",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": []
+        },
+        "Task_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "673ce70b4f283f4a2f678f8e8e7db81c9c182689960fb9ce88f8a321a53fa771",
+          "computation_id": "pix.computation.v1:sha256:6810a712c5a152d3ede64d0a97b42a25c5c39f8dfb89e3b764def70667b26405",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "Task_traces.json"
+          ]
+        },
+        "ToolCall_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "d80a5d5a3deb3707eefe17a0ce5d4c705dcf50b455089d24c9ff038fd666e731",
+          "computation_id": "pix.computation.v1:sha256:7e5874e530bc527692811cbdbbaffdf9d60633551b50244a0dfa51fc58471d63",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": []
+        },
+        "ToolCall_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "28124fbf965ff3b6fcc95685ddb5096f09ee2820059adf7174aab615fb3c0829",
+          "computation_id": "pix.computation.v1:sha256:c2547e89030f5089c5476427f37e1a80507080fb64b1fb17881ae1092596b1af",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "ToolCall_traces.json"
+          ]
+        },
+        "Turn_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "07884fb8b5c424f6f02eda55c57eccec778e44524fa4ac7b644c54ec29d9c564",
+          "computation_id": "pix.computation.v1:sha256:2c3f51c619b86a85a7cedaa4558665198cd3d4c2235ca2bb79e15847ce63cee2",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": []
+        },
+        "Turn_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "563fbbdb78f287aa75a975bbcbdaa0a700eb4a57a79ba20683741d0136154924",
+          "computation_id": "pix.computation.v1:sha256:8ed62b2254106171f9bf10c13efc050f91a6480208eb9686ae59e07f4e68bf7e",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "Turn_traces.json"
+          ]
+        },
+        "ocdfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "3ef1dbf6d4f40053833afde034dea5938de1146a501625303e0a9fbbcc83b95f",
+          "computation_id": "pix.computation.v1:sha256:f6cc1f6c4445126065e9c049ee88f69af57bff5b7ded4956b7ecde97b855cec8",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "Agent_dfg.json",
+            "ModelRequest_dfg.json",
+            "Run_dfg.json",
+            "Session_dfg.json",
+            "Task_dfg.json",
+            "ToolCall_dfg.json",
+            "Turn_dfg.json"
+          ]
+        },
+        "executions": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "8ca93f0522be5572dd120f0321e7214bd30b43b47c82fd722b74e2dc8afa5e30",
+          "computation_id": "pix.computation.v1:sha256:d735af89af42bed168e26c011c39d94ecdce9503d7059d3ff1d19f44d83ede6d",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": []
+        },
+        "variants": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "9113bbe1fab1f2ab367358b477597a94bd19985db70c7d27d6bb9ecd50f9bf70",
+          "computation_id": "pix.computation.v1:sha256:6ab9860cd9911a151118917142cb0ce585e75f4e37099137c84120bd0dacf2ea",
+          "source_digest": "pix.ocel.canonical.v1:sha256:6b656900ebd5793d4d671900d2fbf07f823f7b559c5004ee03edf2c6c383bf30",
+          "parents": [
+            "executions.json"
+          ]
+        }
+      },
+      "coverage": "partial: exact per-run saved metadata; no atomic cross-run cut or host-project artifact capture",
+      "snapshot_atomic": false,
+      "run_dfg_distinct_edges": 12,
+      "run_dfg_occurrences": 15
+    },
+    "sdk-profile-a": {
+      "handoff_record": {
+        "agent_id": "d8088a0a-e5db-4a25-a3e8-24e5360135b8",
+        "source_id": "profile-a",
+        "org_id": "10f83456-e5c9-4a1b-a889-f6ab0e564b9d",
+        "job_id": "91f29a2e-547d-4db9-ba9e-f9b329e252a1",
+        "attempt_id": "8ae40714-3c67-40dc-a281-9bc9f40dbe5a",
+        "run_id": "04fc92fd-2842-4920-9548-5ae6a627df93",
+        "status": "failed",
+        "code": "PROGRAM_EXIT_FAILED",
+        "inclusion_events": 2,
+        "provenance": "public SDK with scripted provider and simulated 15-token response usage",
+        "organization_task_id": "92834dab-6899-458c-a787-4cfacc09b8cc",
+        "session_id": "01a1b74a-4af4-7022-aefa-91928bb1f6be",
+        "native_organization_status": "unknown",
+        "source_state_sha256": "1c76dd4fd34a0bc2d7b5521b99d57574ad610b1258adccba24a1908655927908",
+        "files": {
+          "sdk-profile-a.ocel.json": "e461f6e7ba41178cfafffab77c4ac07a142e326c2d7237f5992a59818e396c39",
+          "sdk-profile-a.ocel.meta.json": "e6de0c84f1d3748b01a53922519afb346580d7cce40d53453f442eff07496578",
+          "sdk-profile-a.manifest.json": "d8caf96c595640deae5fdccda6898f47820e4e1fe8246b992791fcf39ecec234"
+        }
+      },
+      "source_events": [
+        {
+          "ocel_id": "pida:Event:42ecd6045dea775a356cffaf4a5abf54c7a7b31f1702593eeda24035601f573c",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "3f3666f3-af2f-4c4c-af0d-3eed1088b941",
+          "sequence_number": 1,
+          "time": "2026-11-07T18:34:21.825Z",
+          "activity": "run_started"
+        },
+        {
+          "ocel_id": "pida:Event:03a72f38609e08b2789f922c3a91a93e32bea5911f9f2fa19d7c3422246c0a13",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "0fe29cf8-b599-4c2f-96b8-dca52387f9ba",
+          "sequence_number": 2,
+          "time": "2026-11-07T18:34:21.847Z",
+          "activity": "context_snapshot_loaded"
+        },
+        {
+          "ocel_id": "pida:Event:21001b3639692b3ebad86db403c5ba5f4ed35d858e4980396c53a0647bffe853",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "fba8484b-1e39-439a-bf26-d34423c2f36d",
+          "sequence_number": 3,
+          "time": "2026-11-07T18:34:21.847Z",
+          "activity": "run_context_loaded"
+        },
+        {
+          "ocel_id": "pida:Event:6e29357df13929be63d058237e07f42e3277a94f5c508b938fd6a34429aad196",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "f9826fe6-efc0-49d9-b17a-7f32a0aa7e6f",
+          "sequence_number": 4,
+          "time": "2026-11-07T18:34:21.852Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:da4602d480ef823d68892e63bf6f72019336c717073971e721873573f60d868e",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "c6bd9f9d-d11b-4bb1-9a51-339651457f89",
+          "sequence_number": 5,
+          "time": "2026-11-07T18:34:21.856Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:0a428c00b92f9af599f163b9ff30447d20e92bb8e509a76a7e8a273f8685ca3d",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "e7e72bc0-ce07-4599-9942-3810adc85f14",
+          "sequence_number": 6,
+          "time": "2026-11-07T18:34:21.864Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:6e30b0998c7e9c691add143a271f652a25620fa65e43442935f8360b3a7b540d",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "63d506ad-dce4-4ae9-8240-20fb359402e9",
+          "sequence_number": 7,
+          "time": "2026-11-07T18:34:21.868Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:e7230ea99bdb6adcd9ed7517874c7a38f6817b97c09976ca05d98b579482b907",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "f1ffe2f3-e210-4890-ab59-ba1e6e7b2597",
+          "sequence_number": 8,
+          "time": "2026-11-07T18:34:21.869Z",
+          "activity": "tool_started"
+        },
+        {
+          "ocel_id": "pida:Event:ec4133d044318b240e9928bb1ec909eda857069db3ddcb7f71ed03ff41ee42a3",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "ea10b3e4-8f44-4f46-88dc-b4d17498912f",
+          "sequence_number": 9,
+          "time": "2026-11-07T18:34:21.974Z",
+          "activity": "tool_failed"
+        },
+        {
+          "ocel_id": "pida:Event:82975a2c448cab5c17e98475e1feadab00ea2e5072dcc9636efaa321ce19f14c",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "6d2618c0-49ac-4e09-ad96-32e0ef33de32",
+          "sequence_number": 10,
+          "time": "2026-11-07T18:34:21.977Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:802500f9f1c59a9ffe61fb79b9f6b315f2c0aefe41d93336017ad54a2495e324",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "60315441-edfb-4531-95d2-e017d0d9c74c",
+          "sequence_number": 11,
+          "time": "2026-11-07T18:34:21.989Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:9442a09036c5615e465838c14c398af2b786333df036858b7927a0198d5e44d0",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "d471f884-6325-4dd1-85de-8ccbeb59807f",
+          "sequence_number": 12,
+          "time": "2026-11-07T18:34:21.992Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:7d4f49e1f2f0886ccf5daea79172a5e711d072c9a8d7009c9f865e7a40972036",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "dd84d085-77da-4b57-b502-db875a1d2422",
+          "sequence_number": 13,
+          "time": "2026-11-07T18:34:21.998Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:df80a86d0f6508a5f90d4c6c832517c50ebe406b072d5fe9873b39a8648144e0",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "b4ca9965-b0e3-4ec6-b8b4-7505cfe19747",
+          "sequence_number": 14,
+          "time": "2026-11-07T18:34:22.016Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:39f0f0ce38a691bfb1f58f099ed9d45f9a1e81e8679611ac0578779f4ece3a13",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "91cc2ee4-56eb-403b-b4ad-1c73a40cbd50",
+          "sequence_number": 15,
+          "time": "2026-11-07T18:34:22.018Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:3dbd8d027df4cfadc108cf958c64ecab75ae087ed9ed9488a24544c7690d9c96",
+          "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+          "source_event_id": "b4f0c2ac-1eb5-47ac-bb52-b192489e9e5b",
+          "sequence_number": 16,
+          "time": "2026-11-07T18:34:22.117Z",
+          "activity": "run_finished"
+        }
+      ],
+      "counts": {
+        "events": 16,
+        "objects": 9,
+        "e2o": 84,
+        "o2o": 11
+      },
+      "timestamp_ties": 1,
+      "canonical_ocel": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+      "producer_meta": {
+        "mapping": "pida.ocel20/1",
+        "sourceDigest": "bfada9b4f63cc248046d437f2b944752e90e2e93036182e175380a5d88bf0bec",
+        "digest": "60107e424c38ad81e00166a2cca692ebc651f1163e06c96ee28301f17e28d7ea",
+        "complete": true,
+        "knownLimits": [
+          "RUNTIME_OBSERVED_EVENTS_ONLY",
+          "SEQUENCE_IS_OBSERVATION_ORDER_NOT_CAUSAL_ORDER",
+          "PROCESS_CONFORMANCE_IS_NOT_ARTIFACT_CORRECTNESS"
+        ]
+      },
+      "manifest": {
+        "schema_version": "pida.result/0.1-draft",
+        "task_id": "91f29a2e-547d-4db9-ba9e-f9b329e252a1",
+        "run_id": "04fc92fd-2842-4920-9548-5ae6a627df93",
+        "session_id": "01a1b74a-4af4-7022-aefa-91928bb1f6be",
+        "agent_id": "d8088a0a-e5db-4a25-a3e8-24e5360135b8",
+        "reported_status": "failed",
+        "reported_by": "runtime",
+        "verification_status": "UNKNOWN",
+        "artifact_refs": [],
+        "current_artifact_refs": [],
+        "evidence_refs": [],
+        "verification_results": [],
+        "runtime_version": "0.8.18",
+        "known_limits": [
+          "NO_INDEPENDENT_TASK_ACCEPTANCE",
+          "AGENT_SUPPLIED_CHECKS_ARE_SCOPED",
+          "PI_INTERNAL_REQUEST_USAGE_NOT_EXPORTED",
+          "HOST_PROJECT_ARTIFACTS_NOT_CAPTURED",
+          "HOST_PROGRAM_NOT_SANDBOXED",
+          "PROGRAM_DEPENDENCIES_NOT_PINNED",
+          "PROGRAM_DESCENDANTS_NOT_GUARANTEED_STOPPED",
+          "COST_UNKNOWN"
+        ],
+        "code": "PROGRAM_EXIT_FAILED"
+      },
+      "native_results": {
+        "Agent_traces": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "209d15bbb0bb3cbc16870cb432c00138524445762a6262fa650cf69a8c27559a",
+          "computation_id": "pix.computation.v1:sha256:3d5bffaa2f665d1c4b5b28b62c19cb85102ffac24dd440eb18d988bd83a5e981",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": []
+        },
+        "Agent_dfg": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "2479724f0cef0a87a9cf0611b0cd6f50595476ff43491e1fda8e6cbd775fc33e",
+          "computation_id": "pix.computation.v1:sha256:16458f01717ad68867ca1a992f9ff5fc207b718a5f9073677de9074d0faed4e6",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "Agent_traces.json"
+          ]
+        },
+        "ModelRequest_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "7e4d1b90603e835429648814287f0f88ea7bb4e9f055d3c0d1db4a37d19b390f",
+          "computation_id": "pix.computation.v1:sha256:579d8d57994c67ad859cb9e05f617ed17b896a77529d7f603ee5268673627be6",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": []
+        },
+        "ModelRequest_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "d2172239d026ed516a03b57b7c56533ef0264631950ddaf72852f2234f040d5e",
+          "computation_id": "pix.computation.v1:sha256:61e8ca1bbe42bc5d3fb462de3c8b4378262af1ec3cce46cfdfc8db8accbde18f",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "ModelRequest_traces.json"
+          ]
+        },
+        "Run_traces": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "bd51f895299d838115a01ccaad1598127954d0102fd11e5f0fcaf1f44b49dae6",
+          "computation_id": "pix.computation.v1:sha256:7e03d5938220786fcd718c82bca3d2a74d80297113152c6d3d630052c5e86817",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": []
+        },
+        "Run_dfg": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "2f7484332c2011279b81930ff1de11406798546a5b25cbeec2bd25de58c51621",
+          "computation_id": "pix.computation.v1:sha256:802198568bba99aed67a906fe5cc9679a07ce8701c543f2721622494f8fd99f4",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "Run_traces.json"
+          ]
+        },
+        "Session_traces": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "c7fce807df275e78d4e214024857c6d35916863674cdc3a1ab12d4386fd7f26e",
+          "computation_id": "pix.computation.v1:sha256:dfdebdffb79c7b75c78da6f27fded1d0aacca7633819adad80adb31fd58540da",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": []
+        },
+        "Session_dfg": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "b0b75f0c77249ec0ffae441c47aba4d39eb520f2c1b7eaff1f486b649bb7f95f",
+          "computation_id": "pix.computation.v1:sha256:ebdfb15fe51124eda94d74f0a13dbd9c59518b047810f9dc13154543e832ff7c",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "Session_traces.json"
+          ]
+        },
+        "Task_traces": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "48379a0efdb2059b49faa54601ab88063836b5a42350ddb7df922ba9d68c2b40",
+          "computation_id": "pix.computation.v1:sha256:a0089ad298ea60685e21aa744d8f89a10f122b5d1983b3ebf3a6522e554f92c0",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": []
+        },
+        "Task_dfg": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "27a9bd5422b1177b9eb62d8e0decebfbe18038e3c42c5dac58d90cf1f6cf694d",
+          "computation_id": "pix.computation.v1:sha256:e8183c7c1ec7fb2d941ccd036c2c411d45ca46f5c667a7c43738011233569bf4",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "Task_traces.json"
+          ]
+        },
+        "ToolCall_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "64c39bae368b0e67248fa1825959d315d2b4beee23ba0a495dcf218e5c6b3eaa",
+          "computation_id": "pix.computation.v1:sha256:7d55f9370970a499a1ee781b0edd2617385786f00241cf8d6491c4ddc639aa1d",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": []
+        },
+        "ToolCall_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "3ac4d1b7f3428667d62d7208a7d58dbbed7803e9dcf071d3ac057979d7d66045",
+          "computation_id": "pix.computation.v1:sha256:4c74fb90aabd09932b15256bbf929864b77f6f3b61d9f8cb9bdffd109d7e5af0",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "ToolCall_traces.json"
+          ]
+        },
+        "Turn_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "5fe67bd86c506de1b2755f0ae767da6c425de6695ac7cdf997f12173a31efdad",
+          "computation_id": "pix.computation.v1:sha256:569b710c9cbebf9f5d999c88705bd1b0558ff0fa169d24cdba6d2ff614343763",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": []
+        },
+        "Turn_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "f686c8dd4ad94ed82334b90d5a7c6ab0f63b9600bf4eb3b1c46213a16c2f5682",
+          "computation_id": "pix.computation.v1:sha256:8bce3f1addaecf9b92f3174a728afc44702643c1f9db395d0fc3c50773a2d6f0",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "Turn_traces.json"
+          ]
+        },
+        "ocdfg": {
+          "status": "unavailable",
+          "issues": [
+            "ambiguous_event_order",
+            "ambiguous_event_order",
+            "ambiguous_event_order",
+            "ambiguous_event_order"
+          ],
+          "sha256": "d66bef3209028b6badd6d2960f8999cd70a0c6431f20d16be04f726b1818a7d7",
+          "computation_id": "pix.computation.v1:sha256:d7c199937c5a5868fec8aa4ec2fe5b9c78eca6d452c415f499f69c2f009d0d9d",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "Agent_dfg.json",
+            "ModelRequest_dfg.json",
+            "Run_dfg.json",
+            "Session_dfg.json",
+            "Task_dfg.json",
+            "ToolCall_dfg.json",
+            "Turn_dfg.json"
+          ]
+        },
+        "executions": {
+          "status": "computed",
+          "issues": [
+            "ambiguous_event_order"
+          ],
+          "sha256": "105a67a092cb5d2141e3c5d74edaa3042bbb242eb17619d8dd6766169a5c8f30",
+          "computation_id": "pix.computation.v1:sha256:847de35cf5953a4da2122abb2504762866d41dfddbc0e13cb6a738a451fb7d75",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": []
+        },
+        "variants": {
+          "status": "unavailable",
+          "issues": [
+            "order_unavailable",
+            "ambiguous_event_order"
+          ],
+          "sha256": "48449ff5d918248ce826b46546167cdd9a8d3d4d39c390724a0b0eedbbe2f81a",
+          "computation_id": "pix.computation.v1:sha256:d7261a27ab9f6397a994f8bc87a3db4ca497544c8a232dcf877519387f89fb09",
+          "source_digest": "pix.ocel.canonical.v1:sha256:d61c193f25d3d68ac34a8b2c2d0e59cceb818e5798aa735ba7327a71fab04ce8",
+          "parents": [
+            "executions.json"
+          ]
+        }
+      },
+      "coverage": "partial: exact per-run saved metadata; no atomic cross-run cut or host-project artifact capture",
+      "snapshot_atomic": false,
+      "run_dfg_distinct_edges": null,
+      "run_dfg_occurrences": null
+    },
+    "sdk-profile-b": {
+      "handoff_record": {
+        "agent_id": "74f579f2-a07e-4f43-94f9-96aea4072aa0",
+        "source_id": "profile-b",
+        "org_id": "c0285fee-cea2-4bbe-8077-1765b4c28cd4",
+        "job_id": "9032b60e-31e0-47f7-ae71-6f6a1d8d3b32",
+        "attempt_id": "f9cc7139-cd08-4155-8074-e20d32c28673",
+        "run_id": "fd7fd03b-f5f6-487a-ac25-9a2b625c55e0",
+        "status": "completed",
+        "code": null,
+        "inclusion_events": 4,
+        "provenance": "public SDK with scripted provider and simulated 15-token response usage",
+        "organization_task_id": "e95bcab8-731a-4df1-8573-0bf089ba027d",
+        "session_id": "01a1b74a-4c49-7022-aefa-9194ba58ff7b",
+        "native_organization_status": "unknown",
+        "source_state_sha256": "1c76dd4fd34a0bc2d7b5521b99d57574ad610b1258adccba24a1908655927908",
+        "files": {
+          "sdk-profile-b.ocel.json": "2d45f348b33daf799f32a288146e97b6f14d0f66dd66cc61295f4791dfa460d2",
+          "sdk-profile-b.ocel.meta.json": "c308d554d98fdb05d15e89e5f36dda6c2d32069db11c98e9ffe851773d503e09",
+          "sdk-profile-b.manifest.json": "acba2013325507ae070b3edab0fa2157f8677ab0f2257c5c3bd22dfe98561408"
+        }
+      },
+      "source_events": [
+        {
+          "ocel_id": "pida:Event:7eea17d39222ef6ac1c61075f8ba3307302b3b439c2138d93d1778b4390baf19",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "f49f9560-e53f-4e46-a55f-1b66caa3eedf",
+          "sequence_number": 1,
+          "time": "2026-11-07T18:34:22.160Z",
+          "activity": "run_started"
+        },
+        {
+          "ocel_id": "pida:Event:dd5ca73c25e300b33936ba0a9957c6dc06faecf73e26cbf9eefc9b39c49c7ec2",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "dec862fc-9895-4a37-bd3d-61fb8edd9c1c",
+          "sequence_number": 2,
+          "time": "2026-11-07T18:34:22.177Z",
+          "activity": "context_snapshot_loaded"
+        },
+        {
+          "ocel_id": "pida:Event:dd147eb0ad7d2ab187c50cd0607960984f3a4833b5e7fa956a9635ca8edea44c",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "180fd89f-7ec8-4fd1-9c94-7cd1c7e6cb91",
+          "sequence_number": 3,
+          "time": "2026-11-07T18:34:22.178Z",
+          "activity": "run_context_loaded"
+        },
+        {
+          "ocel_id": "pida:Event:95b3f48f7355cd9e9311aca6e4f5d41b30294e7f8d483c5451f4380e0038a918",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "6c3dda96-628c-44d3-8a89-2a5d975f6e78",
+          "sequence_number": 4,
+          "time": "2026-11-07T18:34:22.181Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:ac7581d6b6b1a122b0d17c759d197cf98d290d9dd26cf5e0304eb1ae4db61475",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "c7369cf6-cb31-4a68-856c-a082dbd8feb0",
+          "sequence_number": 5,
+          "time": "2026-11-07T18:34:22.184Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:fb799eb3ee0c7acb9598ac2ef868dfd6f9c148bedd2303ab5e135543f38dd5bb",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "7a96076c-8007-4b5f-a694-b6f833140234",
+          "sequence_number": 6,
+          "time": "2026-11-07T18:34:22.189Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:9b7981cc3a0cf64a001358e692e09f14a1df909a4651a61e6d888d3a9ea42ec8",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "19dadd4c-1dee-4e05-862e-32317d3b31f7",
+          "sequence_number": 7,
+          "time": "2026-11-07T18:34:22.284Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:5137b36519041540de51a7ab4c62da648c30faec4dbcb6d53dd3f45dfe731591",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "f0e0c746-afb1-4c0e-a3ac-6478b55fdea4",
+          "sequence_number": 8,
+          "time": "2026-11-07T18:34:22.285Z",
+          "activity": "tool_started"
+        },
+        {
+          "ocel_id": "pida:Event:70ca5f6bb82f0f168c00415f20236f1b9ceba778555887c5a936ce0cdfbee321",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "ad2e758d-1e2e-4adf-ae65-a3d28a1c3867",
+          "sequence_number": 9,
+          "time": "2026-11-07T18:34:22.296Z",
+          "activity": "tool_completed"
+        },
+        {
+          "ocel_id": "pida:Event:6bbabb88256d274fb22857aa3562781dbca7b99381b63696b9e7d5dc916afecd",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "4c2632c5-324a-428f-baf1-877600f14bda",
+          "sequence_number": 10,
+          "time": "2026-11-07T18:34:22.299Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:a9437ff653eeb357c94980d5caa34d9dbcd594267e867d32d1279d7b1649d28d",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "ce0e29fa-b67a-484e-a014-169a749c1a7c",
+          "sequence_number": 11,
+          "time": "2026-11-07T18:34:22.305Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:f1a46168c3e90283ab799199f4c714b151d607c9fa582334b0da4178fa64b05d",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "fd1b9d61-c994-4ac5-b048-3863cb0206c5",
+          "sequence_number": 12,
+          "time": "2026-11-07T18:34:22.308Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:50ab36cc54b72b3e776d7df18a880d518587bca6a31d44e819843ea99c64bc17",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "c989c724-3f2d-4ded-8a48-70bb3ca2a442",
+          "sequence_number": 13,
+          "time": "2026-11-07T18:34:22.314Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:413661ced3ea633d8d7e3f23403305cc86568971b49dcfbf70b77615476c50e0",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "023ae8f6-5e16-4244-989c-1c445d9e9123",
+          "sequence_number": 14,
+          "time": "2026-11-07T18:34:22.331Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:00b2c1bd3e48a85f720bf6b2fddacb393d7f1e22c60d848c5e1b76ad2ddae0ed",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "2811a491-f99c-405c-b685-a2e95ff2fad3",
+          "sequence_number": 15,
+          "time": "2026-11-07T18:34:22.332Z",
+          "activity": "tool_started"
+        },
+        {
+          "ocel_id": "pida:Event:f03e45f468439aa4077ffe2dd24da8880b1e3f5f1622e5a29bd72e5ce2997d8d",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "3ca1f844-1afa-44c5-a7ff-a1bd84d0a96c",
+          "sequence_number": 16,
+          "time": "2026-11-07T18:34:22.429Z",
+          "activity": "tool_completed"
+        },
+        {
+          "ocel_id": "pida:Event:2831f82ff6f0b7df56bd9e61c5a3ef61add351919d6d22a5fa7f9d686855ebb2",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "093bbd1b-6201-4f46-89a5-e946113733fc",
+          "sequence_number": 17,
+          "time": "2026-11-07T18:34:22.431Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:d8730f97e20726080c2151a5bbde644516f3379be9cea5dbe3fd6a283e8e25b2",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "ab3ca476-6cd1-45a8-a248-fa733c524129",
+          "sequence_number": 18,
+          "time": "2026-11-07T18:34:22.440Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:5b8e47405001919bfd86a5bcd92ff3a3277fa9aa0341a0f8f0fcd8eb4ab0b0b0",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "7f658823-87fb-4d90-97b4-a2af622aaca0",
+          "sequence_number": 19,
+          "time": "2026-11-07T18:34:22.443Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:c7057c1c2f1734cc18995bc930b5eb3d0e70cb32cc660bf6f0a72bc608f6bd24",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "b203cadd-c3ed-4766-a080-19a41fbaf75d",
+          "sequence_number": 20,
+          "time": "2026-11-07T18:34:22.448Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:3cde6a8baf79f35af70e7b840eed959b8f68ffc0af4ab1beac828558ac899821",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "039944ce-32c1-4b8f-92fa-3d8884c2f4d5",
+          "sequence_number": 21,
+          "time": "2026-11-07T18:34:22.488Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:6f6191310ccd8b4b7cbd7792c9a8ba20cfa5fb46bc1e6373441e5722404a2f2d",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "e265d8f2-1958-4392-a04d-3a55290801d4",
+          "sequence_number": 22,
+          "time": "2026-11-07T18:34:22.490Z",
+          "activity": "tool_started"
+        },
+        {
+          "ocel_id": "pida:Event:d62175c2088c7e023279edab7fbd7888bbc6fa72b95fec619e54d50c35dded20",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "12b80afb-7e1d-435d-8284-8d3d33d42017",
+          "sequence_number": 23,
+          "time": "2026-11-07T18:34:22.494Z",
+          "activity": "tool_completed"
+        },
+        {
+          "ocel_id": "pida:Event:70ead26cef501b10fe1966d75cc19dc18bf101b9545e4dc1828c0b10bfe5cfc6",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "10e00565-7d3d-49bb-9453-57966b833410",
+          "sequence_number": 24,
+          "time": "2026-11-07T18:34:22.496Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:730d20fdf241c3988c87e6646668c2a13ae658a032a6e36e1c84c0cdb275383f",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "ad14a8b3-f268-4e94-9dbe-75e3b7d67ff3",
+          "sequence_number": 25,
+          "time": "2026-11-07T18:34:22.505Z",
+          "activity": "turn_started"
+        },
+        {
+          "ocel_id": "pida:Event:ae07a018b8ca6a840cda135a3959347c9b263b7ba8652b592c501d8bc496ce82",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "5a359ac3-11c9-4529-9214-158dc556f9d6",
+          "sequence_number": 26,
+          "time": "2026-11-07T18:34:22.508Z",
+          "activity": "model_request"
+        },
+        {
+          "ocel_id": "pida:Event:7e9f0884424a274b9f65d845d85a367ae9396138aa2c112a94901297cbb10a15",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "05d4b2a7-9083-4282-9804-70a344f37269",
+          "sequence_number": 27,
+          "time": "2026-11-07T18:34:22.512Z",
+          "activity": "context_input_included"
+        },
+        {
+          "ocel_id": "pida:Event:626fe71447ecb1edb22af180a122b9084e56e7b7363bcf87f9ebfd13ca0276d8",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "fa11873c-e525-4282-9e80-9fdf567589d8",
+          "sequence_number": 28,
+          "time": "2026-11-07T18:34:22.536Z",
+          "activity": "model_response"
+        },
+        {
+          "ocel_id": "pida:Event:cd46e89be445363a5910932174e4ea90008f6fa086e06375387fa91469941eb2",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "04d55915-f6b3-4ff9-b336-992c132bb883",
+          "sequence_number": 29,
+          "time": "2026-11-07T18:34:22.537Z",
+          "activity": "turn_finished"
+        },
+        {
+          "ocel_id": "pida:Event:291f0581eaa119d9982440d8f1b7da67d6078c3b58b2ed4f120095697283952e",
+          "source_id": "8ea653a5-0a3d-4cde-9904-55c671ccd04c",
+          "source_event_id": "f507f489-7ccb-45e9-9387-ba7afc6c6dfa",
+          "sequence_number": 30,
+          "time": "2026-11-07T18:34:22.631Z",
+          "activity": "run_finished"
+        }
+      ],
+      "counts": {
+        "events": 30,
+        "objects": 15,
+        "e2o": 164,
+        "o2o": 21
+      },
+      "timestamp_ties": 0,
+      "canonical_ocel": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+      "producer_meta": {
+        "mapping": "pida.ocel20/1",
+        "sourceDigest": "ef2d66cf66dd02820f71413eee82bf694779ccc8d57d6de2982abb5f690095c6",
+        "digest": "6a3a69bda3c80162c20bf8bb5027aa7335d9052859799cf34cb36beb1daf3f83",
+        "complete": true,
+        "knownLimits": [
+          "RUNTIME_OBSERVED_EVENTS_ONLY",
+          "SEQUENCE_IS_OBSERVATION_ORDER_NOT_CAUSAL_ORDER",
+          "PROCESS_CONFORMANCE_IS_NOT_ARTIFACT_CORRECTNESS"
+        ]
+      },
+      "manifest": {
+        "schema_version": "pida.result/0.1-draft",
+        "task_id": "9032b60e-31e0-47f7-ae71-6f6a1d8d3b32",
+        "run_id": "fd7fd03b-f5f6-487a-ac25-9a2b625c55e0",
+        "session_id": "01a1b74a-4c49-7022-aefa-9194ba58ff7b",
+        "agent_id": "74f579f2-a07e-4f43-94f9-96aea4072aa0",
+        "reported_status": "completed",
+        "reported_by": "runtime",
+        "verification_status": "UNKNOWN",
+        "artifact_refs": [],
+        "current_artifact_refs": [],
+        "evidence_refs": [],
+        "verification_results": [],
+        "runtime_version": "0.8.18",
+        "known_limits": [
+          "NO_INDEPENDENT_TASK_ACCEPTANCE",
+          "AGENT_SUPPLIED_CHECKS_ARE_SCOPED",
+          "PI_INTERNAL_REQUEST_USAGE_NOT_EXPORTED",
+          "HOST_PROJECT_ARTIFACTS_NOT_CAPTURED",
+          "HOST_PROGRAM_NOT_SANDBOXED",
+          "PROGRAM_DEPENDENCIES_NOT_PINNED",
+          "PROGRAM_DESCENDANTS_NOT_GUARANTEED_STOPPED",
+          "COST_UNKNOWN"
+        ]
+      },
+      "native_results": {
+        "Agent_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "a06bd34d4ca5c10d1c53cc1c399b669ecd264591788d4fd79db538b8d8dea309",
+          "computation_id": "pix.computation.v1:sha256:3b754d9fe6a4f385701b602fbc7b69289ce923c496ebb9724c6ac7193049477b",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": []
+        },
+        "Agent_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "8c541956385316ea8dbb7b3e987999747a657877e4f75769a7e5b5b7d359e7ec",
+          "computation_id": "pix.computation.v1:sha256:7b3ea04a2c9f88ce1577d914c465290afa4063b046a960e1d398b69f31eed0e0",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "Agent_traces.json"
+          ]
+        },
+        "ModelRequest_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "bf683f6f1390efd2f591914adfcf5065de10c47c5dc9dbcc60b143f06b3aeb45",
+          "computation_id": "pix.computation.v1:sha256:d341bb346a313cbbf81cf8e25760a00d3853b8dd90172c80622498b11949f60d",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": []
+        },
+        "ModelRequest_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "101bdc623ea643eb98e2d8c062b98bfb8a0d7dcea20a7fa033badd6525c2f1e9",
+          "computation_id": "pix.computation.v1:sha256:44cf3cf094c09da71c7bbe29bf1ae1d42aaa767c4a30c05e122ebf11eda60761",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "ModelRequest_traces.json"
+          ]
+        },
+        "Run_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "cae42f220f10de0a3dc89497cd86e5cea73b2ca1c00090ad242822d7a7904453",
+          "computation_id": "pix.computation.v1:sha256:8a74f16222ec000c6cfa540c6d469610d8b422b9a865fecce10cdf5e5a72c8fd",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": []
+        },
+        "Run_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "a2cbca9171012f4693aa4a9e984499d46e3d8c5e1280e91513d460053a050382",
+          "computation_id": "pix.computation.v1:sha256:e1a13a4e45fbccb5a2d6e0b58040ddee922c96cb66d0b6ed9567796fdc5220bf",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "Run_traces.json"
+          ]
+        },
+        "Session_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "ea0acea3604de27fb01a45449a7446a307e7c2f7bad292372504f6894463331e",
+          "computation_id": "pix.computation.v1:sha256:40be02f6f258200b24a50f1e136aa6f255dd6da93b7a6145b5c4e35c60976ee7",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": []
+        },
+        "Session_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "ae7b232c2c0a27dcc3ab0f1207ea075a597c0cfd244b06bb53af7e358a1a70b4",
+          "computation_id": "pix.computation.v1:sha256:fc00155a4f1121c3c26fb9e713bc6c7decee7158bfee69ffa2acbea033e13c13",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "Session_traces.json"
+          ]
+        },
+        "Task_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "ce5fe00f556d473693b82d1b83479e5fe669c11a806c0c473bf3f38ff045e60f",
+          "computation_id": "pix.computation.v1:sha256:4f1952a1946f7930e64ac662dcb4a5c8f46acc889e7d2dba696d15f319e8ca23",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": []
+        },
+        "Task_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "6b5796b7263df89de574435ef6c29b8e87029b08569cbe712613bfa52d5a2263",
+          "computation_id": "pix.computation.v1:sha256:bf0a7854b9fa5f898f8ae7bd05787fc546a78889f654e9e032ebf1cfa12d84b4",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "Task_traces.json"
+          ]
+        },
+        "ToolCall_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "0294826bab0f84ba4df407a2bbe9f97aa5550c4c1cfe9f7b31329d0e32da5808",
+          "computation_id": "pix.computation.v1:sha256:d0b54b4e55053ce901a34409404ace8770800c261b0c25253458d6f22dd8ef1c",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": []
+        },
+        "ToolCall_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "df45b282fda636de69ebf62cd1752a1b6618206ace1a48582224977a378ed686",
+          "computation_id": "pix.computation.v1:sha256:afd4373f4bd7010c95c655e0a700480e6e90a52203cfa8eb12ff966b3dde227d",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "ToolCall_traces.json"
+          ]
+        },
+        "Turn_traces": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "4e93b88bfa0ef12d5a6cfe5dae8618d5955377a5acb12a5b8bd61f81f0fa35b8",
+          "computation_id": "pix.computation.v1:sha256:689a03f82864ddd9e9bd6ae457d945fb89f9a13dd96babca28e4056b793a2ba1",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": []
+        },
+        "Turn_dfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "7e5d6533c5565fc4163b9c007eab4840054bb6a20a2d884902acc0d1484e718c",
+          "computation_id": "pix.computation.v1:sha256:1d837590327cfaeaac16934ec46678322e3391265a57d81e8d9676de1062ab46",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "Turn_traces.json"
+          ]
+        },
+        "ocdfg": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "c15f4a07319428203077d290c4eabf20152b392a3e23bf836f93497d90ec0723",
+          "computation_id": "pix.computation.v1:sha256:487bd0e7ce546c412ce24e5eec5bc44d2c02fb100075507210164c7fe393eee0",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "Agent_dfg.json",
+            "ModelRequest_dfg.json",
+            "Run_dfg.json",
+            "Session_dfg.json",
+            "Task_dfg.json",
+            "ToolCall_dfg.json",
+            "Turn_dfg.json"
+          ]
+        },
+        "executions": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "1a0fe3473fb2c0157ba39fca8fedacda9c7d26961c680fb168a85fcda9122347",
+          "computation_id": "pix.computation.v1:sha256:e701dd58affc8569d5e83487568f9e2d704e6500c48c035db25691e8234aea2c",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": []
+        },
+        "variants": {
+          "status": "computed",
+          "issues": [],
+          "sha256": "ca2f72c05f7561d496fd944e9d01833d7b5fc9208940d855d0578d70421c3cd1",
+          "computation_id": "pix.computation.v1:sha256:96ac14d5c35635bb8088f5221b95d615b3ca4e29eb494dbd7cc3b7355c34e722",
+          "source_digest": "pix.ocel.canonical.v1:sha256:db76980d51d6f1ee013465328e011a490718435c519dd7983e5ee47c98679428",
+          "parents": [
+            "executions.json"
+          ]
+        }
+      },
+      "coverage": "partial: exact per-run saved metadata; no atomic cross-run cut or host-project artifact capture",
+      "snapshot_atomic": false,
+      "run_dfg_distinct_edges": 12,
+      "run_dfg_occurrences": 29
+    }
+  }
+}

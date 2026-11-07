@@ -37,5 +37,7 @@ conflicting, failed/repair evidence is collapsed, unsupported ordering is invent
 or any coverage limit disappears. Validity applies only to the handed-off exact
 exports and cited engine source. Organizational improvement remains unknown.
 
-Current status: plan prepared; approved metadata exports and direct compatibility
-results are pending. No new analysis result is asserted.
+Initial status was pending approved exports. The exact approved handoff and
+subsequent bounded direct results are now recorded in
+[the compatibility report](2026-11-08_REPOSITORY_PERSONA_COMPATIBILITY.md).
+The original plan remains as the intake record.

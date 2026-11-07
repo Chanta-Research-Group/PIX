@@ -1,0 +1,55 @@
+{
+  "stock-profile-a": {
+    "counts": {
+      "events": 16,
+      "objects": 9,
+      "e2o": 84,
+      "o2o": 11
+    },
+    "timestamp_ties": 0,
+    "results": {
+      "computed": 17
+    },
+    "run_dfg_occurrences": 15
+  },
+  "stock-profile-b": {
+    "counts": {
+      "events": 16,
+      "objects": 9,
+      "e2o": 84,
+      "o2o": 11
+    },
+    "timestamp_ties": 0,
+    "results": {
+      "computed": 17
+    },
+    "run_dfg_occurrences": 15
+  },
+  "sdk-profile-a": {
+    "counts": {
+      "events": 16,
+      "objects": 9,
+      "e2o": 84,
+      "o2o": 11
+    },
+    "timestamp_ties": 1,
+    "results": {
+      "unavailable": 10,
+      "computed": 7
+    },
+    "run_dfg_occurrences": null
+  },
+  "sdk-profile-b": {
+    "counts": {
+      "events": 30,
+      "objects": 15,
+      "e2o": 164,
+      "o2o": 21
+    },
+    "timestamp_ties": 0,
+    "results": {
+      "computed": 17
+    },
+    "run_dfg_occurrences": 29
+  }
+}

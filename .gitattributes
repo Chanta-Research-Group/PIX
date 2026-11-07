@@ -20,3 +20,6 @@ src/pix/viewer/assets/vendor/* -text
 /docs/reports/evidence/local-analysis-peer-20261107/**/*.json -text
 /docs/reports/evidence/local-analysis-peer-20261107/binding_oracle.py -text
 /docs/reports/evidence/organization-linked-runs-20261107/*.json -text
+/docs/reports/evidence/repository-persona-20261108/**/*.json -text
+/docs/reports/evidence/repository-persona-20261108/*.py -text
+/docs/reports/evidence/repository-persona-20261108/execution.txt -text whitespace=cr-at-eol
