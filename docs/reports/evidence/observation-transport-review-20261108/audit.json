@@ -1,0 +1,500 @@
+{
+  "reviewed_commit": "cba1dc185846338eeeb839645a7a1a1071924692",
+  "engine_commit": "6e9af5ee1b670de39a87be406518fea49dffdfec",
+  "python": "3.13.14 (main, Jun 23 2026, 15:19:27) [MSC v.1944 64 bit (AMD64)]",
+  "approved_upstream": {
+    "docs/development/repository-catalogue-combination-evidence-20261108/metadata-only/handoff.json": "4863f97cf8169f722d901b6ff6d400c59540e80f1c0b5abfac5cb8075667cdac",
+    "docs/development/repository-catalogue-combination-evidence-20261108/metadata-only/sdk-profile-a.ocel.json": "e461f6e7ba41178cfafffab77c4ac07a142e326c2d7237f5992a59818e396c39",
+    "docs/development/repository-catalogue-combination-evidence-20261108/metadata-only/sdk-profile-a.ocel.meta.json": "e6de0c84f1d3748b01a53922519afb346580d7cce40d53453f442eff07496578",
+    "docs/development/repository-catalogue-combination-evidence-20261108/metadata-only/sdk-profile-a.manifest.json": "d8caf96c595640deae5fdccda6898f47820e4e1fe8246b992791fcf39ecec234"
+  },
+  "checked_pinned_files": {
+    "docs/reports/evidence/repository-persona-20261108/analyze.py": "1b43a3f43d6215653cacf2f6986a021380677361a7ae8aaa560f9fcc4081325d",
+    "docs/reports/evidence/repository-persona-20261108/execution.txt": "68aa22ab62d3411596b51c9d3ae65a0e8db33ab705fdf62869aaf8c53dbcbd9f",
+    "docs/reports/evidence/repository-persona-20261108/producer-metadata-verification.json": "23ccda5f063cad41bb5d2384620231a0362970a4b4a5df9c13bad1fb11c267df",
+    "docs/reports/evidence/repository-persona-20261108/source-manifest.json": "ead33f98235173938b9a415839902008a806af98f386caa5621af3e1b5ae7da3",
+    "docs/reports/evidence/repository-persona-20261108/native/run-record.json": "f9b98f07ce39d8eb8e6d601873c393777b3a401c390a9e8e24493e25377110ff",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/handoff.json": "4863f97cf8169f722d901b6ff6d400c59540e80f1c0b5abfac5cb8075667cdac",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/sdk-profile-a.manifest.json": "d8caf96c595640deae5fdccda6898f47820e4e1fe8246b992791fcf39ecec234",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/sdk-profile-a.ocel.json": "e461f6e7ba41178cfafffab77c4ac07a142e326c2d7237f5992a59818e396c39",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/sdk-profile-a.ocel.meta.json": "e6de0c84f1d3748b01a53922519afb346580d7cce40d53453f442eff07496578",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/sdk-profile-b.manifest.json": "acba2013325507ae070b3edab0fa2157f8677ab0f2257c5c3bd22dfe98561408",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/sdk-profile-b.ocel.json": "2d45f348b33daf799f32a288146e97b6f14d0f66dd66cc61295f4791dfa460d2",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/sdk-profile-b.ocel.meta.json": "c308d554d98fdb05d15e89e5f36dda6c2d32069db11c98e9ffe851773d503e09",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/stock-profile-a.manifest.json": "506339918dede8b62159db373c07c6326d04b7b459c3151a1d165285b685fdf6",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/stock-profile-a.ocel.json": "5b88270d8edd31252aefd9c61cd466539716bc259b3e794d18445c5df54de56f",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/stock-profile-a.ocel.meta.json": "27ff08ef0dabe312f3f497fbb08f13dc512422932e114f7b1b31e73440135c53",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/stock-profile-b.manifest.json": "8102319667acb75bac82097f84a696221626a7e0751b81d84fce91b0f538500a",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/stock-profile-b.ocel.json": "d9c901156f1f320027e2ea2c5e04b1e60583cc3a428fb8e723332b325842f7ed",
+    "docs/reports/evidence/repository-persona-20261108/native/approved-source/stock-profile-b.ocel.meta.json": "37fcb03d9048920f06f4e9b8ec44dae2078ee85f24ec582825f71342f6089935",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Agent_dfg.json": "2479724f0cef0a87a9cf0611b0cd6f50595476ff43491e1fda8e6cbd775fc33e",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Agent_traces.json": "209d15bbb0bb3cbc16870cb432c00138524445762a6262fa650cf69a8c27559a",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/executions.json": "105a67a092cb5d2141e3c5d74edaa3042bbb242eb17619d8dd6766169a5c8f30",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ModelRequest_dfg.json": "d2172239d026ed516a03b57b7c56533ef0264631950ddaf72852f2234f040d5e",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ModelRequest_traces.json": "7e4d1b90603e835429648814287f0f88ea7bb4e9f055d3c0d1db4a37d19b390f",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ocdfg.json": "d66bef3209028b6badd6d2960f8999cd70a0c6431f20d16be04f726b1818a7d7",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Run_dfg.json": "2f7484332c2011279b81930ff1de11406798546a5b25cbeec2bd25de58c51621",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Run_traces.json": "bd51f895299d838115a01ccaad1598127954d0102fd11e5f0fcaf1f44b49dae6",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Session_dfg.json": "b0b75f0c77249ec0ffae441c47aba4d39eb520f2c1b7eaff1f486b649bb7f95f",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Session_traces.json": "c7fce807df275e78d4e214024857c6d35916863674cdc3a1ab12d4386fd7f26e",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Task_dfg.json": "27a9bd5422b1177b9eb62d8e0decebfbe18038e3c42c5dac58d90cf1f6cf694d",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Task_traces.json": "48379a0efdb2059b49faa54601ab88063836b5a42350ddb7df922ba9d68c2b40",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ToolCall_dfg.json": "3ac4d1b7f3428667d62d7208a7d58dbbed7803e9dcf071d3ac057979d7d66045",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ToolCall_traces.json": "64c39bae368b0e67248fa1825959d315d2b4beee23ba0a495dcf218e5c6b3eaa",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Turn_dfg.json": "f686c8dd4ad94ed82334b90d5a7c6ab0f63b9600bf4eb3b1c46213a16c2f5682",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Turn_traces.json": "5fe67bd86c506de1b2755f0ae767da6c425de6695ac7cdf997f12173a31efdad",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/variants.json": "48449ff5d918248ce826b46546167cdd9a8d3d4d39c390724a0b0eedbbe2f81a",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Agent_dfg.json": "8c541956385316ea8dbb7b3e987999747a657877e4f75769a7e5b5b7d359e7ec",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Agent_traces.json": "a06bd34d4ca5c10d1c53cc1c399b669ecd264591788d4fd79db538b8d8dea309",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/executions.json": "1a0fe3473fb2c0157ba39fca8fedacda9c7d26961c680fb168a85fcda9122347",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ModelRequest_dfg.json": "101bdc623ea643eb98e2d8c062b98bfb8a0d7dcea20a7fa033badd6525c2f1e9",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ModelRequest_traces.json": "bf683f6f1390efd2f591914adfcf5065de10c47c5dc9dbcc60b143f06b3aeb45",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ocdfg.json": "c15f4a07319428203077d290c4eabf20152b392a3e23bf836f93497d90ec0723",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Run_dfg.json": "a2cbca9171012f4693aa4a9e984499d46e3d8c5e1280e91513d460053a050382",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Run_traces.json": "cae42f220f10de0a3dc89497cd86e5cea73b2ca1c00090ad242822d7a7904453",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Session_dfg.json": "ae7b232c2c0a27dcc3ab0f1207ea075a597c0cfd244b06bb53af7e358a1a70b4",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Session_traces.json": "ea0acea3604de27fb01a45449a7446a307e7c2f7bad292372504f6894463331e",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Task_dfg.json": "6b5796b7263df89de574435ef6c29b8e87029b08569cbe712613bfa52d5a2263",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Task_traces.json": "ce5fe00f556d473693b82d1b83479e5fe669c11a806c0c473bf3f38ff045e60f",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ToolCall_dfg.json": "df45b282fda636de69ebf62cd1752a1b6618206ace1a48582224977a378ed686",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ToolCall_traces.json": "0294826bab0f84ba4df407a2bbe9f97aa5550c4c1cfe9f7b31329d0e32da5808",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Turn_dfg.json": "7e5d6533c5565fc4163b9c007eab4840054bb6a20a2d884902acc0d1484e718c",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Turn_traces.json": "4e93b88bfa0ef12d5a6cfe5dae8618d5955377a5acb12a5b8bd61f81f0fa35b8",
+    "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/variants.json": "ca2f72c05f7561d496fd944e9d01833d7b5fc9208940d855d0578d70421c3cd1",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Agent_dfg.json": "54f17ee6a0ed3b2fca568ad1c643cc8d82c0d4a19b7f76f3783342b4d9bd7a43",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Agent_traces.json": "741355b3535ee9d6e4cb470787887a1cc27dd4ac6c98232c2505e87cc6381c74",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/executions.json": "353997f3093fd7d9d71420f9dc0b278744824890ff187ab27e88cbefdde97358",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ModelRequest_dfg.json": "19dcd76010f96b468eebe92553991e13eb10c4b22f77734894123942016722ae",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ModelRequest_traces.json": "301b0191c7a44223c1d7cf886185511f340076ec44318086dbac1870cbef2015",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ocdfg.json": "73ff816674912d37d60a9f70a587adcab6f784bb3ceffc215061e7d42b348bd1",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Run_dfg.json": "cf76bcd42c6a6b0265200f7a1fab222ba85144463da7c8aed92eff94a05c2af7",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Run_traces.json": "66733b04d6c9bc84ad4a797dee6592ffdd9a955cc628b1e67b40eb526f3a2e08",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Session_dfg.json": "87140bfa62c8211fe4d4f078b6f4415e52887907749ca3571d0e3ceeea948c22",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Session_traces.json": "0e07f951943c04b3b7994cf4a61562a9a54199819208a7ff0ab69d231f347f1c",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Task_dfg.json": "4e2b8ec99f6a60d962f8251db58b92a1599181053668018e1ecf83b0d7793f66",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Task_traces.json": "10d1972a44c6eb00d8c65f1ef6b79584fbd4a746e6ca8fe664062f8a637e7e95",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ToolCall_dfg.json": "6009c92d970b5ea04b7a3ac6f418fb955a44e9babba2e0d1dd67b1ad3188a243",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ToolCall_traces.json": "2fdcce7a5712458391e613b643da1094ed9f01e3af0e090fdc96cf5f843a65d4",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Turn_dfg.json": "01c60fe582310dd27e5e091d9014e6479550aa5c128234766f17f9c3464a9c41",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Turn_traces.json": "29b97cf1e4e3eb76af81b6ef321670c15ed8babb61b38fb77f3a97e327269d0e",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/variants.json": "4ae434aed1c58cda7b5f18db22e0cc3463cacd43b5dcb8f253cabc0d891237cd",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Agent_dfg.json": "d52ebe74381c4af07d06f52466a290d3d8abbcda651f2fdad94c07607c5bb039",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Agent_traces.json": "245e4701e07254fa97f73fb540288d07a7496451130bcc23055b7112987c0ea9",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/executions.json": "8ca93f0522be5572dd120f0321e7214bd30b43b47c82fd722b74e2dc8afa5e30",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ModelRequest_dfg.json": "9263129d915070cd5f377bfa183a9ff4af8fe6a732a4f6367c41f260c62e36d2",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ModelRequest_traces.json": "ae8901e04d59ee5615f912aaac6d524b7f3b4025861d13e1bb717a5f705948fb",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ocdfg.json": "3ef1dbf6d4f40053833afde034dea5938de1146a501625303e0a9fbbcc83b95f",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Run_dfg.json": "e1d4080fe1225990e5d3e4a010eadad37d143c38e64e852f07d2ac5b8450e305",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Run_traces.json": "e371774c6d489cfef62cff5fe7c2b4c20871c80266d3d2e287a857eef244e315",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Session_dfg.json": "53150d4088036cae7f5f2b2a6f3db8e5894fac94f9e5da817ad95f5383cd2b4c",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Session_traces.json": "0d659cdb97fed08e2bc328cef6e3a621ae2619e55abde015d5efb998080df7f1",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Task_dfg.json": "673ce70b4f283f4a2f678f8e8e7db81c9c182689960fb9ce88f8a321a53fa771",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Task_traces.json": "39de8d8391b7c1caacfa21379f249e90cdde697fa4775634594db7da28b620dd",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ToolCall_dfg.json": "28124fbf965ff3b6fcc95685ddb5096f09ee2820059adf7174aab615fb3c0829",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ToolCall_traces.json": "d80a5d5a3deb3707eefe17a0ce5d4c705dcf50b455089d24c9ff038fd666e731",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Turn_dfg.json": "563fbbdb78f287aa75a975bbcbdaa0a700eb4a57a79ba20683741d0136154924",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Turn_traces.json": "07884fb8b5c424f6f02eda55c57eccec778e44524fa4ac7b644c54ec29d9c564",
+    "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/variants.json": "9113bbe1fab1f2ab367358b477597a94bd19985db70c7d27d6bb9ecd50f9bf70",
+    "docs/reports/evidence/observation-sequence-20261108/analyze.py": "a9c4870fcd47246294c8a3f909949ba676eb7c35ac0275733c03d26e81e1ba68",
+    "docs/reports/evidence/observation-sequence-20261108/execution.txt": "62924a08b7292294afdd1511453c8a79b52bd536e4c8ba7263c6cfac04805cf2",
+    "docs/reports/evidence/observation-sequence-20261108/source-manifest.json": "9250099d44cde57a116c4b5fcceffd67a8c88aa4e79b67bde76519d44b3d186c",
+    "docs/reports/evidence/observation-sequence-20261108/native/record-projection.json": "32e419ef5b59d4af5376c5baf1528e9f599a57cb331b900bb80c36bf1205c5e5",
+    "docs/reports/evidence/observation-sequence-20261108/native/run-record.json": "4ab3c9ab026474d01c79bdecd2459828a6d2b9cdfa1bd9b5517a133b1bfa5c99",
+    "docs/reports/evidence/observation-sequence-20261108/native/sequence-delivery.json": "4de3fb90ff395521e02419351f7ba6635bc83f120df5e9a1c4f0d5dd282b304c",
+    "docs/reports/evidence/observation-transport-20261108/execution.txt": "7d7d95042cfc3cf95dd8b8575b646134af18548a65325a7b0c324dddf28e3a89",
+    "docs/reports/evidence/observation-transport-20261108/project.py": "3c3a3c0493edd47da2a6a319a39e3ed370d22a5f8bf39d14db086e52345dada8",
+    "docs/reports/evidence/observation-transport-20261108/source-manifest.json": "d10f9daac7bd4120b06387f479193300eafd4fdcfd3e8ba30ad480215c49108f",
+    "docs/reports/evidence/observation-transport-20261108/validation-note.txt": "fb88c1c351fa668bac44e178b7d4066be43f976ce14b147ee6cd75c9f34ab2d6",
+    "docs/reports/evidence/observation-transport-20261108/native/record-projection.json": "9f2cd4b6a5c8480e943073033584fb6939d48d73fc01534a82e323fd51f23723",
+    "docs/reports/evidence/observation-transport-20261108/native/run-record.json": "31e98943e0b6faf717863e3eeba2af74327d4715ef260857abb995e514c666d9",
+    "docs/reports/evidence/observation-transport-20261108/native/sequence-delivery.json": "3e4013bc005e44f7973e8915319646c47e4faf92f195cf4c353accfed4ae6324"
+  },
+  "prior_files_unchanged": 92,
+  "strict_native_results": [
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Agent_dfg.json",
+      "status": "unavailable",
+      "sha256": "2479724f0cef0a87a9cf0611b0cd6f50595476ff43491e1fda8e6cbd775fc33e"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Agent_traces.json",
+      "status": "unavailable",
+      "sha256": "209d15bbb0bb3cbc16870cb432c00138524445762a6262fa650cf69a8c27559a"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/executions.json",
+      "status": "computed",
+      "sha256": "105a67a092cb5d2141e3c5d74edaa3042bbb242eb17619d8dd6766169a5c8f30"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ModelRequest_dfg.json",
+      "status": "computed",
+      "sha256": "d2172239d026ed516a03b57b7c56533ef0264631950ddaf72852f2234f040d5e"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ModelRequest_traces.json",
+      "status": "computed",
+      "sha256": "7e4d1b90603e835429648814287f0f88ea7bb4e9f055d3c0d1db4a37d19b390f"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ocdfg.json",
+      "status": "unavailable",
+      "sha256": "d66bef3209028b6badd6d2960f8999cd70a0c6431f20d16be04f726b1818a7d7"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Run_dfg.json",
+      "status": "unavailable",
+      "sha256": "2f7484332c2011279b81930ff1de11406798546a5b25cbeec2bd25de58c51621"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Run_traces.json",
+      "status": "unavailable",
+      "sha256": "bd51f895299d838115a01ccaad1598127954d0102fd11e5f0fcaf1f44b49dae6"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Session_dfg.json",
+      "status": "unavailable",
+      "sha256": "b0b75f0c77249ec0ffae441c47aba4d39eb520f2c1b7eaff1f486b649bb7f95f"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Session_traces.json",
+      "status": "unavailable",
+      "sha256": "c7fce807df275e78d4e214024857c6d35916863674cdc3a1ab12d4386fd7f26e"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Task_dfg.json",
+      "status": "unavailable",
+      "sha256": "27a9bd5422b1177b9eb62d8e0decebfbe18038e3c42c5dac58d90cf1f6cf694d"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Task_traces.json",
+      "status": "unavailable",
+      "sha256": "48379a0efdb2059b49faa54601ab88063836b5a42350ddb7df922ba9d68c2b40"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ToolCall_dfg.json",
+      "status": "computed",
+      "sha256": "3ac4d1b7f3428667d62d7208a7d58dbbed7803e9dcf071d3ac057979d7d66045"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/ToolCall_traces.json",
+      "status": "computed",
+      "sha256": "64c39bae368b0e67248fa1825959d315d2b4beee23ba0a495dcf218e5c6b3eaa"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Turn_dfg.json",
+      "status": "computed",
+      "sha256": "f686c8dd4ad94ed82334b90d5a7c6ab0f63b9600bf4eb3b1c46213a16c2f5682"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/Turn_traces.json",
+      "status": "computed",
+      "sha256": "5fe67bd86c506de1b2755f0ae767da6c425de6695ac7cdf997f12173a31efdad"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-a/variants.json",
+      "status": "unavailable",
+      "sha256": "48449ff5d918248ce826b46546167cdd9a8d3d4d39c390724a0b0eedbbe2f81a"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Agent_dfg.json",
+      "status": "computed",
+      "sha256": "8c541956385316ea8dbb7b3e987999747a657877e4f75769a7e5b5b7d359e7ec"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Agent_traces.json",
+      "status": "computed",
+      "sha256": "a06bd34d4ca5c10d1c53cc1c399b669ecd264591788d4fd79db538b8d8dea309"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/executions.json",
+      "status": "computed",
+      "sha256": "1a0fe3473fb2c0157ba39fca8fedacda9c7d26961c680fb168a85fcda9122347"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ModelRequest_dfg.json",
+      "status": "computed",
+      "sha256": "101bdc623ea643eb98e2d8c062b98bfb8a0d7dcea20a7fa033badd6525c2f1e9"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ModelRequest_traces.json",
+      "status": "computed",
+      "sha256": "bf683f6f1390efd2f591914adfcf5065de10c47c5dc9dbcc60b143f06b3aeb45"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ocdfg.json",
+      "status": "computed",
+      "sha256": "c15f4a07319428203077d290c4eabf20152b392a3e23bf836f93497d90ec0723"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Run_dfg.json",
+      "status": "computed",
+      "sha256": "a2cbca9171012f4693aa4a9e984499d46e3d8c5e1280e91513d460053a050382"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Run_traces.json",
+      "status": "computed",
+      "sha256": "cae42f220f10de0a3dc89497cd86e5cea73b2ca1c00090ad242822d7a7904453"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Session_dfg.json",
+      "status": "computed",
+      "sha256": "ae7b232c2c0a27dcc3ab0f1207ea075a597c0cfd244b06bb53af7e358a1a70b4"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Session_traces.json",
+      "status": "computed",
+      "sha256": "ea0acea3604de27fb01a45449a7446a307e7c2f7bad292372504f6894463331e"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Task_dfg.json",
+      "status": "computed",
+      "sha256": "6b5796b7263df89de574435ef6c29b8e87029b08569cbe712613bfa52d5a2263"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Task_traces.json",
+      "status": "computed",
+      "sha256": "ce5fe00f556d473693b82d1b83479e5fe669c11a806c0c473bf3f38ff045e60f"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ToolCall_dfg.json",
+      "status": "computed",
+      "sha256": "df45b282fda636de69ebf62cd1752a1b6618206ace1a48582224977a378ed686"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/ToolCall_traces.json",
+      "status": "computed",
+      "sha256": "0294826bab0f84ba4df407a2bbe9f97aa5550c4c1cfe9f7b31329d0e32da5808"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Turn_dfg.json",
+      "status": "computed",
+      "sha256": "7e5d6533c5565fc4163b9c007eab4840054bb6a20a2d884902acc0d1484e718c"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/Turn_traces.json",
+      "status": "computed",
+      "sha256": "4e93b88bfa0ef12d5a6cfe5dae8618d5955377a5acb12a5b8bd61f81f0fa35b8"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/sdk-profile-b/variants.json",
+      "status": "computed",
+      "sha256": "ca2f72c05f7561d496fd944e9d01833d7b5fc9208940d855d0578d70421c3cd1"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Agent_dfg.json",
+      "status": "computed",
+      "sha256": "54f17ee6a0ed3b2fca568ad1c643cc8d82c0d4a19b7f76f3783342b4d9bd7a43"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Agent_traces.json",
+      "status": "computed",
+      "sha256": "741355b3535ee9d6e4cb470787887a1cc27dd4ac6c98232c2505e87cc6381c74"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/executions.json",
+      "status": "computed",
+      "sha256": "353997f3093fd7d9d71420f9dc0b278744824890ff187ab27e88cbefdde97358"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ModelRequest_dfg.json",
+      "status": "computed",
+      "sha256": "19dcd76010f96b468eebe92553991e13eb10c4b22f77734894123942016722ae"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ModelRequest_traces.json",
+      "status": "computed",
+      "sha256": "301b0191c7a44223c1d7cf886185511f340076ec44318086dbac1870cbef2015"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ocdfg.json",
+      "status": "computed",
+      "sha256": "73ff816674912d37d60a9f70a587adcab6f784bb3ceffc215061e7d42b348bd1"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Run_dfg.json",
+      "status": "computed",
+      "sha256": "cf76bcd42c6a6b0265200f7a1fab222ba85144463da7c8aed92eff94a05c2af7"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Run_traces.json",
+      "status": "computed",
+      "sha256": "66733b04d6c9bc84ad4a797dee6592ffdd9a955cc628b1e67b40eb526f3a2e08"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Session_dfg.json",
+      "status": "computed",
+      "sha256": "87140bfa62c8211fe4d4f078b6f4415e52887907749ca3571d0e3ceeea948c22"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Session_traces.json",
+      "status": "computed",
+      "sha256": "0e07f951943c04b3b7994cf4a61562a9a54199819208a7ff0ab69d231f347f1c"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Task_dfg.json",
+      "status": "computed",
+      "sha256": "4e2b8ec99f6a60d962f8251db58b92a1599181053668018e1ecf83b0d7793f66"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Task_traces.json",
+      "status": "computed",
+      "sha256": "10d1972a44c6eb00d8c65f1ef6b79584fbd4a746e6ca8fe664062f8a637e7e95"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ToolCall_dfg.json",
+      "status": "computed",
+      "sha256": "6009c92d970b5ea04b7a3ac6f418fb955a44e9babba2e0d1dd67b1ad3188a243"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/ToolCall_traces.json",
+      "status": "computed",
+      "sha256": "2fdcce7a5712458391e613b643da1094ed9f01e3af0e090fdc96cf5f843a65d4"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Turn_dfg.json",
+      "status": "computed",
+      "sha256": "01c60fe582310dd27e5e091d9014e6479550aa5c128234766f17f9c3464a9c41"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/Turn_traces.json",
+      "status": "computed",
+      "sha256": "29b97cf1e4e3eb76af81b6ef321670c15ed8babb61b38fb77f3a97e327269d0e"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-a/variants.json",
+      "status": "computed",
+      "sha256": "4ae434aed1c58cda7b5f18db22e0cc3463cacd43b5dcb8f253cabc0d891237cd"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Agent_dfg.json",
+      "status": "computed",
+      "sha256": "d52ebe74381c4af07d06f52466a290d3d8abbcda651f2fdad94c07607c5bb039"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Agent_traces.json",
+      "status": "computed",
+      "sha256": "245e4701e07254fa97f73fb540288d07a7496451130bcc23055b7112987c0ea9"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/executions.json",
+      "status": "computed",
+      "sha256": "8ca93f0522be5572dd120f0321e7214bd30b43b47c82fd722b74e2dc8afa5e30"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ModelRequest_dfg.json",
+      "status": "computed",
+      "sha256": "9263129d915070cd5f377bfa183a9ff4af8fe6a732a4f6367c41f260c62e36d2"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ModelRequest_traces.json",
+      "status": "computed",
+      "sha256": "ae8901e04d59ee5615f912aaac6d524b7f3b4025861d13e1bb717a5f705948fb"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ocdfg.json",
+      "status": "computed",
+      "sha256": "3ef1dbf6d4f40053833afde034dea5938de1146a501625303e0a9fbbcc83b95f"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Run_dfg.json",
+      "status": "computed",
+      "sha256": "e1d4080fe1225990e5d3e4a010eadad37d143c38e64e852f07d2ac5b8450e305"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Run_traces.json",
+      "status": "computed",
+      "sha256": "e371774c6d489cfef62cff5fe7c2b4c20871c80266d3d2e287a857eef244e315"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Session_dfg.json",
+      "status": "computed",
+      "sha256": "53150d4088036cae7f5f2b2a6f3db8e5894fac94f9e5da817ad95f5383cd2b4c"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Session_traces.json",
+      "status": "computed",
+      "sha256": "0d659cdb97fed08e2bc328cef6e3a621ae2619e55abde015d5efb998080df7f1"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Task_dfg.json",
+      "status": "computed",
+      "sha256": "673ce70b4f283f4a2f678f8e8e7db81c9c182689960fb9ce88f8a321a53fa771"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Task_traces.json",
+      "status": "computed",
+      "sha256": "39de8d8391b7c1caacfa21379f249e90cdde697fa4775634594db7da28b620dd"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ToolCall_dfg.json",
+      "status": "computed",
+      "sha256": "28124fbf965ff3b6fcc95685ddb5096f09ee2820059adf7174aab615fb3c0829"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/ToolCall_traces.json",
+      "status": "computed",
+      "sha256": "d80a5d5a3deb3707eefe17a0ce5d4c705dcf50b455089d24c9ff038fd666e731"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Turn_dfg.json",
+      "status": "computed",
+      "sha256": "563fbbdb78f287aa75a975bbcbdaa0a700eb4a57a79ba20683741d0136154924"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/Turn_traces.json",
+      "status": "computed",
+      "sha256": "07884fb8b5c424f6f02eda55c57eccec778e44524fa4ac7b644c54ec29d9c564"
+    },
+    {
+      "path": "docs/reports/evidence/repository-persona-20261108/native/stock-profile-b/variants.json",
+      "status": "computed",
+      "sha256": "9113bbe1fab1f2ab367358b477597a94bd19985db70c7d27d6bb9ecd50f9bf70"
+    }
+  ],
+  "transport_owner_record_exact_equal": true,
+  "two_native_results_byte_equal": true,
+  "exact_one_based_failure_reproduced": true,
+  "events": 16,
+  "native_range": [
+    1,
+    16
+  ],
+  "transport_range": [
+    0,
+    15
+  ],
+  "negative_mapping_checks": {
+    "absent": "native_sequence_required_integer",
+    "duplicate": "declared_cut_mismatch_or_gap_or_duplicate",
+    "fractional": "native_sequence_required_integer",
+    "boolean": "native_sequence_required_integer",
+    "domain": "mixed_domain",
+    "event_id": "duplicate_event_identity",
+    "gap": "declared_cut_mismatch_or_gap_or_duplicate",
+    "wrong_declared_start": "declared_cut_mismatch_or_gap_or_duplicate"
+  },
+  "negative_domain_checks": {
+    "manifest_run": "manifest_domain_mismatch",
+    "manifest_session": "manifest_domain_mismatch",
+    "object_run": "native_object_domain_mismatch",
+    "object_session": "native_object_domain_mismatch",
+    "event_relation": "event_domain_relationship_mismatch"
+  },
+  "identity_mutation_checks": {
+    "native_sequence": true,
+    "payload_digest": true,
+    "ocel_event_id": true,
+    "policy_handoff_sha256": true,
+    "policy_profile": true,
+    "policy_declared_last_native_sequence": true
+  },
+  "domain": {
+    "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+    "session_id": "01a1b74a-4af4-7022-aefa-91928bb1f6be",
+    "run_id": "04fc92fd-2842-4920-9548-5ae6a627df93"
+  },
+  "partial_open_no_synthetic_closure": true,
+  "source_failure_retained": true,
+  "scope": "one pinned approved failed SDK metadata run; no engine change, private raw access, live workloads or Sch adoption"
+}

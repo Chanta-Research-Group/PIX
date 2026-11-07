@@ -1,0 +1,21 @@
+{
+  "schema": "pix.owner.transport-independent-review-archive/1",
+  "archived_at": "2026-11-07T18:54:10.972036+00:00",
+  "reviewed_commit": "cba1dc185846338eeeb839645a7a1a1071924692",
+  "upstream_evidence_root": "D:\\ChantaResearchGroup\\PIX-transport-review-evidence-20261108",
+  "upstream_index_sha256": "5e7159933be7b80fca377d57d3a224cf3941b561a711b9576be34040da816fa9",
+  "files": {
+    "audit.json": "3e5540f4fc2dd9d3266cc94b00213902853b721766676f513ec95c23ff965732",
+    "audit.py": "99b5d3c7a89e6675bc70c65d214297329e79d6e3ad6163988a75f404dc374d50",
+    "exact-reproduced/record-projection.json": "32e419ef5b59d4af5376c5baf1528e9f599a57cb331b900bb80c36bf1205c5e5",
+    "exact-reproduced/run-record.json": "4ab3c9ab026474d01c79bdecd2459828a6d2b9cdfa1bd9b5517a133b1bfa5c99",
+    "exact-reproduced/sequence-delivery.json": "4de3fb90ff395521e02419351f7ba6635bc83f120df5e9a1c4f0d5dd282b304c",
+    "FINAL_REVIEW.md": "3f6d7ea87289fa92c9ab56bada1d4a7c6937537bf2d0b710c3a849d8311af4e4",
+    "reproduced/record-projection.json": "9f2cd4b6a5c8480e943073033584fb6939d48d73fc01534a82e323fd51f23723",
+    "reproduced/run-record.json": "31e98943e0b6faf717863e3eeba2af74327d4715ef260857abb995e514c666d9",
+    "reproduced/sequence-delivery.json": "3e4013bc005e44f7973e8915319646c47e4faf92f195cf4c353accfed4ae6324",
+    "artifact-index.json": "5e7159933be7b80fca377d57d3a224cf3941b561a711b9576be34040da816fa9"
+  },
+  "scope": "Exact indexed safe review bytes only. Archive/hash verification; no review code or analysis rerun.",
+  "acceptance": "Independent review found no material issue for pinned single-run script; no general ingestion or Sch adoption acceptance."
+}
