@@ -1,0 +1,17 @@
+{
+  "schema": "pix.exact-native-sequence.evidence/1",
+  "recorded_at": "2026-11-07T18:44:45.696515+00:00",
+  "strict_evidence_commit": "e36d7864f64c1a979ef612a31084eb62c89d3702",
+  "engine_pin": "6e9af5ee1b670de39a87be406518fea49dffdfec",
+  "command": "uv run --no-project --with tzdata python docs/reports/evidence/observation-sequence-20261108/analyze.py docs/reports/evidence/observation-sequence-20261108/native",
+  "exit_code": 0,
+  "files": {
+    "docs/reports/2026-11-08_EXACT_SEQUENCE_COMPOSITION.md": "f4ff97359a73dfad073d4aebc221da0678521298651728bbd55f7dbc00a84d5e",
+    "docs/reports/evidence/observation-sequence-20261108/analyze.py": "a9c4870fcd47246294c8a3f909949ba676eb7c35ac0275733c03d26e81e1ba68",
+    "docs/reports/evidence/observation-sequence-20261108/execution.txt": "62924a08b7292294afdd1511453c8a79b52bd536e4c8ba7263c6cfac04805cf2",
+    "docs/reports/evidence/observation-sequence-20261108/native/record-projection.json": "32e419ef5b59d4af5376c5baf1528e9f599a57cb331b900bb80c36bf1205c5e5",
+    "docs/reports/evidence/observation-sequence-20261108/native/run-record.json": "4ab3c9ab026474d01c79bdecd2459828a6d2b9cdfa1bd9b5517a133b1bfa5c99",
+    "docs/reports/evidence/observation-sequence-20261108/native/sequence-delivery.json": "4de3fb90ff395521e02419351f7ba6635bc83f120df5e9a1c4f0d5dd282b304c"
+  },
+  "scope": "Exact-sequence adapter boundary reproducer; no zero-based normalization in this result"
+}

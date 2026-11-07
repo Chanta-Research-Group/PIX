@@ -1,0 +1,14 @@
+{
+  "projection": "computed",
+  "delivery": "unavailable",
+  "events": 16,
+  "native_sequence_range": [
+    1,
+    16
+  ],
+  "negative_mapping_probes": 7,
+  "strict_files_unchanged": 82,
+  "delivery_issues": [
+    "Operation 0: out_of_order: a new case must start at sequence zero; caller checkpoint remains unchanged"
+  ]
+}
