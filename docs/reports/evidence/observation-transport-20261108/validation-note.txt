@@ -1,0 +1,1 @@
+Documentation link check initially used bare Python 3.11 default cp949 and failed decoding the UTF-8 report. Rechecked with explicit encoding=utf8: all links pass. Analysis ran successfully once under uv Python 3.13.14; no computation was repeated for this documentation correction.

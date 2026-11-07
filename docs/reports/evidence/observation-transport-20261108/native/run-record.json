@@ -1,0 +1,956 @@
+{
+  "schema": "pix.owner.native-sequence-transport/1",
+  "engine_pin": "6e9af5ee1b670de39a87be406518fea49dffdfec",
+  "python": "3.13.14 (main, Jun 23 2026, 15:19:27) [MSC v.1944 64 bit (AMD64)]",
+  "script_sha256": "3c3a3c0493edd47da2a6a319a39e3ed370d22a5f8bf39d14db086e52345dada8",
+  "validator_commit": "cb0917ca3c1b14582474a436b9a69d596816083c",
+  "validator_sha256": "a9c4870fcd47246294c8a3f909949ba676eb7c35ac0275733c03d26e81e1ba68",
+  "mapping_policy": {
+    "profile": "pix.owner.native-sequence-transport/1",
+    "domain": {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "session_id": "01a1b74a-4af4-7022-aefa-91928bb1f6be",
+      "run_id": "04fc92fd-2842-4920-9548-5ae6a627df93"
+    },
+    "declared_first_native_sequence": 1,
+    "declared_last_native_sequence": 16,
+    "formula": "transport_sequence = native_sequence - declared_first_native_sequence",
+    "inverse": "native_sequence = transport_sequence + declared_first_native_sequence",
+    "handoff_sha256": "4863f97cf8169f722d901b6ff6d400c59540e80f1c0b5abfac5cb8075667cdac",
+    "ocel_sha256": "e461f6e7ba41178cfafffab77c4ac07a142e326c2d7237f5992a59818e396c39",
+    "original_native_sequence_unchanged": true,
+    "timestamp_order_policy": "not used for adjacency; original time retained"
+  },
+  "mapping_policy_digest": "879cfd9a075f3cd4558372c878ccde2483918ad0dfaca1a9a2e7c2986e0f73c6",
+  "records": [
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "3f3666f3-af2f-4c4c-af0d-3eed1088b941",
+      "ocel_event_id": "pida:Event:42ecd6045dea775a356cffaf4a5abf54c7a7b31f1702593eeda24035601f573c",
+      "native_sequence": 1,
+      "activity": "run_started",
+      "timestamp": "2026-11-07T18:34:21.825Z",
+      "payload_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "3f3666f3-af2f-4c4c-af0d-3eed1088b941",
+      "transport_sequence": 0
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "0fe29cf8-b599-4c2f-96b8-dca52387f9ba",
+      "ocel_event_id": "pida:Event:03a72f38609e08b2789f922c3a91a93e32bea5911f9f2fa19d7c3422246c0a13",
+      "native_sequence": 2,
+      "activity": "context_snapshot_loaded",
+      "timestamp": "2026-11-07T18:34:21.847Z",
+      "payload_digest": "c7fb228987cf0eb25d66fd8edaf73a354552714aecc6cc395bb627180ef4ab38",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "0fe29cf8-b599-4c2f-96b8-dca52387f9ba",
+      "transport_sequence": 1
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "fba8484b-1e39-439a-bf26-d34423c2f36d",
+      "ocel_event_id": "pida:Event:21001b3639692b3ebad86db403c5ba5f4ed35d858e4980396c53a0647bffe853",
+      "native_sequence": 3,
+      "activity": "run_context_loaded",
+      "timestamp": "2026-11-07T18:34:21.847Z",
+      "payload_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "fba8484b-1e39-439a-bf26-d34423c2f36d",
+      "transport_sequence": 2
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "f9826fe6-efc0-49d9-b17a-7f32a0aa7e6f",
+      "ocel_event_id": "pida:Event:6e29357df13929be63d058237e07f42e3277a94f5c508b938fd6a34429aad196",
+      "native_sequence": 4,
+      "activity": "turn_started",
+      "timestamp": "2026-11-07T18:34:21.852Z",
+      "payload_digest": "d54cc8126de7be7b15b38e66389e5bd93fad8e4f7486e2c9089ffc382a8f62a2",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:d355d6a0af028cce633293ebdbad620afdbdee4bb1c3b71d8f1261824c70a8c4",
+          "qualifier": "turn"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "f9826fe6-efc0-49d9-b17a-7f32a0aa7e6f",
+      "transport_sequence": 3
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "c6bd9f9d-d11b-4bb1-9a51-339651457f89",
+      "ocel_event_id": "pida:Event:da4602d480ef823d68892e63bf6f72019336c717073971e721873573f60d868e",
+      "native_sequence": 5,
+      "activity": "model_request",
+      "timestamp": "2026-11-07T18:34:21.856Z",
+      "payload_digest": "22544648a6f2f4b3aedb2eb9e7ace8572780b68e911003663b3453c62ce75168",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:d355d6a0af028cce633293ebdbad620afdbdee4bb1c3b71d8f1261824c70a8c4",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:096ca081c2abc5c03b8bcc37b0d80897f20b9eb70943b69960a91292e88b8d4b",
+          "qualifier": "request"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "c6bd9f9d-d11b-4bb1-9a51-339651457f89",
+      "transport_sequence": 4
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "e7e72bc0-ce07-4599-9942-3810adc85f14",
+      "ocel_event_id": "pida:Event:0a428c00b92f9af599f163b9ff30447d20e92bb8e509a76a7e8a273f8685ca3d",
+      "native_sequence": 6,
+      "activity": "context_input_included",
+      "timestamp": "2026-11-07T18:34:21.864Z",
+      "payload_digest": "024b68f95612c2ee0be26666ee134da97039c78d2eb9ce9a7cf54fe6bbf47e20",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:d355d6a0af028cce633293ebdbad620afdbdee4bb1c3b71d8f1261824c70a8c4",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:096ca081c2abc5c03b8bcc37b0d80897f20b9eb70943b69960a91292e88b8d4b",
+          "qualifier": "request"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "e7e72bc0-ce07-4599-9942-3810adc85f14",
+      "transport_sequence": 5
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "63d506ad-dce4-4ae9-8240-20fb359402e9",
+      "ocel_event_id": "pida:Event:6e30b0998c7e9c691add143a271f652a25620fa65e43442935f8360b3a7b540d",
+      "native_sequence": 7,
+      "activity": "model_response",
+      "timestamp": "2026-11-07T18:34:21.868Z",
+      "payload_digest": "66bdc88e894b0754b0be68570aeb7c0b40ee8e88ae529e0c066760966b22b7b4",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:d355d6a0af028cce633293ebdbad620afdbdee4bb1c3b71d8f1261824c70a8c4",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:096ca081c2abc5c03b8bcc37b0d80897f20b9eb70943b69960a91292e88b8d4b",
+          "qualifier": "request"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "63d506ad-dce4-4ae9-8240-20fb359402e9",
+      "transport_sequence": 6
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "f1ffe2f3-e210-4890-ab59-ba1e6e7b2597",
+      "ocel_event_id": "pida:Event:e7230ea99bdb6adcd9ed7517874c7a38f6817b97c09976ca05d98b579482b907",
+      "native_sequence": 8,
+      "activity": "tool_started",
+      "timestamp": "2026-11-07T18:34:21.869Z",
+      "payload_digest": "c221a8f9fae4c9b76f93309f355901b1e54cebb778163faf2afd0e54c35689b4",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:d355d6a0af028cce633293ebdbad620afdbdee4bb1c3b71d8f1261824c70a8c4",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ToolCall:170a7be4b414bb2f3ca0a31474babc1e2a0e9418adc633849ce7edcfa55d91bd",
+          "qualifier": "call"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "f1ffe2f3-e210-4890-ab59-ba1e6e7b2597",
+      "transport_sequence": 7
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "ea10b3e4-8f44-4f46-88dc-b4d17498912f",
+      "ocel_event_id": "pida:Event:ec4133d044318b240e9928bb1ec909eda857069db3ddcb7f71ed03ff41ee42a3",
+      "native_sequence": 9,
+      "activity": "tool_failed",
+      "timestamp": "2026-11-07T18:34:21.974Z",
+      "payload_digest": "a96ff25fd7fa45bc365d79b88ce5236a6e353ee57495bd7a5f203597a60152b6",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:d355d6a0af028cce633293ebdbad620afdbdee4bb1c3b71d8f1261824c70a8c4",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ToolCall:170a7be4b414bb2f3ca0a31474babc1e2a0e9418adc633849ce7edcfa55d91bd",
+          "qualifier": "call"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "ea10b3e4-8f44-4f46-88dc-b4d17498912f",
+      "transport_sequence": 8
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "6d2618c0-49ac-4e09-ad96-32e0ef33de32",
+      "ocel_event_id": "pida:Event:82975a2c448cab5c17e98475e1feadab00ea2e5072dcc9636efaa321ce19f14c",
+      "native_sequence": 10,
+      "activity": "turn_finished",
+      "timestamp": "2026-11-07T18:34:21.977Z",
+      "payload_digest": "d54cc8126de7be7b15b38e66389e5bd93fad8e4f7486e2c9089ffc382a8f62a2",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:d355d6a0af028cce633293ebdbad620afdbdee4bb1c3b71d8f1261824c70a8c4",
+          "qualifier": "turn"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "6d2618c0-49ac-4e09-ad96-32e0ef33de32",
+      "transport_sequence": 9
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "60315441-edfb-4531-95d2-e017d0d9c74c",
+      "ocel_event_id": "pida:Event:802500f9f1c59a9ffe61fb79b9f6b315f2c0aefe41d93336017ad54a2495e324",
+      "native_sequence": 11,
+      "activity": "turn_started",
+      "timestamp": "2026-11-07T18:34:21.989Z",
+      "payload_digest": "0ac3f2e3a46f4e552265b0fb37b61241cce5107bdaac72a2750113195c26183f",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:947bf19f7925fa43ec541755375473b8504314f8094a8a6c9ddd4f109f3892d7",
+          "qualifier": "turn"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "60315441-edfb-4531-95d2-e017d0d9c74c",
+      "transport_sequence": 10
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "d471f884-6325-4dd1-85de-8ccbeb59807f",
+      "ocel_event_id": "pida:Event:9442a09036c5615e465838c14c398af2b786333df036858b7927a0198d5e44d0",
+      "native_sequence": 12,
+      "activity": "model_request",
+      "timestamp": "2026-11-07T18:34:21.992Z",
+      "payload_digest": "2dc386677109be2d1c7cfbd42be4b7f1876ac3f805f8bfa12bbe36781f082e1d",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:947bf19f7925fa43ec541755375473b8504314f8094a8a6c9ddd4f109f3892d7",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:dec23a0766213033cae389e2634bca9f364cd96a4a9962c407888be966459e22",
+          "qualifier": "request"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "d471f884-6325-4dd1-85de-8ccbeb59807f",
+      "transport_sequence": 11
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "dd84d085-77da-4b57-b502-db875a1d2422",
+      "ocel_event_id": "pida:Event:7d4f49e1f2f0886ccf5daea79172a5e711d072c9a8d7009c9f865e7a40972036",
+      "native_sequence": 13,
+      "activity": "context_input_included",
+      "timestamp": "2026-11-07T18:34:21.998Z",
+      "payload_digest": "7ab44fb8d1976bf428df13d4ec9d2ca8aa796074dc8855e0c5b9cb15b5ea7e1f",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:947bf19f7925fa43ec541755375473b8504314f8094a8a6c9ddd4f109f3892d7",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:dec23a0766213033cae389e2634bca9f364cd96a4a9962c407888be966459e22",
+          "qualifier": "request"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "dd84d085-77da-4b57-b502-db875a1d2422",
+      "transport_sequence": 12
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "b4ca9965-b0e3-4ec6-b8b4-7505cfe19747",
+      "ocel_event_id": "pida:Event:df80a86d0f6508a5f90d4c6c832517c50ebe406b072d5fe9873b39a8648144e0",
+      "native_sequence": 14,
+      "activity": "model_response",
+      "timestamp": "2026-11-07T18:34:22.016Z",
+      "payload_digest": "88c1a4821410581f1552ce4ddf822d116d059d71137a625830d87e19b8752fb0",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:947bf19f7925fa43ec541755375473b8504314f8094a8a6c9ddd4f109f3892d7",
+          "qualifier": "turn"
+        },
+        {
+          "objectId": "pida:ModelRequest:dec23a0766213033cae389e2634bca9f364cd96a4a9962c407888be966459e22",
+          "qualifier": "request"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "b4ca9965-b0e3-4ec6-b8b4-7505cfe19747",
+      "transport_sequence": 13
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "91cc2ee4-56eb-403b-b4ad-1c73a40cbd50",
+      "ocel_event_id": "pida:Event:39f0f0ce38a691bfb1f58f099ed9d45f9a1e81e8679611ac0578779f4ece3a13",
+      "native_sequence": 15,
+      "activity": "turn_finished",
+      "timestamp": "2026-11-07T18:34:22.018Z",
+      "payload_digest": "0ac3f2e3a46f4e552265b0fb37b61241cce5107bdaac72a2750113195c26183f",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        },
+        {
+          "objectId": "pida:Turn:947bf19f7925fa43ec541755375473b8504314f8094a8a6c9ddd4f109f3892d7",
+          "qualifier": "turn"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "91cc2ee4-56eb-403b-b4ad-1c73a40cbd50",
+      "transport_sequence": 14
+    },
+    {
+      "source_id": "a30d3bf4-3130-4d4a-8e00-808051e84e66",
+      "source_event_id": "b4f0c2ac-1eb5-47ac-bb52-b192489e9e5b",
+      "ocel_event_id": "pida:Event:3dbd8d027df4cfadc108cf958c64ecab75ae087ed9ed9488a24544c7690d9c96",
+      "native_sequence": 16,
+      "activity": "run_finished",
+      "timestamp": "2026-11-07T18:34:22.117Z",
+      "payload_digest": "22acde741494b8e85f1b552fc26e1681d6929a418816b4f94ed8df459f48f5ad",
+      "relationships": [
+        {
+          "objectId": "pida:Agent:74355bfbc56e794a48828aec576c46c7dfcc253bde98e37c0c0c053c90e9cb74",
+          "qualifier": "actor"
+        },
+        {
+          "objectId": "pida:Session:dc72571bde0d0bd13a2fe7cf1e1e62441fd6c771d7fbb208084720135e7bffff",
+          "qualifier": "session"
+        },
+        {
+          "objectId": "pida:Task:a34f78061625e8ffab0eb6c0f96978fe0376361128b5aa6b56f73590ce099a8d",
+          "qualifier": "task"
+        },
+        {
+          "objectId": "pida:Run:41d2f94c0f419d3b6ad48ba9dc0dbd83452fb7c51742db52139c273c50da4dfd",
+          "qualifier": "run"
+        }
+      ],
+      "case_id": "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+      "event_id": "b4f0c2ac-1eb5-47ac-bb52-b192489e9e5b",
+      "transport_sequence": 15
+    }
+  ],
+  "record_spec": {
+    "namespace": "pix.owner.native-sequence-transport/1:879cfd9a075f3cd4558372c878ccde2483918ad0dfaca1a9a2e7c2986e0f73c6",
+    "order_policy": "sequence",
+    "tie_policy": "reject",
+    "duplicate_policy": "reject",
+    "close_cases": false,
+    "case_id_key": "case_id",
+    "event_id_key": "event_id",
+    "activity_key": "activity",
+    "timestamp_key": "timestamp",
+    "sequence_key": "transport_sequence",
+    "end_key": "end",
+    "start_sequences": [
+      [
+        "{\"run_id\":\"04fc92fd-2842-4920-9548-5ae6a627df93\",\"session_id\":\"01a1b74a-4af4-7022-aefa-91928bb1f6be\",\"source_id\":\"a30d3bf4-3130-4d4a-8e00-808051e84e66\"}",
+        0
+      ]
+    ],
+    "max_events": 16
+  },
+  "stream_spec": {
+    "stream_id": "pix.owner.native-sequence-transport/1:879cfd9a075f3cd4558372c878ccde2483918ad0dfaca1a9a2e7c2986e0f73c6",
+    "replay_model": null,
+    "declare": [],
+    "temporal": [],
+    "footprints": null,
+    "order_policy": "sequence",
+    "max_cases": 1,
+    "max_activities": 11,
+    "dedup_window": 16,
+    "temporal_history_limit": 1000,
+    "silent_max_states": 1000,
+    "capacity_policy": "reject",
+    "retirement_filter_bits": 16384
+  },
+  "results": {
+    "record-projection": {
+      "status": "computed",
+      "sha256": "9f2cd4b6a5c8480e943073033584fb6939d48d73fc01534a82e323fd51f23723",
+      "source_digest": "pix.stream.record-source.v1:sha256:90436fcaa8ed5d68309c7f32e20a31d85b580ff690d8f00908f361e6d1c7f9c4",
+      "computation_id": "pix.computation.v1:sha256:6af8a21955dd8a7b59eed5d19777935eeebaa0b1c6565df20f20eaf508d057d9",
+      "parents": [],
+      "issues": [
+        {
+          "code": "explicit_record_order",
+          "message": "case groups in first-appearance order; per-case sequence order; delivery order is not cross-case causality",
+          "at": []
+        }
+      ]
+    },
+    "sequence-delivery": {
+      "status": "partial",
+      "sha256": "3e4013bc005e44f7973e8915319646c47e4faf92f195cf4c353accfed4ae6324",
+      "source_digest": "pix.stream.record-source.v1:sha256:90436fcaa8ed5d68309c7f32e20a31d85b580ff690d8f00908f361e6d1c7f9c4",
+      "computation_id": "pix.computation.v1:sha256:eaf1ff30ffe9f9d2725268c777372c186aff439fcf7412adba4572ddec8d091b",
+      "parents": [
+        "pix.computation.v1:sha256:6af8a21955dd8a7b59eed5d19777935eeebaa0b1c6565df20f20eaf508d057d9"
+      ],
+      "issues": [
+        {
+          "code": "explicit_record_order",
+          "message": "case groups in first-appearance order; per-case sequence order; delivery order is not cross-case causality",
+          "at": []
+        },
+        {
+          "code": "open_cases",
+          "message": "Retained open cases have not been finalized; end counts include explicit closures only",
+          "at": []
+        }
+      ]
+    }
+  },
+  "native_identity": {
+    "agent_id": "d8088a0a-e5db-4a25-a3e8-24e5360135b8",
+    "source_id": "profile-a",
+    "org_id": "10f83456-e5c9-4a1b-a889-f6ab0e564b9d",
+    "job_id": "91f29a2e-547d-4db9-ba9e-f9b329e252a1",
+    "attempt_id": "8ae40714-3c67-40dc-a281-9bc9f40dbe5a",
+    "run_id": "04fc92fd-2842-4920-9548-5ae6a627df93",
+    "status": "failed",
+    "code": "PROGRAM_EXIT_FAILED",
+    "inclusion_events": 2,
+    "provenance": "public SDK with scripted provider and simulated 15-token response usage",
+    "organization_task_id": "92834dab-6899-458c-a787-4cfacc09b8cc",
+    "session_id": "01a1b74a-4af4-7022-aefa-91928bb1f6be",
+    "native_organization_status": "unknown",
+    "source_state_sha256": "1c76dd4fd34a0bc2d7b5521b99d57574ad610b1258adccba24a1908655927908",
+    "files": {
+      "sdk-profile-a.ocel.json": "e461f6e7ba41178cfafffab77c4ac07a142e326c2d7237f5992a59818e396c39",
+      "sdk-profile-a.ocel.meta.json": "e6de0c84f1d3748b01a53922519afb346580d7cce40d53453f442eff07496578",
+      "sdk-profile-a.manifest.json": "d8caf96c595640deae5fdccda6898f47820e4e1fe8246b992791fcf39ecec234"
+    }
+  },
+  "manifest": {
+    "schema_version": "pida.result/0.1-draft",
+    "task_id": "91f29a2e-547d-4db9-ba9e-f9b329e252a1",
+    "run_id": "04fc92fd-2842-4920-9548-5ae6a627df93",
+    "session_id": "01a1b74a-4af4-7022-aefa-91928bb1f6be",
+    "agent_id": "d8088a0a-e5db-4a25-a3e8-24e5360135b8",
+    "reported_status": "failed",
+    "reported_by": "runtime",
+    "verification_status": "UNKNOWN",
+    "artifact_refs": [],
+    "current_artifact_refs": [],
+    "evidence_refs": [],
+    "verification_results": [],
+    "runtime_version": "0.8.18",
+    "known_limits": [
+      "NO_INDEPENDENT_TASK_ACCEPTANCE",
+      "AGENT_SUPPLIED_CHECKS_ARE_SCOPED",
+      "PI_INTERNAL_REQUEST_USAGE_NOT_EXPORTED",
+      "HOST_PROJECT_ARTIFACTS_NOT_CAPTURED",
+      "HOST_PROGRAM_NOT_SANDBOXED",
+      "PROGRAM_DEPENDENCIES_NOT_PINNED",
+      "PROGRAM_DESCENDANTS_NOT_GUARANTEED_STOPPED",
+      "COST_UNKNOWN"
+    ],
+    "code": "PROGRAM_EXIT_FAILED"
+  },
+  "export_meta": {
+    "mapping": "pida.ocel20/1",
+    "sourceDigest": "bfada9b4f63cc248046d437f2b944752e90e2e93036182e175380a5d88bf0bec",
+    "digest": "60107e424c38ad81e00166a2cca692ebc651f1163e06c96ee28301f17e28d7ea",
+    "complete": true,
+    "knownLimits": [
+      "RUNTIME_OBSERVED_EVENTS_ONLY",
+      "SEQUENCE_IS_OBSERVATION_ORDER_NOT_CAUSAL_ORDER",
+      "PROCESS_CONFORMANCE_IS_NOT_ARTIFACT_CORRECTNESS"
+    ]
+  },
+  "checks": {
+    "invertible_all_events": true,
+    "native_event_ids_times_sequences_preserved": true,
+    "negative_probes": {
+      "absent": "native_sequence_required_integer",
+      "duplicate": "declared_cut_mismatch_or_gap_or_duplicate",
+      "fractional": "native_sequence_required_integer",
+      "boolean": "native_sequence_required_integer",
+      "domain": "mixed_domain",
+      "event_id": "duplicate_event_identity",
+      "gap": "declared_cut_mismatch_or_gap_or_duplicate",
+      "wrong_declared_start": "declared_cut_mismatch_or_gap_or_duplicate"
+    },
+    "reversed_delivery_same_projection_mapping": true,
+    "native_provenance_changes_result_identity": true,
+    "different_run_changes_domain_identity": true,
+    "synthetic_end_markers": 0,
+    "prior_artifact_hashes_unchanged": {
+      "docs\\reports\\evidence\\repository-persona-20261108\\analyze.py": "1b43a3f43d6215653cacf2f6986a021380677361a7ae8aaa560f9fcc4081325d",
+      "docs\\reports\\evidence\\repository-persona-20261108\\execution.txt": "68aa22ab62d3411596b51c9d3ae65a0e8db33ab705fdf62869aaf8c53dbcbd9f",
+      "docs\\reports\\evidence\\repository-persona-20261108\\producer-metadata-verification.json": "23ccda5f063cad41bb5d2384620231a0362970a4b4a5df9c13bad1fb11c267df",
+      "docs\\reports\\evidence\\repository-persona-20261108\\source-manifest.json": "ead33f98235173938b9a415839902008a806af98f386caa5621af3e1b5ae7da3",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\run-record.json": "f9b98f07ce39d8eb8e6d601873c393777b3a401c390a9e8e24493e25377110ff",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\handoff.json": "4863f97cf8169f722d901b6ff6d400c59540e80f1c0b5abfac5cb8075667cdac",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\sdk-profile-a.manifest.json": "d8caf96c595640deae5fdccda6898f47820e4e1fe8246b992791fcf39ecec234",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\sdk-profile-a.ocel.json": "e461f6e7ba41178cfafffab77c4ac07a142e326c2d7237f5992a59818e396c39",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\sdk-profile-a.ocel.meta.json": "e6de0c84f1d3748b01a53922519afb346580d7cce40d53453f442eff07496578",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\sdk-profile-b.manifest.json": "acba2013325507ae070b3edab0fa2157f8677ab0f2257c5c3bd22dfe98561408",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\sdk-profile-b.ocel.json": "2d45f348b33daf799f32a288146e97b6f14d0f66dd66cc61295f4791dfa460d2",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\sdk-profile-b.ocel.meta.json": "c308d554d98fdb05d15e89e5f36dda6c2d32069db11c98e9ffe851773d503e09",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\stock-profile-a.manifest.json": "506339918dede8b62159db373c07c6326d04b7b459c3151a1d165285b685fdf6",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\stock-profile-a.ocel.json": "5b88270d8edd31252aefd9c61cd466539716bc259b3e794d18445c5df54de56f",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\stock-profile-a.ocel.meta.json": "27ff08ef0dabe312f3f497fbb08f13dc512422932e114f7b1b31e73440135c53",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\stock-profile-b.manifest.json": "8102319667acb75bac82097f84a696221626a7e0751b81d84fce91b0f538500a",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\stock-profile-b.ocel.json": "d9c901156f1f320027e2ea2c5e04b1e60583cc3a428fb8e723332b325842f7ed",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\approved-source\\stock-profile-b.ocel.meta.json": "37fcb03d9048920f06f4e9b8ec44dae2078ee85f24ec582825f71342f6089935",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Agent_dfg.json": "2479724f0cef0a87a9cf0611b0cd6f50595476ff43491e1fda8e6cbd775fc33e",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Agent_traces.json": "209d15bbb0bb3cbc16870cb432c00138524445762a6262fa650cf69a8c27559a",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\executions.json": "105a67a092cb5d2141e3c5d74edaa3042bbb242eb17619d8dd6766169a5c8f30",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\ModelRequest_dfg.json": "d2172239d026ed516a03b57b7c56533ef0264631950ddaf72852f2234f040d5e",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\ModelRequest_traces.json": "7e4d1b90603e835429648814287f0f88ea7bb4e9f055d3c0d1db4a37d19b390f",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\ocdfg.json": "d66bef3209028b6badd6d2960f8999cd70a0c6431f20d16be04f726b1818a7d7",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Run_dfg.json": "2f7484332c2011279b81930ff1de11406798546a5b25cbeec2bd25de58c51621",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Run_traces.json": "bd51f895299d838115a01ccaad1598127954d0102fd11e5f0fcaf1f44b49dae6",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Session_dfg.json": "b0b75f0c77249ec0ffae441c47aba4d39eb520f2c1b7eaff1f486b649bb7f95f",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Session_traces.json": "c7fce807df275e78d4e214024857c6d35916863674cdc3a1ab12d4386fd7f26e",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Task_dfg.json": "27a9bd5422b1177b9eb62d8e0decebfbe18038e3c42c5dac58d90cf1f6cf694d",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Task_traces.json": "48379a0efdb2059b49faa54601ab88063836b5a42350ddb7df922ba9d68c2b40",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\ToolCall_dfg.json": "3ac4d1b7f3428667d62d7208a7d58dbbed7803e9dcf071d3ac057979d7d66045",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\ToolCall_traces.json": "64c39bae368b0e67248fa1825959d315d2b4beee23ba0a495dcf218e5c6b3eaa",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Turn_dfg.json": "f686c8dd4ad94ed82334b90d5a7c6ab0f63b9600bf4eb3b1c46213a16c2f5682",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\Turn_traces.json": "5fe67bd86c506de1b2755f0ae767da6c425de6695ac7cdf997f12173a31efdad",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-a\\variants.json": "48449ff5d918248ce826b46546167cdd9a8d3d4d39c390724a0b0eedbbe2f81a",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Agent_dfg.json": "8c541956385316ea8dbb7b3e987999747a657877e4f75769a7e5b5b7d359e7ec",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Agent_traces.json": "a06bd34d4ca5c10d1c53cc1c399b669ecd264591788d4fd79db538b8d8dea309",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\executions.json": "1a0fe3473fb2c0157ba39fca8fedacda9c7d26961c680fb168a85fcda9122347",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\ModelRequest_dfg.json": "101bdc623ea643eb98e2d8c062b98bfb8a0d7dcea20a7fa033badd6525c2f1e9",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\ModelRequest_traces.json": "bf683f6f1390efd2f591914adfcf5065de10c47c5dc9dbcc60b143f06b3aeb45",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\ocdfg.json": "c15f4a07319428203077d290c4eabf20152b392a3e23bf836f93497d90ec0723",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Run_dfg.json": "a2cbca9171012f4693aa4a9e984499d46e3d8c5e1280e91513d460053a050382",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Run_traces.json": "cae42f220f10de0a3dc89497cd86e5cea73b2ca1c00090ad242822d7a7904453",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Session_dfg.json": "ae7b232c2c0a27dcc3ab0f1207ea075a597c0cfd244b06bb53af7e358a1a70b4",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Session_traces.json": "ea0acea3604de27fb01a45449a7446a307e7c2f7bad292372504f6894463331e",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Task_dfg.json": "6b5796b7263df89de574435ef6c29b8e87029b08569cbe712613bfa52d5a2263",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Task_traces.json": "ce5fe00f556d473693b82d1b83479e5fe669c11a806c0c473bf3f38ff045e60f",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\ToolCall_dfg.json": "df45b282fda636de69ebf62cd1752a1b6618206ace1a48582224977a378ed686",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\ToolCall_traces.json": "0294826bab0f84ba4df407a2bbe9f97aa5550c4c1cfe9f7b31329d0e32da5808",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Turn_dfg.json": "7e5d6533c5565fc4163b9c007eab4840054bb6a20a2d884902acc0d1484e718c",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\Turn_traces.json": "4e93b88bfa0ef12d5a6cfe5dae8618d5955377a5acb12a5b8bd61f81f0fa35b8",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\sdk-profile-b\\variants.json": "ca2f72c05f7561d496fd944e9d01833d7b5fc9208940d855d0578d70421c3cd1",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Agent_dfg.json": "54f17ee6a0ed3b2fca568ad1c643cc8d82c0d4a19b7f76f3783342b4d9bd7a43",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Agent_traces.json": "741355b3535ee9d6e4cb470787887a1cc27dd4ac6c98232c2505e87cc6381c74",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\executions.json": "353997f3093fd7d9d71420f9dc0b278744824890ff187ab27e88cbefdde97358",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\ModelRequest_dfg.json": "19dcd76010f96b468eebe92553991e13eb10c4b22f77734894123942016722ae",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\ModelRequest_traces.json": "301b0191c7a44223c1d7cf886185511f340076ec44318086dbac1870cbef2015",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\ocdfg.json": "73ff816674912d37d60a9f70a587adcab6f784bb3ceffc215061e7d42b348bd1",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Run_dfg.json": "cf76bcd42c6a6b0265200f7a1fab222ba85144463da7c8aed92eff94a05c2af7",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Run_traces.json": "66733b04d6c9bc84ad4a797dee6592ffdd9a955cc628b1e67b40eb526f3a2e08",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Session_dfg.json": "87140bfa62c8211fe4d4f078b6f4415e52887907749ca3571d0e3ceeea948c22",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Session_traces.json": "0e07f951943c04b3b7994cf4a61562a9a54199819208a7ff0ab69d231f347f1c",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Task_dfg.json": "4e2b8ec99f6a60d962f8251db58b92a1599181053668018e1ecf83b0d7793f66",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Task_traces.json": "10d1972a44c6eb00d8c65f1ef6b79584fbd4a746e6ca8fe664062f8a637e7e95",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\ToolCall_dfg.json": "6009c92d970b5ea04b7a3ac6f418fb955a44e9babba2e0d1dd67b1ad3188a243",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\ToolCall_traces.json": "2fdcce7a5712458391e613b643da1094ed9f01e3af0e090fdc96cf5f843a65d4",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Turn_dfg.json": "01c60fe582310dd27e5e091d9014e6479550aa5c128234766f17f9c3464a9c41",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\Turn_traces.json": "29b97cf1e4e3eb76af81b6ef321670c15ed8babb61b38fb77f3a97e327269d0e",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-a\\variants.json": "4ae434aed1c58cda7b5f18db22e0cc3463cacd43b5dcb8f253cabc0d891237cd",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Agent_dfg.json": "d52ebe74381c4af07d06f52466a290d3d8abbcda651f2fdad94c07607c5bb039",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Agent_traces.json": "245e4701e07254fa97f73fb540288d07a7496451130bcc23055b7112987c0ea9",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\executions.json": "8ca93f0522be5572dd120f0321e7214bd30b43b47c82fd722b74e2dc8afa5e30",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\ModelRequest_dfg.json": "9263129d915070cd5f377bfa183a9ff4af8fe6a732a4f6367c41f260c62e36d2",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\ModelRequest_traces.json": "ae8901e04d59ee5615f912aaac6d524b7f3b4025861d13e1bb717a5f705948fb",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\ocdfg.json": "3ef1dbf6d4f40053833afde034dea5938de1146a501625303e0a9fbbcc83b95f",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Run_dfg.json": "e1d4080fe1225990e5d3e4a010eadad37d143c38e64e852f07d2ac5b8450e305",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Run_traces.json": "e371774c6d489cfef62cff5fe7c2b4c20871c80266d3d2e287a857eef244e315",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Session_dfg.json": "53150d4088036cae7f5f2b2a6f3db8e5894fac94f9e5da817ad95f5383cd2b4c",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Session_traces.json": "0d659cdb97fed08e2bc328cef6e3a621ae2619e55abde015d5efb998080df7f1",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Task_dfg.json": "673ce70b4f283f4a2f678f8e8e7db81c9c182689960fb9ce88f8a321a53fa771",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Task_traces.json": "39de8d8391b7c1caacfa21379f249e90cdde697fa4775634594db7da28b620dd",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\ToolCall_dfg.json": "28124fbf965ff3b6fcc95685ddb5096f09ee2820059adf7174aab615fb3c0829",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\ToolCall_traces.json": "d80a5d5a3deb3707eefe17a0ce5d4c705dcf50b455089d24c9ff038fd666e731",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Turn_dfg.json": "563fbbdb78f287aa75a975bbcbdaa0a700eb4a57a79ba20683741d0136154924",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\Turn_traces.json": "07884fb8b5c424f6f02eda55c57eccec778e44524fa4ac7b644c54ec29d9c564",
+      "docs\\reports\\evidence\\repository-persona-20261108\\native\\stock-profile-b\\variants.json": "9113bbe1fab1f2ab367358b477597a94bd19985db70c7d27d6bb9ecd50f9bf70",
+      "docs\\reports\\evidence\\observation-sequence-20261108\\analyze.py": "a9c4870fcd47246294c8a3f909949ba676eb7c35ac0275733c03d26e81e1ba68",
+      "docs\\reports\\evidence\\observation-sequence-20261108\\execution.txt": "62924a08b7292294afdd1511453c8a79b52bd536e4c8ba7263c6cfac04805cf2",
+      "docs\\reports\\evidence\\observation-sequence-20261108\\source-manifest.json": "9250099d44cde57a116c4b5fcceffd67a8c88aa4e79b67bde76519d44b3d186c",
+      "docs\\reports\\evidence\\observation-sequence-20261108\\native\\record-projection.json": "32e419ef5b59d4af5376c5baf1528e9f599a57cb331b900bb80c36bf1205c5e5",
+      "docs\\reports\\evidence\\observation-sequence-20261108\\native\\run-record.json": "4ab3c9ab026474d01c79bdecd2459828a6d2b9cdfa1bd9b5517a133b1bfa5c99",
+      "docs\\reports\\evidence\\observation-sequence-20261108\\native\\sequence-delivery.json": "4de3fb90ff395521e02419351f7ba6635bc83f120df5e9a1c4f0d5dd282b304c"
+    }
+  },
+  "observations": {
+    "events": 16,
+    "cases": 1,
+    "closed_cases": 0,
+    "activity_counts": [
+      [
+        "context_input_included",
+        2
+      ],
+      [
+        "context_snapshot_loaded",
+        1
+      ],
+      [
+        "model_request",
+        2
+      ],
+      [
+        "model_response",
+        2
+      ],
+      [
+        "run_context_loaded",
+        1
+      ],
+      [
+        "run_finished",
+        1
+      ],
+      [
+        "run_started",
+        1
+      ],
+      [
+        "tool_failed",
+        1
+      ],
+      [
+        "tool_started",
+        1
+      ],
+      [
+        "turn_finished",
+        2
+      ],
+      [
+        "turn_started",
+        2
+      ]
+    ],
+    "dfg_edges": [
+      [
+        "context_input_included",
+        "model_response",
+        2
+      ],
+      [
+        "context_snapshot_loaded",
+        "run_context_loaded",
+        1
+      ],
+      [
+        "model_request",
+        "context_input_included",
+        2
+      ],
+      [
+        "model_response",
+        "tool_started",
+        1
+      ],
+      [
+        "model_response",
+        "turn_finished",
+        1
+      ],
+      [
+        "run_context_loaded",
+        "turn_started",
+        1
+      ],
+      [
+        "run_started",
+        "context_snapshot_loaded",
+        1
+      ],
+      [
+        "tool_failed",
+        "turn_finished",
+        1
+      ],
+      [
+        "tool_started",
+        "tool_failed",
+        1
+      ],
+      [
+        "turn_finished",
+        "run_finished",
+        1
+      ],
+      [
+        "turn_finished",
+        "turn_started",
+        1
+      ],
+      [
+        "turn_started",
+        "model_request",
+        2
+      ]
+    ],
+    "dfg_distinct_edges": 12,
+    "dfg_occurrences": 15,
+    "source_terminal": "failed / PROGRAM_EXIT_FAILED",
+    "stream_scope": "open prefix because no synthetic closure was introduced"
+  },
+  "coverage": "partial single-run observation/case view; no atomic organization cut",
+  "snapshot_atomic": false,
+  "not_claimed": [
+    "replacement of strict native OCEL/OCPM results",
+    "timestamp repair",
+    "cross-run order or causality",
+    "host project artifact capture",
+    "conformance or efficiency",
+    "model input body verification"
+  ]
+}

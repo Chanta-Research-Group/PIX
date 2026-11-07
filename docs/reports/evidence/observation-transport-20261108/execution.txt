@@ -1,0 +1,17 @@
+{
+  "projection": "computed",
+  "delivery": "partial",
+  "events": 16,
+  "native_sequence": [
+    1,
+    16
+  ],
+  "transport_sequence": [
+    0,
+    15
+  ],
+  "dfg_distinct_edges": 12,
+  "dfg_occurrences": 15,
+  "negative_probes": 8,
+  "unchanged_prior_files": 92
+}

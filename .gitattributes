@@ -26,3 +26,6 @@ src/pix/viewer/assets/vendor/* -text
 /docs/reports/evidence/observation-sequence-20261108/**/*.json -text
 /docs/reports/evidence/observation-sequence-20261108/*.py -text
 /docs/reports/evidence/observation-sequence-20261108/execution.txt -text whitespace=cr-at-eol
+/docs/reports/evidence/observation-transport-20261108/**/*.json -text
+/docs/reports/evidence/observation-transport-20261108/*.py -text
+/docs/reports/evidence/observation-transport-20261108/execution.txt -text whitespace=cr-at-eol
