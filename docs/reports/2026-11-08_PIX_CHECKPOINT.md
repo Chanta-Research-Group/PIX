@@ -14,9 +14,16 @@ work branch only. No analysis/test suite, workload, model, GUI or build was reru
   `pyproject.toml` remain identical. This work did not change the engine or
   consumer pins. Earlier consumer pin `3205d832d5dcdc6901f916b35496a0c60b657e7a`
   has the source equivalence recorded in the earlier reports, not a new adoption.
-- Remote work branch was absent at initial checkpoint inspection. Publication
-  targets exactly the named work branch; no force push or default-branch merge.
-  The final pushed SHA is reported by the orchestrator after remote verification.
+- The first exact-name push was rejected because the remote already has a branch
+  `work` at `48fe7eb67388cda1144c5bba93adbfe00933ab1c`; Git cannot also create
+  its slash-child `work/pix-owner-intake-20261107`. No remote branch was altered.
+  The orchestrator authorized the nonconflicting destination
+  `work-pix-owner-intake-20261107`. The local branch name is preserved. No force,
+  deletion or default-branch merge is used. Origin redirects to canonical
+  `https://github.com/Chanta-Research-Group/PIX.git`.
+  The [publication receipt](evidence/checkpoint-20261108/publication-receipt.json)
+  records remote verification of checkpoint payload commit `4687cc9`; the final
+  documentation-receipt commit SHA is separately verified and reported on completion.
 
 PIX remains neutral process computation over event/object evidence. PersonaSubstrate
 owns identity/memory; pida owns organization execution; Schumpeter owns multiple

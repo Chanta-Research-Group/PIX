@@ -1,0 +1,15 @@
+{
+  "schema": "pix.checkpoint.publication/1",
+  "verified_at": "2026-11-08T02:11:23.597672+00:00",
+  "local_branch": "work/pix-owner-intake-20261107",
+  "origin": "https://github.com/riesling-29/PIX.git",
+  "canonical_remote_reported_by_github": "https://github.com/Chanta-Research-Group/PIX.git",
+  "rejected_destination": "refs/heads/work/pix-owner-intake-20261107",
+  "rejection": "directory file conflict with existing refs/heads/work",
+  "preserved_existing_work_sha": "48fe7eb67388cda1144c5bba93adbfe00933ab1c",
+  "authorized_destination": "refs/heads/work-pix-owner-intake-20261107",
+  "verified_checkpoint_payload_commit": "4687cc9abfaa48a93dd495e72b1806bf51bef959",
+  "verification": "git ls-remote returned exactly the local checkpoint payload SHA",
+  "force_or_delete_or_default_merge": false,
+  "receipt_followup": "This receipt is committed afterward and pushed to the same destination; final documentation commit is verified separately in the completion message."
+}
