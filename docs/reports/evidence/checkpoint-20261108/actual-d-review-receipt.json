@@ -1,0 +1,10 @@
+{
+  "schema": "pix.checkpoint.actual-d-review-receipt/1",
+  "recorded_at": "2026-11-08T02:09:59.783139+00:00",
+  "source_path": "D:\\ChantaResearchGroup\\Schumpeter-actual-d-pix-review-evidence-20261108\\FINAL_REVIEW.md",
+  "sha256": "eeeb4e198dbbcd6c909f3cdd878bce455de0fafa021533439b5cafc1fef3a517",
+  "copied_file": "ACTUAL-D-PIX-INDEPENDENT-REVIEW.md",
+  "scope": "Safe textual independent report only, not its linked private/raw sources or full package inventory. No analysis, review, workload or build rerun in checkpoint slice.",
+  "author_checkpoint_base": "313d4ccfc1c79ab0a0f4ccc8492d1ae2b95c6b40",
+  "engine_source": "6e9af5ee1b670de39a87be406518fea49dffdfec"
+}
