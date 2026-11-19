@@ -278,6 +278,37 @@ def test_sequential_consumers_reject_concurrent_traces():
     )
 
 
+@pytest.mark.parametrize("reverse", [False, True])
+def test_state_equation_alignments_reject_concurrent_traces(reverse):
+    from pix.case_centric.alignment_search import (
+        DiscountedAStarSpec,
+        align_discounted_astar,
+        align_state_equation_astar,
+    )
+    from pix.contracts.models import Arc, Marking, PetriNet, Place, Transition
+
+    traces, _ = evaluate(log(reverse=reverse))
+    net = PetriNet(
+        (Place("s"), Place("m"), Place("f")),
+        (Transition("t1", "sent"), Transition("t2", "received")),
+        (Arc("s", "t1"), Arc("t1", "m"), Arc("m", "t2"), Arc("t2", "f")),
+        Marking((("s", 1),)),
+        Marking((("f", 1),)),
+    )
+    results = (
+        align_state_equation_astar(traces, net),
+        align_discounted_astar(traces, net, DiscountedAStarSpec(4)),
+    )
+    assert all(result.status.value == "invalid_input" for result in results)
+    assert all(result.value is None for result in results)
+    assert all(
+        result.issues[0].code == "concurrent_traces_unsupported" for result in results
+    )
+    assert all(
+        result.parent_computation_ids == (traces.computation_id,) for result in results
+    )
+
+
 def test_uncertain_median_is_an_interval():
     result = measure_temporal(
         log(), TemporalSpec("message", tie_policy="concurrent", time_precision=MINUTE)
