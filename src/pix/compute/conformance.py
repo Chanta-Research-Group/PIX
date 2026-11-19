@@ -157,6 +157,31 @@ def _align(trace: ObjectTrace, net: PetriNet, spec: AlignmentSpec) -> TraceAlign
     return finish("unreachable")
 
 
+def _reject_concurrent_traces(
+    operator_id: str, request: object, traces: ComputationResult[TraceSet]
+) -> ComputationResult | None:
+    """Reject traces whose equal-time groups have no asserted internal order."""
+    if getattr(traces.spec, "tie_policy", None) != "concurrent":
+        return None
+    return _result(
+        operator_id,
+        None,
+        request,
+        ComputeStatus.INVALID_INPUT,
+        None,
+        (
+            ComputeIssue(
+                "concurrent_traces_unsupported",
+                "This operator requires an explicitly ordered sequence",
+            ),
+        ),
+        source_digest=traces.source_digest,
+        parent_computation_ids=(
+            (traces.computation_id,) if traces.computation_id is not None else ()
+        ),
+    )
+
+
 def align_traces(
     traces: ComputationResult[TraceSet],
     net: PetriNet,
@@ -179,22 +204,9 @@ def align_traces(
     digest = model_digest(net)
     request = AlignmentRequest(digest, spec)
     parents = (traces.computation_id,) if traces.computation_id is not None else ()
-    if getattr(traces.spec, "tie_policy", None) == "concurrent":
-        return _result(
-            ALIGNMENT_OPERATOR_ID,
-            None,
-            request,
-            ComputeStatus.INVALID_INPUT,
-            None,
-            (
-                ComputeIssue(
-                    "concurrent_traces_unsupported",
-                    "This operator requires an explicitly ordered sequence",
-                ),
-            ),
-            source_digest=traces.source_digest,
-            parent_computation_ids=parents,
-        )
+    rejected = _reject_concurrent_traces(ALIGNMENT_OPERATOR_ID, request, traces)
+    if rejected is not None:
+        return rejected
     if traces.status is not ComputeStatus.COMPUTED or not isinstance(
         traces.value, TraceSet
     ):
