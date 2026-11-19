@@ -20,6 +20,7 @@ from typing import ClassVar, Literal
 
 from pix.case_centric._input import CaseInput, as_case_traces
 from pix.compute._common import _result
+from pix.compute.conformance import _reject_concurrent_traces
 from pix.compute.model_semantics import enabled_transitions, fire, model_digest
 from pix.contracts.analysis import ObjectTrace, TraceSet
 from pix.contracts.conformance import AlignmentMove, AlignmentSpec
@@ -681,6 +682,9 @@ def _apply(log, net, spec, discounted):
         else StateEquationRequest(digest, spec)
     )
     parents = (source.computation_id,) if source.computation_id is not None else ()
+    rejected = _reject_concurrent_traces(operator, request, source)
+    if rejected is not None:
+        return rejected
 
     def result(status, value, issues=()):
         return _result(
