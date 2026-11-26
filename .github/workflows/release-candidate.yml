@@ -1,0 +1,45 @@
+name: Build verified PIX 0.5.0 release candidate
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  distributions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: refs/tags/v0.5.0
+          fetch-depth: 0
+      - name: Verify the approved annotated tag and source
+        run: |
+          test "$(git cat-file -t refs/tags/v0.5.0)" = tag
+          test "$(git rev-parse HEAD)" = a086f3470a87b98ed4bc690dfdfa572849e03949
+          test "$(git rev-parse 'refs/tags/v0.5.0^{commit}')" = "$(git rev-parse HEAD)"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install build twine
+      - run: python -m build
+      - run: python -m twine check --strict dist/*
+      - name: Smoke the installed wheel and record its bytes
+        run: |
+          python -m venv "$RUNNER_TEMP/pix-release"
+          python_path="$RUNNER_TEMP/pix-release/bin/python"
+          "$python_path" -m pip install dist/pix-0.5.0-py3-none-any.whl
+          "$python_path" -m pip check
+          test "$("$RUNNER_TEMP/pix-release/bin/pix" --version)" = 0.5.0
+          cd dist
+          sha256sum pix-0.5.0-py3-none-any.whl pix-0.5.0.tar.gz > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pix-v0.5.0-candidate
+          path: |
+            dist/pix-0.5.0-py3-none-any.whl
+            dist/pix-0.5.0.tar.gz
+            dist/SHA256SUMS.txt
+          if-no-files-found: error

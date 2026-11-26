@@ -1,0 +1,238 @@
+{
+  "artifact_note": "Files named by the adapter run are generated bundle paths, not files checked into this evidence directory; reproduce with the pinned runner and fixture. CI retains its own wheel and test outputs under the workflow retention policy.",
+  "checks": {
+    "baseline": {
+      "junit_sha256": "328e3f321180e919ede06947682922c6d09387e4d7e249f8e42f0f159d2fbb01",
+      "log_sha256": "0a64032f9e737bd70bc4171d05153551f21a31e8ca55945ecf69ac2eecf6c65c",
+      "summary": "837 passed, 17 skipped, 52 subtests passed in 8.04s"
+    },
+    "focused": {
+      "junit_sha256": "ae02bdadcba25a0f2be936a18db3d625c8e4d63b8c41697981e7af3ecc76594f",
+      "log_sha256": "716bf6fc041629504e626a7aaf78a81d09c1c841b508af368da81496f4ce00fa",
+      "summary": "877 passed, 1 skipped, 52 subtests passed in 8.16s"
+    },
+    "full": {
+      "junit_sha256": "bbc1435cee5474c1b707d961a357b4743ee136f7ebd869c6e39578cc51b821e7",
+      "log_sha256": "3cb6b68c30abff5310fdf01fe83a9877340a6b6ea309c1b9670682f57eccde17",
+      "summary": "2 failed, 10700 passed, 42 skipped, 1169 subtests passed in 73.07s (0:01:13)"
+    },
+    "installed-consumer": {
+      "junit_sha256": "a5ecb9a876075f73e3937c147544b87a761d30bfb0f2a0b0949b1e5559da3dfb",
+      "log_sha256": "d1e7b4b61f05abfad82c2dc4fa075aa40bcf40c0e5e7bba8b67a43cfff8403dd",
+      "summary": "24 passed in 1.67s"
+    },
+    "retest": {
+      "junit_sha256": "bfb4b88b606eae5e773cca56d603f204220ca757d65391178425b9b97fc401c0",
+      "log_sha256": "79b903863726d60eca4ecd47120a678395b6f13f47884ac91d9813264850a318",
+      "summary": "2 passed in 0.78s"
+    }
+  },
+  "ci_conclusion": "success",
+  "ci_details_file": "pi_hub_20261025_ci.json",
+  "ci_run": "https://github.com/Chanta-Research-Group/PIX/actions/runs/40151918609",
+  "core_wheel_adapter_run": {
+    "coverage": {
+      "excluded_events": 0,
+      "projected_events": 5,
+      "scope": "provided synthetic file only",
+      "source_events": 5
+    },
+    "exports": {
+      "json": {
+        "artifact": "snapshot.json",
+        "reference_schema": "not_run",
+        "roundtrip": "passed",
+        "sha256": "ce6748a074739872afb4ccfa098b8df1dbd7d567d0b3efdc2efba675864a1471"
+      },
+      "sqlite": {
+        "artifact": "snapshot.sqlite",
+        "reference_schema": "not_run",
+        "roundtrip": "passed",
+        "sha256": "043a321f270ab642f6aaf0563963021120dfd5eba824a439cbc42feb652fa15d"
+      },
+      "xml": {
+        "artifact": "snapshot.xml",
+        "reference_schema": "not_run",
+        "roundtrip": "passed",
+        "sha256": "465432f1dc6b86305b45dd9038583abd3f8e6c2caa60ebca76a5a373ad5bb8c0"
+      }
+    },
+    "input_sha256": {
+      "expected.json": "dab19f0a164811980f815fd5f85af3c31f8766f92455206d63555b1ac283bfea",
+      "mapping.json": "187d6c4e14f2ef5c42bef2fc24107c0178c72e3221a5a89663335bc8416dc92d",
+      "normalized.json": "bcf93920232deee74c5458639c5df245672805e79c73f2a38c62aaa3fbb354da"
+    },
+    "installed_distributions": [
+      "pix==0.5.0"
+    ],
+    "installed_pix": "/tmp/pix-wheel-ym3c56dh/venv/lib/python3.12/site-packages/pix/__init__.py",
+    "isolated": true,
+    "limits": [
+      "Exact-time example only",
+      "Verification execution is not verification success",
+      "Service time unavailable without observed start attributes"
+    ],
+    "mapping_digest": "example.mapping.v1:sha256:bb6ed3edc2964bda5adf5b9bd4368e03f1c17c6e7508b6cc143372318d0dd05c",
+    "pix_commit_declared": "70df30ac38a11ba40536447f33d0fb1a93669418",
+    "pix_version": "0.5.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "results": {
+      "constraints": {
+        "artifact": "constraints.result.json",
+        "computation_id": "pix.computation.v1:sha256:950750e57cd044483d0297fa3e6def1be62903f79c426f78abe6c71da7b91330",
+        "parent_artifacts": [
+          "traces.result.json"
+        ],
+        "sha256": "431718fcced442215cfa48178ccbe681189d562ec1ae0845e0c78f009353d720",
+        "status": "computed"
+      },
+      "executions": {
+        "artifact": "executions.result.json",
+        "computation_id": "pix.computation.v1:sha256:ab5485b67c57ee7329e9b46014ffb8b5dba2e4682bbf66fcc1b7b44bf5ea1f32",
+        "parent_artifacts": [],
+        "sha256": "f3f90799e3a1838137516baaee169ff0c5d6eb9c9527d821b5c011d27aa9d349",
+        "status": "computed"
+      },
+      "handover": {
+        "artifact": "handover.result.json",
+        "computation_id": "pix.computation.v1:sha256:08eab62241b88bdc5a6c725a87d74b44068e8d520fa91f85c3f67bf6f5022314",
+        "parent_artifacts": [],
+        "sha256": "4ec1505c7fd156f0d4ea62de991677c93c761df153cfeedc7f8106e6b1f707d9",
+        "status": "computed"
+      },
+      "ocdfg": {
+        "artifact": "ocdfg.result.json",
+        "computation_id": "pix.computation.v1:sha256:bd547132c33d10d14fedd0f56970300bd2309b81d5d5e615b97f8e7675c54023",
+        "parent_artifacts": [
+          "task_dfg.result.json"
+        ],
+        "sha256": "c0c75ee8e3a84ce0839954cb424af4953144600b09fa1d10766a708f29908031",
+        "status": "computed"
+      },
+      "task_dfg": {
+        "artifact": "task_dfg.result.json",
+        "computation_id": "pix.computation.v1:sha256:58b2b06ebf47cfb8fb6824aab722f65c42deba70d64d592c76ef0f9f34361378",
+        "parent_artifacts": [
+          "traces.result.json"
+        ],
+        "sha256": "374320deeab4be9bdde1da8a354923ed57176e99b59b93e6723b0f0fe3f6de48",
+        "status": "computed"
+      },
+      "temporal": {
+        "artifact": "temporal.result.json",
+        "computation_id": "pix.computation.v1:sha256:440f8851229a01973110aa913b4e3ad283375f187fb90f3e019e2d18b8de6dd5",
+        "parent_artifacts": [
+          "traces.result.json"
+        ],
+        "sha256": "486c800c983f7a5a6633fad4d221b7441eea4e759cdae9088274c2c00f3b3400",
+        "status": "computed"
+      },
+      "traces": {
+        "artifact": "traces.result.json",
+        "computation_id": "pix.computation.v1:sha256:542bb0c60f4e5fcee62789901c76b079403c76fca3578bdeb5b9619da428ea17",
+        "parent_artifacts": [],
+        "sha256": "2a87b9de574dd2762b43c34f47c8d33fa38926bbfaaeba4e66e83ee9540299bc",
+        "status": "computed"
+      },
+      "variants": {
+        "artifact": "variants.result.json",
+        "computation_id": "pix.computation.v1:sha256:4398a20d189bacd8193462fe0219005dafe7d5416cadfa49956adf8a7723e221",
+        "parent_artifacts": [
+          "executions.result.json"
+        ],
+        "sha256": "9edaa45b42e695c873c8522c95b61f4fbb1932fddfb71eb92d57f3b1479becef",
+        "status": "computed"
+      }
+    },
+    "runner_sha256": "3f62f623f15dfe6588a381f5947b4bcf662d9fcebd6a5f1914315a8beeafa3a7",
+    "scope": "Synthetic consumer example, not Schumpeter G1 or mission acceptance",
+    "source_digest": "pix.ocel.canonical.v1:sha256:108fbf5f7d6df53efd98fd5ae3351922bba0c485fcaf7d9bee0371a841854fed",
+    "summary": {
+      "constraint_counts": {
+        "ack_60s": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "artifact_before_check": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "e2o_count": 14,
+      "event_count": 5,
+      "execution_count": 1,
+      "handover": [
+        [
+          "agent:A",
+          "agent:B",
+          "message:1",
+          30000000,
+          30000000
+        ]
+      ],
+      "o2o_count": 1,
+      "object_count": 5,
+      "order_conflicts": [],
+      "task_dfg_edges": [
+        [
+          "artifact_written",
+          "verification_executed",
+          1
+        ],
+        [
+          "sent",
+          "received",
+          1
+        ],
+        [
+          "started",
+          "artifact_written",
+          1
+        ],
+        [
+          "verification_executed",
+          "sent",
+          1
+        ]
+      ],
+      "task_gap_microseconds": [
+        30000000,
+        60000000,
+        60000000,
+        60000000
+      ],
+      "task_sequence": [
+        "started",
+        "artifact_written",
+        "verification_executed",
+        "sent",
+        "received"
+      ],
+      "unmatched_receives": [],
+      "unmatched_sends": [],
+      "variant_frequencies": [
+        1
+      ]
+    },
+    "wheel_sha256_declared": "c041c8e690800acf841776aae3164eb5630d2f9767fe85812e88ac4269bf7afe"
+  },
+  "core_wheel_checks": {
+    "mining-wheel-evidence": true,
+    "visualization-wheel-evidence": true
+  },
+  "engine_baseline_commit": "48fe7eb67388cda1144c5bba93adbfe00933ab1c",
+  "engine_source_unchanged": true,
+  "focused_command": "python -m pytest tests/ocel tests/compute/test_trace.py tests/compute/test_executions.py tests/compute/test_variants.py tests/compute/test_ocdfg.py tests/compute/test_constraints.py tests/compute/test_temporal.py tests/compute/test_time_precision.py tests/compute/test_handover.py tests/tabular/test_chat_log.py tests/test_results.py tests/test_import_boundaries.py tests/test_pi_hub_consumer.py -q",
+  "full_command": "python -m pytest -q",
+  "full_suite_retest_reason": "Two subprocess tests initially could not import pix because the validation venv lacked an installed package. Editable installation corrected the environment; both failed tests passed on targeted rerun with no code changes.",
+  "implementation_tree": "b3273eea8eb227db462aee01ed9b77cdf8e50e4c",
+  "installed_consumer_command": "python -I -m pytest tests/test_pi_hub_consumer.py -q --import-mode=importlib",
+  "retest_command": "python -m pytest tests/test_cli.py::test_module_cli_runs_in_real_process tests/test_log_imports.py::test_public_facade_keeps_optional_and_reference_libraries_unloaded -q",
+  "scope": "PIX-side synthetic consumer readiness; Schumpeter deployed G1 unverified",
+  "verification_commit": "70df30ac38a11ba40536447f33d0fb1a93669418"
+}
